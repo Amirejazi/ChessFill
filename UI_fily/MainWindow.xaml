@@ -19,7 +19,7 @@
         </Border.Background>
         <Grid>
             <Image x:Name="img1" Height="500" Source="\sorce\2.png" VerticalAlignment="Top" RenderTransformOrigin="0.49,0.497" Margin="348,35,348,0"/>
-            <Label Content="welcome" Foreground="White" FontSize="50" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="393,369,0,0" VerticalAlignment="Top" Height="65" Width="404"/>
+            <Label Content="welcome" Foreground="White" FontSize="50" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" Margin="0,369,0,0" VerticalAlignment="Top" Height="65" Width="404"/>
             <Button x:Name="btnnewgame" Content="New Game"
                 Height="70"
                 Width="400"
