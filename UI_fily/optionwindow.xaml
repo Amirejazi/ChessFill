@@ -85,19 +85,19 @@
                         <RowDefinition Height="70"/>
                     </Grid.RowDefinitions>
                     <Grid Grid.Row="0">
-                        <Button Content="Texture" Name="btntexture" BorderThickness="0" Foreground="Black" Background="Transparent" FontSize="45" HorizontalContentAlignment="Left" Margin="12,0,-12,0" Click="btntexture_Click"></Button>
+                        <Button Content="Texture" Name="btntexture" BorderThickness="0" Foreground="Black" Background="Transparent" FontSize="45" HorizontalContentAlignment="Left" Margin="12,0,10,0" Click="btntexture_Click"></Button>
                     </Grid>
                     <Grid Grid.Row="1">
-                        <Button Content="information" Name="btninformation" BorderThickness="0"  Foreground="Black" Background="Transparent" FontSize="45" HorizontalContentAlignment="Left" Margin="12,0,-12,0" Click="btninformation_Click"></Button>
+                        <Button Content="information" Name="btninformation" BorderThickness="0"  Foreground="Black" Background="Transparent" FontSize="45" HorizontalContentAlignment="Left" Margin="12,0,10,0" Click="btninformation_Click"></Button>
                     </Grid>
                     <Grid Grid.Row="2">
-                        <Button Content="Timer" Name="btntimer" BorderThickness="0" Foreground="Black" Background="Transparent" FontSize="45" HorizontalContentAlignment="Left" Margin="12,0,-12,0" Click="btntimer_Click"></Button>
+                        <Button Content="Timer" Name="btntimer" BorderThickness="0" Foreground="Black" Background="Transparent" FontSize="45" HorizontalContentAlignment="Left" Margin="12,0,10,0" Click="btntimer_Click"></Button>
                     </Grid>
                     <Grid Grid.Row="3">
-                        <Button Content="sound" Name="btnsound" BorderThickness="0" Foreground="Black" Background="Transparent" FontSize="45" HorizontalContentAlignment="Left" Margin="12,0,-12,0" Click="btnsound_Click"></Button>
+                        <Button Content="sound" Name="btnsound" BorderThickness="0" Foreground="Black" Background="Transparent" FontSize="45" HorizontalContentAlignment="Left" Margin="12,0,10,0" Click="btnsound_Click"></Button>
                     </Grid>
                     <Grid Grid.Row="4">
-                        <Button Content="setting" Name="btnsetting" BorderThickness="0" Foreground="Black" Background="Transparent" FontSize="45" HorizontalContentAlignment="Left" Margin="12,0,-12,0" Click="btnsetting_Click"></Button>
+                        <Button Content="setting" Name="btnsetting" BorderThickness="0" Foreground="Black" Background="Transparent" FontSize="45" HorizontalContentAlignment="Left" Margin="12,0,10,0" Click="btnsetting_Click"></Button>
                     </Grid>
 
                 </Grid>
@@ -107,13 +107,28 @@
                 <Grid Grid.Row="2" Grid.Column="3">
                     <Border x:Name="textureborder" Visibility="Visible">
                         <Grid>
-                            <Label Content="1" FontSize="60" ></Label>
-                            <Image Source="sorce/texture1.jpg" HorizontalAlignment="Left" Height="170" Margin="602,0,0,0" VerticalAlignment="Top" Width="170"/>
-                            <Image Source="sorce/texture2.jpg" HorizontalAlignment="Left" Height="170" Margin="403,0,0,0" VerticalAlignment="Top" Width="170"/>
-                            <Image Source="sorce/texture3.jpg" HorizontalAlignment="Left" Height="170" Margin="202,0,0,0" VerticalAlignment="Top" Width="170"/>
-                            <Image Source="sorce/texture4.jpg" HorizontalAlignment="Left" Height="170" VerticalAlignment="Top" Width="170"/>
+                            <Grid Margin="0,0,0,210" >
+                                <Label Content="1" FontSize="60" ></Label>
+                                <Image Source="sorce/texture1.jpg" HorizontalAlignment="Left" Height="170" Margin="602,0,0,0" VerticalAlignment="Top" Width="170"/>
+                                <Image Source="sorce/texture2.jpg" HorizontalAlignment="Left" Height="170" Margin="403,0,0,0" VerticalAlignment="Top" Width="170"/>
+                                <Image Source="sorce/texture3.jpg" HorizontalAlignment="Left" Height="170" Margin="202,0,0,0" VerticalAlignment="Top" Width="170"/>
+                                <Image Source="sorce/texture4.jpg" HorizontalAlignment="Left" Height="170" VerticalAlignment="Top" Width="170"/>
+                                <RadioButton Content="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="50" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="32" Width="14" Margin="680,178,0,0"/>
+                                <RadioButton Content="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="50" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="32" Width="14" Margin="482,178,0,0"/>
+                                <RadioButton Content="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="50" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="32" Width="14" Margin="281,178,0,0"/>
+                                <RadioButton Content="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="50" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="32" Width="14" Margin="81,178,0,0"/>
 
+                            </Grid>
+                            <Grid Margin="0,215,0,0" >
+                                <Image Source="sorce/preview2.png" HorizontalAlignment="Left" Height="170" Margin="403,0,0,0" VerticalAlignment="Top" Width="170"/>
+                                <Image Source="sorce/preview3.png" HorizontalAlignment="Left" Height="170" Margin="202,0,0,0" VerticalAlignment="Top" Width="170"/>
+                                <Image Source="sorce/preview1.png" HorizontalAlignment="Left" Height="170" VerticalAlignment="Top" Width="170"/>
+                                <RadioButton Content="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="50" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="32" Width="14" Margin="482,178,0,0"/>
+                                <RadioButton Content="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="50" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="32" Width="14" Margin="281,178,0,0"/>
+                                <RadioButton Content="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="50" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="32" Width="14" Margin="81,178,0,0"/>
+                            </Grid>
                         </Grid>
+                        
                     </Border>
                     <Border x:Name="informationborder" Visibility="Collapsed">
                         <Grid>

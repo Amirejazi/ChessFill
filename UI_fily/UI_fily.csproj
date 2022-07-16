@@ -137,5 +137,10 @@
     <Resource Include="sorce\texture3.jpg" />
     <Resource Include="sorce\texture4.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="sorce\preview1.png" />
+    <Resource Include="sorce\preview2.png" />
+    <Resource Include="sorce\preview3.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
