@@ -37,7 +37,7 @@
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="42"/>
-                    <ColumnDefinition Width="78"/>
+                    <ColumnDefinition Width="70"/>
                     <ColumnDefinition Width="240"/>
                     <ColumnDefinition Width="792"/>
                     <ColumnDefinition Width="748"/>
@@ -51,8 +51,27 @@
                 <Grid Grid.Row="2"
                       Grid.Column="1">
                     <Grid.RowDefinitions>
-                        
+                        <RowDefinition Height="70"/>
+                        <RowDefinition Height="70"/>
+                        <RowDefinition Height="70"/>
+                        <RowDefinition Height="70"/>
+                        <RowDefinition Height="70"/>
+                        <RowDefinition Height="70"/>
                     </Grid.RowDefinitions>
+                </Grid>
+                <Grid Grid.Row="2"
+                      Grid.Column="2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="70"/>
+                        <RowDefinition Height="70"/>
+                        <RowDefinition Height="70"/>
+                        <RowDefinition Height="70"/>
+                        <RowDefinition Height="70"/>
+                        <RowDefinition Height="70"/>
+                    </Grid.RowDefinitions>
+                </Grid>
+                <Grid>
+                    
                 </Grid>
             </Grid>
         </Grid>
