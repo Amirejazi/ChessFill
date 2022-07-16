@@ -14,11 +14,9 @@
         Background="Transparent"
         AllowsTransparency="True">
     <Border CornerRadius="20">
-        <Border.Background>
-            <ImageBrush ImageSource="resorce/background.jpg" Stretch="UniformToFill"/>
-        </Border.Background>
+        
         <Grid>
-            <Image Height="500" Source="resorce/logo_2.png" VerticalAlignment="Top" RenderTransformOrigin="0.49,0.497" Margin="348,35,348,0"/>
+            <Image x:Name="img1" Height="500" Source="resorce/logo_2.png" VerticalAlignment="Top" RenderTransformOrigin="0.49,0.497" Margin="348,35,348,0"/>
             <Label Content="welcome" Foreground="White" FontSize="50" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="393,369,0,0" VerticalAlignment="Top" Height="65" Width="404"/>
             <Button x:Name="btnnewgame" Content="New Game"
                 Height="70"
