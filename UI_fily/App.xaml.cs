@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace UI_filly
+namespace UI_fily
 {
     /// <summary>
     /// Interaction logic for App.xaml

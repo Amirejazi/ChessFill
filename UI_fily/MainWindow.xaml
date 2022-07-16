@@ -1,0 +1,43 @@
+﻿<Window x:Class="UI_fily.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UI_fily"
+        mc:Ignorable="d"
+        Title="Login" 
+        Height="680" 
+        Width="1200" 
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Background="Transparent"
+        AllowsTransparency="True">
+    <Border CornerRadius="20">
+        <Border.Background>
+            <ImageBrush ImageSource="\resorce\background.jpg" Stretch="UniformToFill"/>
+        </Border.Background>
+        <Grid>
+            <Image x:Name="img1" Height="500" Source="\resorce\logo_2.png" VerticalAlignment="Top" RenderTransformOrigin="0.49,0.497" Margin="348,35,348,0"/>
+            <Label Content="welcome" Foreground="White" FontSize="50" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="393,369,0,0" VerticalAlignment="Top" Height="65" Width="404"/>
+            <Button x:Name="btnnewgame" Content="New Game"
+                Height="70"
+                Width="400"
+                Background="#4CC9F0"
+                Foreground="#3A0CA3"
+                FontSize="40"
+                FontWeight="Bold"
+                FontFamily="Arial"
+                BorderThickness="2" Margin="375,458,375,152"/>
+            <Button x:Name="btnloadgame" Content="Load Game"
+                Height="70"
+                Width="400"
+                Background="#4CC9F0"
+                Foreground="#3A0CA3"
+                FontSize="40"
+                FontWeight="Bold"
+                FontFamily="Arial"
+                BorderThickness="2" Margin="400,545,400,65" Click="btnloadgame_click"/>
+        </Grid>
+    </Border>
+</Window>
