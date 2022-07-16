@@ -5,8 +5,35 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:UI_fily"
         mc:Ignorable="d"
-        Title="optionwindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="Login" 
+        Height="680" 
+        Width="1200" 
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Background="Transparent"
+        AllowsTransparency="True">
+    <Border  CornerRadius="20" Background="#F72585">
+        <Grid>
+            <Border Background="#3A0CA3"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Left"
+                CornerRadius="20,0,100,0"
+                Height="80"
+                Width="1078">
+            </Border>
+            <Border Background="#3A0CA3"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Left"
+                CornerRadius="100,0,0,0"
+                Height="80"
+                Width="1078" Margin="122,600,0,0">
+            </Border>
+            <Border Background="#4361EE"
+                BorderBrush="#FFFFFF"
+                BorderThickness="0,5,0,5"
+                Margin="0,70,0,70"
+                CornerRadius="25"/>
+        </Grid>
+    </Border>
 </Window>
