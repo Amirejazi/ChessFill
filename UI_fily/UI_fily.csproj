@@ -121,10 +121,12 @@
     <Resource Include="sorce\popcorn.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="sorce\texture.png" />
+  </ItemGroup>
+  <ItemGroup>
     <Resource Include="sorce\info.png" />
     <Resource Include="sorce\setting.png" />
     <Resource Include="sorce\sound.png" />
-    <Resource Include="sorce\texture.png" />
     <Resource Include="sorce\timer.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

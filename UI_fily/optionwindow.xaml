@@ -61,6 +61,18 @@
                     <Grid Grid.Row="0">
                         <Image Source="sorce/texture.png"></Image>
                     </Grid>
+                    <Grid Grid.Row="1">
+                        <Image Source="sorce/info.png"/>
+                    </Grid>
+                    <Grid Grid.Row="2">
+                        <Image Source="sorce/timer.png" Margin="0,6,0,-6"></Image>
+                    </Grid>
+                    <Grid Grid.Row="3" Margin="9,0,-9,0">
+                        <Image Source="sorce/sound.png" Margin="0,3,0,-3"></Image>
+                    </Grid>
+                    <Grid Grid.Row="4">
+                        <Image Source="sorce/setting.png"></Image>
+                    </Grid>
                 </Grid>
                 <Grid Grid.Row="2"
                       Grid.Column="2">
@@ -72,6 +84,21 @@
                         <RowDefinition Height="70"/>
                         <RowDefinition Height="70"/>
                     </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <Button Content="Texture" Name="btntexture" BorderThickness="0" Foreground="Black" Background="Transparent" FontSize="45" HorizontalContentAlignment="Left" Margin="12,0,-12,0">  </Button>
+                    </Grid>
+                    <Grid Grid.Row="1">
+                        <Button Content="information" Name="btninformation" BorderThickness="0"  Foreground="Black" Background="Transparent" FontSize="45" HorizontalContentAlignment="Left" Margin="12,0,-12,0"></Button>
+                    </Grid>
+                    <Grid Grid.Row="2">
+                        <Button Content="Timer" Name="btntimer" BorderThickness="0" Foreground="Black" Background="Transparent" FontSize="45" HorizontalContentAlignment="Left" Margin="12,0,-12,0"></Button>
+                    </Grid>
+                    <Grid Grid.Row="3">
+                        <Button Content="sound" Name="btnsound" BorderThickness="0" Foreground="Black" Background="Transparent" FontSize="45" HorizontalContentAlignment="Left" Margin="12,0,-12,0"></Button>
+                    </Grid>
+                    <Grid Grid.Row="4">
+                        <Button Content="setting" Name="btnsetting" BorderThickness="0" Foreground="Black" Background="Transparent" FontSize="45" HorizontalContentAlignment="Left" Margin="12,0,-12,0"></Button>
+                    </Grid>
                     
                 </Grid>
                 
