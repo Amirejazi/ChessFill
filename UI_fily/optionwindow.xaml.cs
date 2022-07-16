@@ -23,5 +23,49 @@ namespace UI_fily
         {
             InitializeComponent();
         }
+        public void bordercollaps()
+        {
+            textureborder.Visibility = Visibility.Collapsed;
+            informationborder.Visibility = Visibility.Collapsed;
+            timerborder.Visibility = Visibility.Collapsed;
+            soundborder.Visibility = Visibility.Collapsed;
+            settingborder.Visibility = Visibility.Collapsed;
+        }
+
+        private void btntexture_Click(object sender, RoutedEventArgs e)
+        {
+            bordercollaps();
+            textureborder.Visibility= Visibility.Visible;
+            adresslabel.Content = "Texture";
+        }
+
+        private void btninformation_Click(object sender, RoutedEventArgs e)
+        {
+            bordercollaps();
+            informationborder.Visibility = Visibility.Visible;
+            adresslabel.Content = "Information";
+        }
+
+        private void btntimer_Click(object sender, RoutedEventArgs e)
+        {
+            bordercollaps();
+            timerborder.Visibility = Visibility.Visible;
+            adresslabel.Content = "Timer";
+        }
+
+        private void btnsound_Click(object sender, RoutedEventArgs e)
+        {
+            bordercollaps();
+            soundborder.Visibility = Visibility.Visible;
+            adresslabel.Content = "Sound";
+        }
+
+        private void btnsetting_Click(object sender, RoutedEventArgs e)
+        {
+            bordercollaps();
+            settingborder.Visibility = Visibility.Visible;
+            adresslabel.Content = "Setting";
+        }
     }
+    
 }
