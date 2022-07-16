@@ -129,5 +129,13 @@
     <Resource Include="sorce\sound.png" />
     <Resource Include="sorce\timer.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="sorce\texture1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="sorce\texture2.jpg" />
+    <Resource Include="sorce\texture3.jpg" />
+    <Resource Include="sorce\texture4.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
