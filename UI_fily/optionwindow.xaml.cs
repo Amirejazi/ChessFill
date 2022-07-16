@@ -15,25 +15,13 @@ using System.Windows.Shapes;
 namespace UI_fily
 {
     /// <summary>
-    /// Interaction logic for choose.xaml
+    /// Interaction logic for optionwindow.xaml
     /// </summary>
-    public partial class choose : Window
+    public partial class optionwindow : Window
     {
-        public choose()
+        public optionwindow()
         {
             InitializeComponent();
-        }
-
-        private void btnserver_Click(object sender, RoutedEventArgs e)
-        {
-            optionwindow optionwindow = new optionwindow();
-            this.Close();
-            optionwindow.ShowDialog();
-        }
-
-        private void btnclient_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }
