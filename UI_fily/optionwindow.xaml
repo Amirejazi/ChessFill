@@ -109,8 +109,8 @@
                         <Grid>
                             <Label Content="1" FontSize="60" ></Label>
                             <Image Source="sorce/texture1.jpg" HorizontalAlignment="Left" Height="170" Margin="602,0,0,0" VerticalAlignment="Top" Width="170"/>
-                            <Image Source="sorce/texture2.jpg" HorizontalAlignment="Left" Height="170" Margin="400,0,0,0" VerticalAlignment="Top" Width="170"/>
-                            <Image Source="sorce/texture3.jpg" HorizontalAlignment="Left" Height="170" Margin="199,0,0,0" VerticalAlignment="Top" Width="170"/>
+                            <Image Source="sorce/texture2.jpg" HorizontalAlignment="Left" Height="170" Margin="403,0,0,0" VerticalAlignment="Top" Width="170"/>
+                            <Image Source="sorce/texture3.jpg" HorizontalAlignment="Left" Height="170" Margin="202,0,0,0" VerticalAlignment="Top" Width="170"/>
                             <Image Source="sorce/texture4.jpg" HorizontalAlignment="Left" Height="170" VerticalAlignment="Top" Width="170"/>
 
                         </Grid>
