@@ -28,7 +28,7 @@
                 FontSize="40"
                 FontWeight="Bold"
                 FontFamily="Arial"
-                BorderThickness="2" Margin="375,458,375,152"/>
+                BorderThickness="2" Margin="375,458,375,152" Click="btnnewgame_Click"/>
             <Button x:Name="btnloadgame" Content="Load Game"
                 Height="70"
                 Width="400"
@@ -37,7 +37,7 @@
                 FontSize="40"
                 FontWeight="Bold"
                 FontFamily="Arial"
-                BorderThickness="2" Margin="400,545,400,65"/>
+                BorderThickness="2" Margin="400,545,400,65" Click="btnloadgame_Click"/>
         </Grid>
     </Border>
 </Window>

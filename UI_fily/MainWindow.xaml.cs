@@ -24,5 +24,17 @@ namespace UI_fily
         {
             InitializeComponent();
         }
+
+        private void btnloadgame_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Coming soon", ":)", MessageBoxButton.OK);
+        }
+
+        private void btnnewgame_Click(object sender, RoutedEventArgs e)
+        {
+            choose choose = new choose();
+            this.Close();
+            choose.ShowDialog();
+        }
     }
 }
