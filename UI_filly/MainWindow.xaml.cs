@@ -28,9 +28,5 @@ namespace UI_filly
 
         }
 
-        private void btnloadgame_click(object sender, RoutedEventArgs e)
-        {
-            
-        }
     }
 }
