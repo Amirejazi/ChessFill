@@ -13,7 +13,7 @@
         ResizeMode="NoResize"
         Background="Transparent"
         AllowsTransparency="True">
-    <Border CornerRadius="20">
+    <Border CornerRadius="40">
         <Border.Background>
             <ImageBrush ImageSource="\sorce\background.jpg" Stretch="UniformToFill"/>
         </Border.Background>
