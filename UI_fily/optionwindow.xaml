@@ -58,6 +58,9 @@
                         <RowDefinition Height="70"/>
                         <RowDefinition Height="70"/>
                     </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <Image Source="sorce/texture.png"></Image>
+                    </Grid>
                 </Grid>
                 <Grid Grid.Row="2"
                       Grid.Column="2">
@@ -69,10 +72,9 @@
                         <RowDefinition Height="70"/>
                         <RowDefinition Height="70"/>
                     </Grid.RowDefinitions>
-                </Grid>
-                <Grid>
                     
                 </Grid>
+                
             </Grid>
         </Grid>
 
