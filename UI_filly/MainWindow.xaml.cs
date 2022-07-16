@@ -24,8 +24,7 @@ namespace UI_filly
         public MainWindow()
         {
             InitializeComponent();
-            string k = System.IO.Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\..\\resorce\\logo_1.png");
-            img1.Source = new BitmapImage(new Uri(k));
+            
 
         }
 
