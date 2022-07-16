@@ -23,5 +23,15 @@ namespace UI_fily
         {
             InitializeComponent();
         }
+
+        private void btnserver_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnclient_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
