@@ -24,5 +24,10 @@ namespace UI_filly
         {
             InitializeComponent();
         }
+
+        private void btnloadgame_click(object sender, RoutedEventArgs e)
+        {
+            
+        }
     }
 }
