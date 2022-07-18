@@ -66,6 +66,13 @@ namespace UI_fily
             settingborder.Visibility = Visibility.Visible;
             adresslabel.Content = "Setting";
         }
+
+        private void btnnext_Click(object sender, RoutedEventArgs e)
+        {
+            portipserverwindow portipserverwindow = new portipserverwindow();
+            this.Close();
+            portipserverwindow.ShowDialog();
+        }
     }
     
 }

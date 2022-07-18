@@ -25,9 +25,10 @@
             <Border Background="#3A0CA3"
                 VerticalAlignment="Top"
                 HorizontalAlignment="Left"
-                CornerRadius="100,0,0,0"
+                CornerRadius="100,0,20,0"
                 Height="80"
                 Width="1078" Margin="122,600,0,0">
+                <Button Name="btnnext" VerticalContentAlignment="Top" HorizontalContentAlignment="Center" Height="40" Width="150" Margin="909,26,19,14" Background="Transparent" BorderThickness="0" Content="Next >>" Foreground="White" FontSize="32" Click="btnnext_Click" ></Button>
             </Border>
             <Border Background="#4361EE"
                 BorderBrush="#FFFFFF"

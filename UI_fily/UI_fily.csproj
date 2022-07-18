@@ -78,10 +78,17 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="portipserverwindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="optionwindow.xaml.cs">
       <DependentUpon>optionwindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="portipserverwindow.xaml.cs">
+      <DependentUpon>portipserverwindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
