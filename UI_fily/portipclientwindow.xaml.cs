@@ -15,20 +15,20 @@ using System.Windows.Shapes;
 namespace UI_fily
 {
     /// <summary>
-    /// Interaction logic for portipserverwindow.xaml
+    /// Interaction logic for portipclientwindow.xaml
     /// </summary>
-    public partial class portipserverwindow : Window
+    public partial class portipclientwindow : Window
     {
-        public portipserverwindow()
+        public portipclientwindow()
         {
             InitializeComponent();
         }
 
-        private void btnstart_Click(object sender, RoutedEventArgs e)
+        private void btnstartclient_Click(object sender, RoutedEventArgs e)
         {
-            gameserverwindow gameserverwindow = new gameserverwindow();
+            gameclientwindow gameclientwindow = new gameclientwindow();
             this.Close();
-            gameserverwindow.ShowDialog();
+            gameclientwindow.ShowDialog();
         }
     }
 }

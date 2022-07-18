@@ -59,6 +59,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="gameclientwindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="gameserverwindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -70,11 +78,21 @@
     <Compile Include="choose.xaml.cs">
       <DependentUpon>choose.xaml</DependentUpon>
     </Compile>
+    <Compile Include="gameclientwindow.xaml.cs">
+      <DependentUpon>gameclientwindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="gameserverwindow.xaml.cs">
+      <DependentUpon>gameserverwindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Page Include="optionwindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="portipclientwindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -86,6 +104,9 @@
   <ItemGroup>
     <Compile Include="optionwindow.xaml.cs">
       <DependentUpon>optionwindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="portipclientwindow.xaml.cs">
+      <DependentUpon>portipclientwindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="portipserverwindow.xaml.cs">
       <DependentUpon>portipserverwindow.xaml</DependentUpon>

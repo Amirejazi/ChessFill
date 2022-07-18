@@ -1,11 +1,11 @@
-﻿<Window x:Class="UI_fily.portipserverwindow"
+﻿<Window x:Class="UI_fily.portipclientwindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:UI_fily"
         mc:Ignorable="d"
-        Title="portipserverwindow"
+        Title="portipclientwindow"
         Height="680" 
         Width="1200" 
         WindowStartupLocation="CenterScreen"
@@ -13,6 +13,7 @@
         ResizeMode="NoResize"
         Background="Transparent"
         AllowsTransparency="True">
+
     <Border CornerRadius="20" Background="#3A0CA3">
         <Grid>
             <Image Source="sorce/4.png" HorizontalAlignment="Center" Height="342" Margin="0,10,0,0" VerticalAlignment="Top" Width="342" RenderTransformOrigin="0.24,0.39"/>
@@ -22,7 +23,7 @@
             <TextBox HorizontalAlignment="Left" FontSize="35" Margin="435,337,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="600" Height="45"/>
             <TextBox HorizontalAlignment="Left" FontSize="35" Margin="435,409,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="600" Height="45"/>
             <TextBox HorizontalAlignment="Left" FontSize="35" Margin="435,481,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="600" Height="45"/>
-            <Button Name="btnstart" Content="Start" FontSize="35" Height="50" Width="250" HorizontalAlignment="Center" Margin="0,579,0,0" VerticalAlignment="Top" Click="btnstart_Click"/>
+            <Button Name="btnstartclient" Content="Start" FontSize="35" Height="50" Width="250" HorizontalAlignment="Center" Margin="0,579,0,0" VerticalAlignment="Top" Click="btnstartclient_Click"/>
 
         </Grid>
     </Border>
