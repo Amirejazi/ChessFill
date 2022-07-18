@@ -105,7 +105,7 @@
                     <Label Name="adresslabel" Content="Texture" FontSize="47" Foreground="Black" VerticalContentAlignment="Center" Margin="0,-12,0,0"></Label>
                 </Grid>
                 <Grid Grid.Row="2" Grid.Column="3">
-                    <Border x:Name="textureborder" Visibility="Collapsed">
+                    <Border x:Name="textureborder" Visibility="Visible">
                         <Grid>
                             <Grid Margin="0,0,0,210" >
                                 <Label Content="1" FontSize="60" ></Label>
@@ -149,9 +149,26 @@
 
                         </Grid>
                     </Border>
-                    <Border x:Name="timerborder" Visibility="Visible">
+                    <Border x:Name="timerborder" Visibility="Collapsed">
                         <Grid>
-                            <Label Content="Playing with Time" FontSize="40" ></Label>
+                            <Label Content="Playing with Time :" FontSize="40" Margin="0,0,414,349" ></Label>
+                            <Label Content="Enter the game time (min) :" FontSize="40" Margin="0,57,256,292" />
+                            <Label Content="Show remaining time :" FontSize="40" Margin="0,117,349,232" />
+                            <Grid>
+                                <RadioButton Content="Yes" FontSize="35" HorizontalAlignment="Left" Margin="539,13,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center"/>
+                                <RadioButton Content="No" FontSize="35" HorizontalAlignment="Left" Margin="683,13,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center"/>
+
+                            </Grid>
+                            <TextBox HorizontalAlignment="Left" FontSize="30" Margin="533,77,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="220" Height="40"/>
+                            <Grid Margin="0,114,0,0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="697*"/>
+                                    <ColumnDefinition Width="75*"/>
+                                </Grid.ColumnDefinitions>
+                                <RadioButton Content="Yes" FontSize="35" HorizontalAlignment="Left" Margin="539,13,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center"/>
+                                <RadioButton Content="No" FontSize="35" HorizontalAlignment="Left" Margin="683,13,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" Grid.ColumnSpan="2"/>
+
+                            </Grid>
                         </Grid>
                     </Border>
                     <Border x:Name="soundborder" Visibility="Collapsed">
@@ -161,7 +178,16 @@
                     </Border>
                     <Border x:Name="settingborder" Visibility="Collapsed">
                         <Grid>
-                            <Label Content="5" FontSize="60" ></Label>
+                            <Label Content="Show The Houses Where the Player Can Go?" FontSize="35" Margin="0,0,0,368" ></Label>
+                            <Label Content="Show The Houses Where you can hit the opponent Player?" FontSize="30" Margin="0,111,-31,257" />
+                            <Grid>
+                                <RadioButton Content="Yes" FontSize="35" HorizontalAlignment="Left" Margin="10,64,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" />
+                                <RadioButton Content="No" FontSize="35" HorizontalAlignment="Left" Margin="121,64,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" />
+                            </Grid>
+                            <Grid Margin="0,102,0,9">
+                                <RadioButton Content="Yes" FontSize="35" HorizontalAlignment="Left" Margin="10,64,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" />
+                                <RadioButton Content="No" FontSize="35" HorizontalAlignment="Left" Margin="121,64,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" />
+                            </Grid>
                         </Grid>
                     </Border>
                 </Grid>
