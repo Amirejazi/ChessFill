@@ -30,5 +30,10 @@ namespace UI_fily
             this.Close();
             gameclientwindow.ShowDialog();
         }
+
+        private void btnconnectclient_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

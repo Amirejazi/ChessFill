@@ -16,14 +16,15 @@
 
     <Border CornerRadius="20" Background="#3A0CA3">
         <Grid>
-            <Image Source="sorce/4.png" HorizontalAlignment="Center" Height="342" Margin="0,10,0,0" VerticalAlignment="Top" Width="342" RenderTransformOrigin="0.24,0.39"/>
-            <Label Content="Port :" FontSize="50" Foreground="White" HorizontalAlignment="Left" Margin="189,315,0,0" VerticalAlignment="Top"/>
-            <Label Content="IP :" FontSize="50" Foreground="White" HorizontalAlignment="Left" Margin="189,390,0,0" VerticalAlignment="Top"/>
-            <Label Content="Pass :" FontSize="50" Foreground="White" HorizontalAlignment="Left" Margin="189,459,0,0" VerticalAlignment="Top"/>
-            <TextBox HorizontalAlignment="Left" FontSize="35" Margin="435,337,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="600" Height="45"/>
-            <TextBox HorizontalAlignment="Left" FontSize="35" Margin="435,409,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="600" Height="45"/>
-            <TextBox HorizontalAlignment="Left" FontSize="35" Margin="435,481,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="600" Height="45"/>
-            <Button Name="btnstartclient" Content="Start" FontSize="35" Height="50" Width="250" HorizontalAlignment="Center" Margin="0,579,0,0" VerticalAlignment="Top" Click="btnstartclient_Click"/>
+            <Image Source="sorce/4.png" HorizontalAlignment="Center" Height="342" Margin="0,-26,0,0" VerticalAlignment="Top" Width="342" RenderTransformOrigin="0.24,0.39"/>
+            <Label Content="Port :" FontSize="50" Foreground="White" HorizontalAlignment="Left" Margin="189,270,0,0" VerticalAlignment="Top"/>
+            <Label Content="IP :" FontSize="50" Foreground="White" HorizontalAlignment="Left" Margin="189,345,0,0" VerticalAlignment="Top"/>
+            <Label Content="Pass :" FontSize="50" Foreground="White" HorizontalAlignment="Left" Margin="189,498,0,0" VerticalAlignment="Top"/>
+            <TextBox HorizontalAlignment="Left" FontSize="35" Margin="435,292,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="600" Height="45"/>
+            <TextBox HorizontalAlignment="Left" FontSize="35" Margin="435,364,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="600" Height="45"/>
+            <TextBox HorizontalAlignment="Left" FontSize="35" Margin="435,520,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="600" Height="45"/>
+            <Button Name="btnstartclient" Content="Start" FontSize="35" Height="50" Width="250" HorizontalAlignment="Center" Margin="0,594,0,0" VerticalAlignment="Top" Click="btnstartclient_Click"/>
+            <Button x:Name="btnconnectclient" Content="connecting" FontSize="35" Height="50" Width="250" HorizontalAlignment="Center" Margin="0,441,0,0" VerticalAlignment="Top" Click="btnconnectclient_Click"/>
 
         </Grid>
     </Border>
