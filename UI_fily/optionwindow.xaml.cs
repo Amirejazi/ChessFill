@@ -130,6 +130,8 @@ namespace UI_fily
                 gameserverwindow.shah_b = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\shah_black_4.png");
                 gameserverwindow.sarbaz_b = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\sarbaz_black_4.png");
             }
+            servername = textboxservername.Text;
+            clientname = textboxclientname.Text;
             portipserverwindow portipserverwindow = new portipserverwindow();
             this.Close();
             portipserverwindow.ShowDialog();
@@ -189,9 +191,43 @@ namespace UI_fily
             rbtncolor = "2";
             
         }
-        
+
+        public static string servername { get; set; }
+        public static string clientname { get; set; }
+
+        private void rbtntimeryes_Checked(object sender, RoutedEventArgs e)
+        {
+            textboxgametime.IsEnabled = true;
+        }
+
+        private void rbtntimerno_Checked(object sender, RoutedEventArgs e)
+        {
+            //textboxgametime.IsEnabled = false;
+        }
+
+        public static string rbtn1 { get; set; }
+        public static string rbtn2 { get; set; }
+
+        private void rbtn1yes_Checked(object sender, RoutedEventArgs e)
+        {
+            rbtn1 = "1";
+        }
+
+        private void rbtn1no_Checked(object sender, RoutedEventArgs e)
+        {
+            rbtn1 = "2";
+        }
+
+        private void rbtn2yes_Checked(object sender, RoutedEventArgs e)
+        {
+            rbtn2 = "1";
+        }
+
+        private void rbtn2no_Checked(object sender, RoutedEventArgs e)
+        {
+            rbtn2 = "2";
+        }
     }
     
     
 }
-//public string rokh_b { get; set; } = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\rokh_black_1.png");
