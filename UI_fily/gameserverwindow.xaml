@@ -13,7 +13,7 @@
         ResizeMode="NoResize"
         Background="Transparent"
         AllowsTransparency="True">
-    <Border CornerRadius="20" Background="#3A0CA3">
+    <Border CornerRadius="20" Background="#3AB0FF">
         <Grid>
             <Button x:Name="_1" Background="#171717" Height="75" Width="74" HorizontalAlignment="Left" Margin="298,568,0,0" VerticalAlignment="Top">
                 <Image x:Name="_1img" ></Image>

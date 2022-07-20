@@ -13,7 +13,7 @@
         ResizeMode="NoResize"
         Background="Transparent"
         AllowsTransparency="True">
-    <Border CornerRadius="20" Background="#3A0CA3">
+    <Border CornerRadius="20" Background="#3AB0FF">
         <!--<Border.Background>
             <ImageBrush ImageSource="\sorce\background.jpg" Stretch="UniformToFill"/>
         </Border.Background>-->
@@ -22,8 +22,8 @@
             <Button x:Name="btnserver" Content="Server"
                 Height="70"
                 Width="400"
-                Background="#4CC9F0"
-                Foreground="#3A0CA3"
+                Background="#3A0CA3"
+                Foreground="#3AB0FF"
                 FontSize="40"
                 FontWeight="Bold"
                 FontFamily="Arial"
