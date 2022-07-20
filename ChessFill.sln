@@ -5,6 +5,8 @@ VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI_fily", "UI_fily\UI_fily.csproj", "{72AA1D59-A1FD-4AC5-A40F-F1B11CC90115}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Socket_Fily", "Socket_Fily\Socket_Fily.csproj", "{31C8B5E8-4EF3-4961-A653-A6B2C7743410}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{72AA1D59-A1FD-4AC5-A40F-F1B11CC90115}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{72AA1D59-A1FD-4AC5-A40F-F1B11CC90115}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{72AA1D59-A1FD-4AC5-A40F-F1B11CC90115}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31C8B5E8-4EF3-4961-A653-A6B2C7743410}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31C8B5E8-4EF3-4961-A653-A6B2C7743410}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31C8B5E8-4EF3-4961-A653-A6B2C7743410}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31C8B5E8-4EF3-4961-A653-A6B2C7743410}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
