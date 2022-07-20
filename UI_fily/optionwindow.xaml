@@ -134,7 +134,7 @@
                         </Grid>
 
                     </Border>
-                    <Border x:Name="informationborder" Visibility="Collapsed">
+                    <Border x:Name="informationborder" Visibility="Visible">
                         <Grid>
                             <Label Content="Choose a Color :" FontSize="40" Height="62" VerticalAlignment="Top" Margin="6,0,430,0" ></Label>
                             <Label Content="The Possibility of Ctrl + Z :" FontSize="40" Height="62" VerticalAlignment="Top" Margin="6,66,291,0" />
@@ -153,7 +153,7 @@
 
                         </Grid>
                     </Border>
-                    <Border x:Name="timerborder" Visibility="Visible">
+                    <Border x:Name="timerborder" Visibility="Collapsed">
                         <Grid>
                             <Label Content="Playing with Time :" FontSize="40" Margin="0,0,414,349" ></Label>
                             <Label Content="Enter the game time (min) :" FontSize="40" Margin="0,57,256,292" />
@@ -185,12 +185,12 @@
                             <Label Content="Show The Houses Where the Player Can Go?" FontSize="35" Margin="0,0,0,368" ></Label>
                             <Label Content="Show The Houses Where you can hit the opponent Player?" FontSize="30" Margin="0,111,-31,257" />
                             <Grid>
-                                <RadioButton Content="Yes" FontSize="35" HorizontalAlignment="Left" Margin="10,64,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" />
-                                <RadioButton Content="No" FontSize="35" HorizontalAlignment="Left" Margin="121,64,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" />
+                                <RadioButton x:Name="rbtn1yes" Content="Yes" FontSize="35" HorizontalAlignment="Left" Margin="10,64,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" Checked="rbtn1yes_Checked" />
+                                <RadioButton x:Name="rbtn1no" Content="No" FontSize="35" HorizontalAlignment="Left" Margin="121,64,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" Checked="rbtn1no_Checked" />
                             </Grid>
                             <Grid Margin="0,102,0,9">
-                                <RadioButton Content="Yes" FontSize="35" HorizontalAlignment="Left" Margin="10,64,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" />
-                                <RadioButton Content="No" FontSize="35" HorizontalAlignment="Left" Margin="121,64,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" />
+                                <RadioButton x:Name="rbtn2yes" Content="Yes" FontSize="35" HorizontalAlignment="Left" Margin="10,64,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" Checked="rbtn2yes_Checked" />
+                                <RadioButton x:Name="rbtn2no" Content="No" FontSize="35" HorizontalAlignment="Left" Margin="121,64,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" Checked="rbtn2no_Checked" />
                             </Grid>
                         </Grid>
                     </Border>
