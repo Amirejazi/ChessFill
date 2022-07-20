@@ -110,14 +110,14 @@
                         <Grid>
                             <Grid Margin="0,0,0,210" >
                                 <Label Content="1" FontSize="60" ></Label>
-                                <Image Source="sorce/texture1.jpg" HorizontalAlignment="Left" Height="170" Margin="602,0,0,0" VerticalAlignment="Top" Width="170"/>
+                                <Image Source="sorce/texture1.jpg" HorizontalAlignment="Left" Margin="602,0,0,40" Width="170"/>
                                 <Image Source="sorce/texture2.jpg" HorizontalAlignment="Left" Height="170" Margin="403,0,0,0" VerticalAlignment="Top" Width="170"/>
                                 <Image Source="sorce/texture3.jpg" HorizontalAlignment="Left" Height="170" Margin="202,0,0,0" VerticalAlignment="Top" Width="170"/>
                                 <Image Source="sorce/texture4.jpg" HorizontalAlignment="Left" Height="170" VerticalAlignment="Top" Width="170"/>
-                                <RadioButton Content="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="50" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="32" Width="14" Margin="680,178,0,0"/>
-                                <RadioButton Content="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="50" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="32" Width="14" Margin="482,178,0,0"/>
-                                <RadioButton Content="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="50" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="32" Width="14" Margin="281,178,0,0"/>
-                                <RadioButton Content="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="50" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="32" Width="14" Margin="81,178,0,0"/>
+                                <RadioButton x:Name="rbtngroundblue" Content="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="50" HorizontalAlignment="Left" Width="14" Margin="680,178,0,0" Checked="rbtngroundblue_Checked" />
+                                <RadioButton x:Name="rbtngroundblack" IsChecked="True" Content="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="50" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="32" Width="14" Margin="482,178,0,0" Checked="rbtngroundblack_Checked"/>
+                                <RadioButton x:Name="rbtngroundgreend" Content="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="50" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="32" Width="14" Margin="281,178,0,0" Checked="rbtngroundgreend_Checked"/>
+                                <RadioButton x:Name="rbtngroundbrown" Content="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="50" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="32" Width="14" Margin="81,178,0,0" Checked="rbtngroundbrown_Checked"/>
 
                             </Grid>
                             <Grid Margin="0,215,0,0" >
