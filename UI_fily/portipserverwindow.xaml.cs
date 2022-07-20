@@ -38,7 +38,16 @@ namespace UI_fily
                 //StartState(false);
                 //ChangeState("Accepting Client...", new SolidColorBrush(Colors.Blue));
                 await _serverstartup.AcceptAsync();
-                
+                try
+                {
+                    _transmission.Send(Pass.Text);
+                    //RecieveBox.Text += $"Me : {SendBox.Text}\n";
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message + "\n try again", "sending error", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+
             }
             catch (Exception ex)
             {
@@ -66,15 +75,7 @@ namespace UI_fily
             //    SendBtn.IsEnabled = true;
             //});
             await _transmission.RecieveAsync();
-            try
-            {
-                _transmission.Send(Pass.Text);
-                //RecieveBox.Text += $"Me : {SendBox.Text}\n";
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message + "\n try again", "sending error", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
+            
         }
 
         private async void receiveErrorCallback(string error)

@@ -93,7 +93,13 @@ namespace UI_fily
             {
                 this.Dispatcher.Invoke(() =>
                 {
-                    Pas = recieveMessage;
+                    for(int i = 0; i < recieveMessage.Length; i++)
+                    {
+                        if (recieveMessage[i] != '\0')
+                        {
+                            Pas += recieveMessage[i];
+                        }
+                    }
                 });
             }
             else
