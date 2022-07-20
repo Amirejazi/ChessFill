@@ -298,6 +298,11 @@ namespace UI_fily
                 _63.Background = new SolidColorBrush(Color.FromRgb(241, 219, 182));
                 // button haye bala brown kam rang kamrang shodand ----------------
             }
+            
+            if(optionwindow.rbtnnut == "1" && optionwindow.rbtncolor == "1")
+            {
+                _1img.Source = new BitmapImage(new Uri("sorce/rokh_white_1.png"));
+            }
         }
     }
 }

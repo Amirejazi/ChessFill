@@ -95,14 +95,37 @@ namespace UI_fily
         }
         public static string rbtnnut { get; set; }
 
+        private void rbtnnut1_Checked(object sender, RoutedEventArgs e)
+        {
+            rbtnnut = "1";
+        }
 
+        private void rbtnnut2_Checked(object sender, RoutedEventArgs e)
+        {
+            rbtnnut = "2";
+        }
 
+        private void rbtnnut3_Checked(object sender, RoutedEventArgs e)
+        {
+            rbtnnut = "3";
+        }
 
+        private void rbtnnut4_Checked(object sender, RoutedEventArgs e)
+        {
+            rbtnnut = "4";
+        }
 
+        public static string rbtncolor { get; set; }
 
+        private void rbtnwhitecolor_Checked(object sender, RoutedEventArgs e)
+        {
+            rbtncolor = "1";
+        }
 
-
-
+        private void rbtnblackcolor_Checked(object sender, RoutedEventArgs e)
+        {
+            rbtncolor = "2";
+        }
     }
     
 }
