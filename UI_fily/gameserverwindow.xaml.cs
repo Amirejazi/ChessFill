@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,7 +11,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+
 
 namespace UI_fily
 {
@@ -298,11 +299,33 @@ namespace UI_fily
                 _63.Background = new SolidColorBrush(Color.FromRgb(241, 219, 182));
                 // button haye bala brown kam rang kamrang shodand ----------------
             }
-            
-            if(optionwindow.rbtnnut == "1" && optionwindow.rbtncolor == "1")
-            {
-                _1img.Source = new BitmapImage(new Uri("sorce/rokh_white_1.png"));
-            }
+            _1img.Source = new BitmapImage(new Uri(rokh));
+            _2img.Source = new BitmapImage(new Uri(asb));
+            _3img.Source = new BitmapImage(new Uri(fil));
+            _4img.Source = new BitmapImage(new Uri(vazir));
+            _5img.Source = new BitmapImage(new Uri(shah));
+            _6img.Source = new BitmapImage(new Uri(fil));
+            _7img.Source = new BitmapImage(new Uri(asb));
+            _8img.Source = new BitmapImage(new Uri(rokh));
+            _9img.Source = new BitmapImage(new Uri(sarbaz));
+            _10img.Source = new BitmapImage(new Uri(sarbaz));
+            _11img.Source = new BitmapImage(new Uri(sarbaz));
+            _12img.Source = new BitmapImage(new Uri(sarbaz));
+            _13img.Source = new BitmapImage(new Uri(sarbaz));
+            _14img.Source = new BitmapImage(new Uri(sarbaz));
+            _15img.Source = new BitmapImage(new Uri(sarbaz));
+            _16img.Source = new BitmapImage(new Uri(sarbaz));
+
+
+
+
+            servername.Content = optionwindow.rbtnnut;
         }
+        public static string rokh { get; set; }
+        public static string asb { get; set; }
+        public static string fil { get; set; }
+        public static string vazir { get; set; }
+        public static string shah { get; set; }
+        public static string sarbaz { get; set; }
     }
 }

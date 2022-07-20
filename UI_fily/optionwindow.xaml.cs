@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,7 +11,6 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace UI_fily
 {
@@ -70,9 +70,46 @@ namespace UI_fily
 
         private void btnnext_Click(object sender, RoutedEventArgs e)
         {
+            if (rbtnnut == "1" && rbtncolor == "1")
+            {
+                gameserverwindow.rokh = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\rokh_white_1.png");
+                gameserverwindow.asb = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\asb_white_1.png");
+                gameserverwindow.fil = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\fil_white_1.png");
+                gameserverwindow.vazir = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\vazir_white_1.png");
+                gameserverwindow.shah = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\shah_white_1.png");
+                gameserverwindow.sarbaz = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\sarbaz_white_1.png");
+            }
+            else if (rbtnnut == "2" && rbtncolor == "1")
+            {
+                gameserverwindow.rokh = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\rokh_white_2.png");
+                gameserverwindow.asb = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\asb_white_2.png");
+                gameserverwindow.fil = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\fil_white_2.png");
+                gameserverwindow.vazir = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\vazir_white_2.png");
+                gameserverwindow.shah = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\shah_white_2.png");
+                gameserverwindow.sarbaz = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\sarbaz_white_2.png");
+            }
+            else if (rbtnnut == "3" && rbtncolor == "1")
+            {
+                gameserverwindow.rokh = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\rokh_white_3.png");
+                gameserverwindow.asb = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\asb_white_3.png");
+                gameserverwindow.fil = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\fil_white_3.png");
+                gameserverwindow.vazir = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\vazir_white_3.png");
+                gameserverwindow.shah = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\shah_white_3.png");
+                gameserverwindow.sarbaz = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\sarbaz_white_3.png");
+            }
+            else if (rbtnnut == "4" && rbtncolor == "1")
+            {
+                gameserverwindow.rokh = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\rokh_white_4.png");
+                gameserverwindow.asb = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\asb_white_4.png");
+                gameserverwindow.fil = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\fil_white_4.png");
+                gameserverwindow.vazir = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\vazir_white_4.png");
+                gameserverwindow.shah = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\shah_white_4.png");
+                gameserverwindow.sarbaz = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\sarbaz_white_4.png");
+            }
             portipserverwindow portipserverwindow = new portipserverwindow();
             this.Close();
             portipserverwindow.ShowDialog();
+            
         }
         private void rbtngroundblue_Checked(object sender, RoutedEventArgs e)
         {
@@ -120,12 +157,17 @@ namespace UI_fily
         private void rbtnwhitecolor_Checked(object sender, RoutedEventArgs e)
         {
             rbtncolor = "1";
+            
         }
 
         private void rbtnblackcolor_Checked(object sender, RoutedEventArgs e)
         {
             rbtncolor = "2";
+            
         }
+        
     }
     
+    
 }
+//public string rokh_b { get; set; } = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\rokh_black_1.png");
