@@ -106,6 +106,42 @@ namespace UI_fily
                 gameserverwindow.shah = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\shah_white_4.png");
                 gameserverwindow.sarbaz = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\sarbaz_white_4.png");
             }
+            else if (rbtnnut == "1" && rbtncolor == "2")
+            {
+                gameserverwindow.rokh = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\rokh_black_1.png");
+                gameserverwindow.asb = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\asb_black_1.png");
+                gameserverwindow.fil = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\fil_black_1.png");
+                gameserverwindow.vazir = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\vazir_black_1.png");
+                gameserverwindow.shah = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\shah_black_1.png");
+                gameserverwindow.sarbaz = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\sarbaz_black_1.png");
+            }
+            else if (rbtnnut == "2" && rbtncolor == "2")
+            {
+                gameserverwindow.rokh = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\rokh_black_2.png");
+                gameserverwindow.asb = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\asb_black_2.png");
+                gameserverwindow.fil = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\fil_black_2.png");
+                gameserverwindow.vazir = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\vazir_black_2.png");
+                gameserverwindow.shah = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\shah_black_2.png");
+                gameserverwindow.sarbaz = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\sarbaz_black_2.png");
+            }
+            else if (rbtnnut == "3" && rbtncolor == "2")
+            {
+                gameserverwindow.rokh = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\rokh_black_3.png");
+                gameserverwindow.asb = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\asb_black_3.png");
+                gameserverwindow.fil = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\fil_black_3.png");
+                gameserverwindow.vazir = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\vazir_black_3.png");
+                gameserverwindow.shah = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\shah_black_3.png");
+                gameserverwindow.sarbaz = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\sarbaz_black_3.png");
+            }
+            else if (rbtnnut == "4" && rbtncolor == "2")
+            {
+                gameserverwindow.rokh = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\rokh_black_4.png");
+                gameserverwindow.asb = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\asb_black_4.png");
+                gameserverwindow.fil = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\fil_black_4.png");
+                gameserverwindow.vazir = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\vazir_black_4.png");
+                gameserverwindow.shah = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\shah_black_4.png");
+                gameserverwindow.sarbaz = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\sarbaz_black_4.png");
+            }
             portipserverwindow portipserverwindow = new portipserverwindow();
             this.Close();
             portipserverwindow.ShowDialog();
