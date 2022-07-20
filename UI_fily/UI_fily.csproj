@@ -235,5 +235,8 @@
     <Resource Include="sorce\vazir_black_4.png" />
     <Resource Include="sorce\vazir_white_4.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="sorce\preview4.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
