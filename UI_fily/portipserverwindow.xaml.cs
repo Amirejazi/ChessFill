@@ -103,5 +103,12 @@ namespace UI_fily
             this.Close();
             gameserverwindow.ShowDialog();
         }
+
+        private void btntest2_Click(object sender, RoutedEventArgs e)
+        {
+            gameclientwindow gameclientwindow = new gameclientwindow();
+            this.Close();
+            gameclientwindow.ShowDialog();
+        }
     }
 }

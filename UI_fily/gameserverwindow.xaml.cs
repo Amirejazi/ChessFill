@@ -263,7 +263,7 @@ namespace UI_fily
                 _60.Background = new SolidColorBrush(Color.FromRgb(182, 136, 100));
                 _62.Background = new SolidColorBrush(Color.FromRgb(182, 136, 100));
                 _64.Background = new SolidColorBrush(Color.FromRgb(182, 136, 100));
-                // button haye bala green shodand -------------------------------
+                // button haye bala brown shodand -------------------------------
                 _2.Background = new SolidColorBrush(Color.FromRgb(241, 219, 182));
                 _4.Background = new SolidColorBrush(Color.FromRgb(241, 219, 182));
                 _6.Background = new SolidColorBrush(Color.FromRgb(241, 219, 182));
@@ -296,9 +296,8 @@ namespace UI_fily
                 _59.Background = new SolidColorBrush(Color.FromRgb(241, 219, 182));
                 _61.Background = new SolidColorBrush(Color.FromRgb(241, 219, 182));
                 _63.Background = new SolidColorBrush(Color.FromRgb(241, 219, 182));
-                // button haye bala green kam rang kamrang shodand ----------------
+                // button haye bala brown kam rang kamrang shodand ----------------
             }
         }
-        
     }
 }
