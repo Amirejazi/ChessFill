@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Socket_Fily;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,6 +20,8 @@ namespace UI_fily
     /// </summary>
     public partial class portipclientwindow : Window
     {
+        ClientStartup _client;
+        TransmissionClient _transmission;
         public portipclientwindow()
         {
             InitializeComponent();

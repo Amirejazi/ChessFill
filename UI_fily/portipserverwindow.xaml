@@ -19,9 +19,9 @@
             <Label Content="Port :" FontSize="50" Foreground="White" HorizontalAlignment="Left" Margin="189,315,0,0" VerticalAlignment="Top"/>
             <Label Content="IP :" FontSize="50" Foreground="White" HorizontalAlignment="Left" Margin="189,390,0,0" VerticalAlignment="Top"/>
             <Label Content="Pass :" FontSize="50" Foreground="White" HorizontalAlignment="Left" Margin="189,459,0,0" VerticalAlignment="Top"/>
-            <TextBox HorizontalAlignment="Left" FontSize="35" Margin="435,337,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="600" Height="45"/>
-            <TextBox HorizontalAlignment="Left" FontSize="35" Margin="435,409,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="600" Height="45"/>
-            <TextBox HorizontalAlignment="Left" FontSize="35" Margin="435,481,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="600" Height="45"/>
+            <TextBox x:Name="Port" HorizontalAlignment="Left" FontSize="35" Margin="435,337,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="600" Height="45"/>
+            <TextBox x:Name="Ip" HorizontalAlignment="Left" FontSize="35" Margin="435,409,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="600" Height="45"/>
+            <TextBox x:Name="Pass" HorizontalAlignment="Left" FontSize="35" Margin="435,481,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="600" Height="45"/>
             <Button Name="btnstart" Content="Start" FontSize="35" Height="50" Width="250" HorizontalAlignment="Center" Margin="0,579,0,0" VerticalAlignment="Top" Click="btnstart_Click"/>
 
         </Grid>

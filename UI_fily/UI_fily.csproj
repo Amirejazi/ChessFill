@@ -201,5 +201,11 @@
     <Resource Include="sorce\vazir_black_3.png" />
     <Resource Include="sorce\vazir_white_3.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Socket_Fily\Socket_Fily.csproj">
+      <Project>{31c8b5e8-4ef3-4961-a653-a6b2c7743410}</Project>
+      <Name>Socket_Fily</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

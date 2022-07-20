@@ -23,6 +23,7 @@ namespace UI_fily
         {
             InitializeComponent();
         }
+        public static string rbtnground {get; set;}
         public void bordercollaps()
         {
             textureborder.Visibility = Visibility.Collapsed;
@@ -73,29 +74,24 @@ namespace UI_fily
             this.Close();
             portipserverwindow.ShowDialog();
         }
-
-
-        public string rbtngroundp { get; set; }
-        
-
         private void rbtngroundblue_Checked(object sender, RoutedEventArgs e)
         {
-            rbtngroundp = "1";
+            rbtnground = "1";
         }
 
         private void rbtngroundblack_Checked(object sender, RoutedEventArgs e)
         {
-            rbtngroundp = "2";
+            rbtnground = "2";
         }
 
         private void rbtngroundgreend_Checked(object sender, RoutedEventArgs e)
         {
-            rbtngroundp = "3";
+            rbtnground = "3";
         }
 
         private void rbtngroundbrown_Checked(object sender, RoutedEventArgs e)
         {
-            rbtngroundp = "4";
+            rbtnground = "4";
         }
         
     }
