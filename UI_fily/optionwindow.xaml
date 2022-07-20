@@ -106,7 +106,7 @@
                     <Label Name="adresslabel" Content="Texture" FontSize="47" Foreground="Black" VerticalContentAlignment="Center" Margin="0,-12,0,0"></Label>
                 </Grid>
                 <Grid Grid.Row="2" Grid.Column="3">
-                    <Border x:Name="textureborder" Visibility="Visible">
+                    <Border x:Name="textureborder" Visibility="Collapsed">
                         <Grid>
                             <Grid Margin="0,0,0,210" >
                                 <Label Content="1" FontSize="60" ></Label>
@@ -148,22 +148,22 @@
                                 <RadioButton Content="Enable" FontSize="30" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalAlignment="Top" VerticalContentAlignment="Center" Margin="652,85,0,0"/>
                                 <RadioButton Content="Disable" FontSize="30" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalAlignment="Top" VerticalContentAlignment="Center" Margin="514,85,0,0"/>
                             </Grid>
-                            <TextBox HorizontalAlignment="Left" Height="42" FontSize="30" Margin="506,154,0,0" TextWrapping="Wrap" Text="TextBoxg" VerticalAlignment="Top" Width="250"/>
-                            <TextBox HorizontalAlignment="Left" Height="42" FontSize="30" Margin="506,222,0,0" TextWrapping="Wrap" Text="TextBoxg" VerticalAlignment="Top" Width="250"/>
+                            <TextBox x:Name="textboxservername" HorizontalAlignment="Left" Height="42" FontSize="30" Margin="506,154,0,0" TextWrapping="Wrap" Text="player1" VerticalAlignment="Top" Width="250"/>
+                            <TextBox x:Name="textboxclientname" HorizontalAlignment="Left" Height="42" FontSize="30" Margin="506,222,0,0" TextWrapping="Wrap" Text="player2" VerticalAlignment="Top" Width="250"/>
 
                         </Grid>
                     </Border>
-                    <Border x:Name="timerborder" Visibility="Collapsed">
+                    <Border x:Name="timerborder" Visibility="Visible">
                         <Grid>
                             <Label Content="Playing with Time :" FontSize="40" Margin="0,0,414,349" ></Label>
                             <Label Content="Enter the game time (min) :" FontSize="40" Margin="0,57,256,292" />
                             <Label Content="Show remaining time :" FontSize="40" Margin="0,117,349,232" />
                             <Grid>
-                                <RadioButton Content="Yes" FontSize="35" HorizontalAlignment="Left" Margin="539,13,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center"/>
-                                <RadioButton Content="No" FontSize="35" HorizontalAlignment="Left" Margin="683,13,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center"/>
+                                <RadioButton x:Name="rbtntimeryes" Content="Yes" FontSize="35" HorizontalAlignment="Left" Margin="539,13,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" Checked="rbtntimeryes_Checked"/>
+                                <RadioButton x:Name="rbtntimerno" IsChecked="True" Content="No" FontSize="35" HorizontalAlignment="Left" Margin="683,13,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" Checked="rbtntimerno_Checked"/>
 
                             </Grid>
-                            <TextBox HorizontalAlignment="Left" FontSize="30" Margin="533,77,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="220" Height="40"/>
+                            <TextBox x:Name="textboxgametime" IsEnabled="False" HorizontalAlignment="Left" FontSize="30" Margin="533,77,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="220" Height="40"/>
                             <Grid Margin="0,114,0,0">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="697*"/>

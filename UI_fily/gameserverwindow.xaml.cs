@@ -334,7 +334,8 @@ namespace UI_fily
 
 
 
-            servername.Content = optionwindow.rbtnnut;
+            servername.Content = optionwindow.servername;
+            clientname.Content = optionwindow.clientname;
         }
         public static string rokh { get; set; }
         public static string asb { get; set; }

@@ -191,6 +191,8 @@ namespace UI_fily
                 gameserverwindow.shah2 = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\shah_white_4.png");
                 gameserverwindow.sarbaz2 = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\sarbaz_white_4.png");
             }
+            servername = textboxservername.Text;
+            clientname = textboxclientname.Text;
             portipserverwindow portipserverwindow = new portipserverwindow();
             this.Close();
             portipserverwindow.ShowDialog();
@@ -250,9 +252,20 @@ namespace UI_fily
             rbtncolor = "2";
             
         }
-        
+
+        public static string servername { get; set; }
+        public static string clientname { get; set; }
+
+        private void rbtntimeryes_Checked(object sender, RoutedEventArgs e)
+        {
+            textboxgametime.IsEnabled = true;
+        }
+
+        private void rbtntimerno_Checked(object sender, RoutedEventArgs e)
+        {
+            textboxgametime.IsEnabled = false;
+        }
     }
     
     
 }
-//public string rokh_b { get; set; } = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\rokh_black_1.png");
