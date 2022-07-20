@@ -94,7 +94,7 @@ namespace UI_fily
             }
             if (optionwindow.rbtnground == "2")
             {
-                _1.Background = new SolidColorBrush(Color.FromRgb(23, 23, 23));
+                _1.Background = new SolidColorBrush(Color.FromRgb(40, 40, 40));
                 _3.Background = new SolidColorBrush(Color.FromRgb(23, 23, 23));
                 _5.Background = new SolidColorBrush(Color.FromRgb(23, 23, 23));
                 _7.Background = new SolidColorBrush(Color.FromRgb(23, 23, 23));
@@ -127,7 +127,7 @@ namespace UI_fily
                 _62.Background = new SolidColorBrush(Color.FromRgb(23, 23, 23));
                 _64.Background = new SolidColorBrush(Color.FromRgb(23, 23, 23));
                 // button haye bala black shodand -------------------------------
-                _2.Background = new SolidColorBrush(Color.FromRgb(255, 255, 255));
+                _2.Background = new SolidColorBrush(Color.FromRgb(245, 245, 245));
                 _4.Background = new SolidColorBrush(Color.FromRgb(255, 255, 255));
                 _6.Background = new SolidColorBrush(Color.FromRgb(255, 255, 255));
                 _8.Background = new SolidColorBrush(Color.FromRgb(255, 255, 255));
