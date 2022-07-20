@@ -86,5 +86,12 @@ namespace UI_fily
                 //RecieveBox.Text += $"Recieve : {recieveMessage}\n";
             });
         }
+
+        private void btntest_Click(object sender, RoutedEventArgs e)
+        {
+            gameserverwindow gameserverwindow = new gameserverwindow();
+            this.Close();
+            gameserverwindow.ShowDialog();
+        }
     }
 }

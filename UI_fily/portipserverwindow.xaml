@@ -23,6 +23,7 @@
             <TextBox x:Name="Ip" HorizontalAlignment="Left" FontSize="35" Margin="435,409,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="600" Height="45"/>
             <TextBox x:Name="Pass" HorizontalAlignment="Left" FontSize="35" Margin="435,481,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="600" Height="45"/>
             <Button Name="btnstart" Content="Start" FontSize="35" Height="50" Width="250" HorizontalAlignment="Center" Margin="0,579,0,0" VerticalAlignment="Top" Click="btnstart_Click"/>
+            <Button x:Name="btntest" Content="Start" FontSize="35" Height="50" Width="250" HorizontalAlignment="Left" Margin="746,172,0,0" VerticalAlignment="Top" Click="btntest_Click" />
 
         </Grid>
     </Border>
