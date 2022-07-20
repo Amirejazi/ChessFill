@@ -315,7 +315,22 @@ namespace UI_fily
             _14img.Source = new BitmapImage(new Uri(sarbaz));
             _15img.Source = new BitmapImage(new Uri(sarbaz));
             _16img.Source = new BitmapImage(new Uri(sarbaz));
-
+            _49img.Source = new BitmapImage(new Uri(sarbaz2));
+            _50img.Source = new BitmapImage(new Uri(sarbaz2));
+            _51img.Source = new BitmapImage(new Uri(sarbaz2));
+            _52img.Source = new BitmapImage(new Uri(sarbaz2));
+            _53img.Source = new BitmapImage(new Uri(sarbaz2));
+            _54img.Source = new BitmapImage(new Uri(sarbaz2));
+            _55img.Source = new BitmapImage(new Uri(sarbaz2));
+            _56img.Source = new BitmapImage(new Uri(sarbaz2));
+            _57img.Source = new BitmapImage(new Uri(rokh2));
+            _58img.Source = new BitmapImage(new Uri(asb2));
+            _59img.Source = new BitmapImage(new Uri(fil2));
+            _60img.Source = new BitmapImage(new Uri(vazir2));
+            _61img.Source = new BitmapImage(new Uri(shah2));
+            _62img.Source = new BitmapImage(new Uri(fil2));
+            _63img.Source = new BitmapImage(new Uri(asb2));
+            _64img.Source = new BitmapImage(new Uri(rokh2));
 
 
 
@@ -327,5 +342,11 @@ namespace UI_fily
         public static string vazir { get; set; }
         public static string shah { get; set; }
         public static string sarbaz { get; set; }
+        public static string rokh2 { get; set; }
+        public static string asb2 { get; set; }
+        public static string fil2 { get; set; }
+        public static string vazir2 { get; set; }
+        public static string shah2 { get; set; }
+        public static string sarbaz2 { get; set; }
     }
 }
