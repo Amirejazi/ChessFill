@@ -15,200 +15,200 @@
         AllowsTransparency="True">
     <Border CornerRadius="20" Background="#3A0CA3">
         <Grid>
-            <Button x:Name="_1" Background="#171717" Height="60" Width="60" HorizontalAlignment="Left" Margin="360,520,0,0" VerticalAlignment="Top">
+            <Button x:Name="_1" Background="#171717" Height="75" Width="74" HorizontalAlignment="Left" Margin="298,568,0,0" VerticalAlignment="Top">
                 <Image x:Name="_1img" ></Image>
             </Button>
-            <Button x:Name="_2" Background="#ffff" Height="60" Width="60" HorizontalAlignment="Left" Margin="420,520,0,0" VerticalAlignment="Top">
+            <Button x:Name="_2" Background="#ffff" Height="75" Width="74" HorizontalAlignment="Left" Margin="372,568,0,0" VerticalAlignment="Top">
                 <Image x:Name="_2img" ></Image>
             </Button>
-            <Button x:Name="_3" Background="#171717" Height="60" Width="60" HorizontalAlignment="Left" Margin="480,520,0,0" VerticalAlignment="Top">
+            <Button x:Name="_3" Background="#171717" Height="75" Width="75" HorizontalAlignment="Left" Margin="446,568,0,0" VerticalAlignment="Top">
                 <Image x:Name="_3img" ></Image>
             </Button>
-            <Button x:Name="_4" Background="#ffff" Height="60" Width="60" HorizontalAlignment="Left" Margin="540,520,0,0" VerticalAlignment="Top">
+            <Button x:Name="_4" Background="#ffff" Height="75" Width="73" HorizontalAlignment="Left" Margin="521,568,0,0" VerticalAlignment="Top">
                 <Image x:Name="_4img" ></Image>
             </Button>
-            <Button x:Name="_5" Background="#171717" Height="60" Width="60" HorizontalAlignment="Left" Margin="600,520,0,0" VerticalAlignment="Top">
+            <Button x:Name="_5" Background="#171717" Height="75" Width="74" HorizontalAlignment="Left" Margin="594,568,0,0" VerticalAlignment="Top">
                 <Image x:Name="_5img" ></Image>
             </Button>
-            <Button x:Name="_6" Background="#ffff" Height="60" Width="60" HorizontalAlignment="Left" Margin="660,520,0,0" VerticalAlignment="Top">
+            <Button x:Name="_6" Background="#ffff" Height="75" Width="74" HorizontalAlignment="Left" Margin="668,568,0,0" VerticalAlignment="Top">
                 <Image x:Name="_6img"  ></Image>
             </Button>
-            <Button x:Name="_7" Background="#171717" Height="60" Width="60" HorizontalAlignment="Left" Margin="720,520,0,0" VerticalAlignment="Top">
+            <Button x:Name="_7" Background="#171717" Height="75" Width="74" HorizontalAlignment="Left" Margin="742,568,0,0" VerticalAlignment="Top">
                 <Image x:Name="_7img" ></Image>
             </Button>
-            <Button x:Name="_8" Background="#ffff" Height="60" Width="60" HorizontalAlignment="Left" Margin="780,520,0,0" VerticalAlignment="Top">
+            <Button x:Name="_8" Background="#ffff" Height="75" Width="74" HorizontalAlignment="Left" Margin="816,568,0,0" VerticalAlignment="Top">
                 <Image x:Name="_8img"  ></Image>
             </Button>
-            <Button x:Name="_9" Background="#ffff" Height="60" Width="60" HorizontalAlignment="Left" Margin="360,460,0,0" VerticalAlignment="Top">
+            <Button x:Name="_9" Background="#ffff" Height="75" Width="74" HorizontalAlignment="Left" Margin="298,493,0,0" VerticalAlignment="Top">
                 <Image x:Name="_9img"  ></Image>
             </Button>
-            <Button x:Name="_10" Background="#171717" Height="60" Width="60" HorizontalAlignment="Left" Margin="420,460,0,0" VerticalAlignment="Top">
+            <Button x:Name="_10" Background="#171717" Height="75" Width="74" HorizontalAlignment="Left" Margin="372,493,0,0" VerticalAlignment="Top">
                 <Image x:Name="_10img"  ></Image>
             </Button>
-            <Button x:Name="_11" Background="#ffff" Height="60" Width="60" HorizontalAlignment="Left" Margin="480,460,0,0" VerticalAlignment="Top">
+            <Button x:Name="_11" Background="#ffff" Height="75" Width="75" HorizontalAlignment="Left" Margin="446,493,0,0" VerticalAlignment="Top">
                 <Image x:Name="_11img" ></Image>
             </Button>
-            <Button x:Name="_12" Background="#171717" Height="60" Width="60" HorizontalAlignment="Left" Margin="540,460,0,0" VerticalAlignment="Top">
+            <Button x:Name="_12" Background="#171717" Height="75" Width="73" HorizontalAlignment="Left" Margin="521,493,0,0" VerticalAlignment="Top">
                 <Image x:Name="_12img" ></Image>
             </Button>
-            <Button x:Name="_13" Background="#ffff" Height="60" Width="60" HorizontalAlignment="Left" Margin="600,460,0,0" VerticalAlignment="Top">
+            <Button x:Name="_13" Background="#ffff" Height="75" Width="74" HorizontalAlignment="Left" Margin="594,493,0,0" VerticalAlignment="Top">
                 <Image x:Name="_13img" ></Image>
             </Button>
-            <Button x:Name="_14" Background="#171717" Height="60" Width="60" HorizontalAlignment="Left" Margin="660,460,0,0" VerticalAlignment="Top">
+            <Button x:Name="_14" Background="#171717" Height="75" Width="74" HorizontalAlignment="Left" Margin="668,493,0,0" VerticalAlignment="Top">
                 <Image x:Name="_14img"  ></Image>
             </Button>
-            <Button x:Name="_15" Background="#ffff" Height="60" Width="60" HorizontalAlignment="Left" Margin="720,460,0,0" VerticalAlignment="Top">
+            <Button x:Name="_15" Background="#ffff" Height="75" Width="74" HorizontalAlignment="Left" Margin="742,493,0,0" VerticalAlignment="Top">
                 <Image x:Name="_15img"  ></Image>
             </Button>
-            <Button x:Name="_16" Background="#171717" Height="60" Width="60" HorizontalAlignment="Left" Margin="780,460,0,0" VerticalAlignment="Top">
+            <Button x:Name="_16" Background="#171717" Height="75" Width="74" HorizontalAlignment="Left" Margin="816,493,0,0" VerticalAlignment="Top">
                 <Image x:Name="_16img" ></Image>
             </Button>
-            <Button x:Name="_17" Background="#171717" Height="60" Width="60" HorizontalAlignment="Left" Margin="360,400,0,0" VerticalAlignment="Top">
+            <Button x:Name="_17" Background="#171717" Height="74" Width="74" HorizontalAlignment="Left" Margin="298,419,0,0" VerticalAlignment="Top">
                 <Image x:Name="_17img"  ></Image>
             </Button>
-            <Button x:Name="_18" Background="#ffff" Height="60" Width="60" HorizontalAlignment="Left" Margin="420,400,0,0" VerticalAlignment="Top">
+            <Button x:Name="_18" Background="#ffff" Height="74" Width="74" HorizontalAlignment="Left" Margin="372,419,0,0" VerticalAlignment="Top">
                 <Image x:Name="_18img" ></Image>
             </Button>
-            <Button x:Name="_19" Background="#171717" Height="60" Width="60" HorizontalAlignment="Left" Margin="480,400,0,0" VerticalAlignment="Top">
+            <Button x:Name="_19" Background="#171717" Height="74" Width="75" HorizontalAlignment="Left" Margin="446,419,0,0" VerticalAlignment="Top">
                 <Image x:Name="_19img" ></Image>
             </Button>
-            <Button x:Name="_20" Background="#ffff" Height="60" Width="60" HorizontalAlignment="Left" Margin="540,400,0,0" VerticalAlignment="Top">
+            <Button x:Name="_20" Background="#ffff" Height="74" Width="73" HorizontalAlignment="Left" Margin="521,419,0,0" VerticalAlignment="Top">
                 <Image x:Name="_20img"  ></Image>
             </Button>
-            <Button x:Name="_21" Background="#171717" Height="60" Width="60" HorizontalAlignment="Left" Margin="600,400,0,0" VerticalAlignment="Top">
+            <Button x:Name="_21" Background="#171717" Height="74" Width="74" HorizontalAlignment="Left" Margin="594,419,0,0" VerticalAlignment="Top">
                 <Image x:Name="_21img" ></Image>
             </Button>
-            <Button x:Name="_22" Background="#ffff" Height="60" Width="60" HorizontalAlignment="Left" Margin="660,400,0,0" VerticalAlignment="Top">
+            <Button x:Name="_22" Background="#ffff" Height="74" Width="74" HorizontalAlignment="Left" Margin="668,419,0,0" VerticalAlignment="Top">
                 <Image x:Name="_22img" ></Image>
             </Button>
-            <Button x:Name="_23" Background="#171717" Height="60" Width="60" HorizontalAlignment="Left" Margin="720,400,0,0" VerticalAlignment="Top">
+            <Button x:Name="_23" Background="#171717" Height="74" Width="74" HorizontalAlignment="Left" Margin="742,419,0,0" VerticalAlignment="Top">
                 <Image x:Name="_23img" ></Image>
             </Button>
-            <Button x:Name="_24" Background="#ffff" Height="60" Width="60" HorizontalAlignment="Left" Margin="780,400,0,0" VerticalAlignment="Top">
+            <Button x:Name="_24" Background="#ffff" Height="74" Width="74" HorizontalAlignment="Left" Margin="816,419,0,0" VerticalAlignment="Top">
                 <Image x:Name="_24img"  ></Image>
             </Button>
-            <Button x:Name="_25" Background="#ffff" Height="60" Width="60" HorizontalAlignment="Left" Margin="360,340,0,0" VerticalAlignment="Top">
+            <Button x:Name="_25" Background="#ffff" Height="75" Width="74" HorizontalAlignment="Left" Margin="298,344,0,0" VerticalAlignment="Top">
                 <Image x:Name="_25img" ></Image>
             </Button>
-            <Button x:Name="_26" Background="#171717" Height="60" Width="60" HorizontalAlignment="Left" Margin="420,340,0,0" VerticalAlignment="Top">
+            <Button x:Name="_26" Background="#171717" Height="75" Width="74" HorizontalAlignment="Left" Margin="372,344,0,0" VerticalAlignment="Top">
                 <Image x:Name="_26img" ></Image>
             </Button>
-            <Button x:Name="_27" Background="#ffff" Height="60" Width="60" HorizontalAlignment="Left" Margin="480,340,0,0" VerticalAlignment="Top">
+            <Button x:Name="_27" Background="#ffff" Height="75" Width="75" HorizontalAlignment="Left" Margin="446,344,0,0" VerticalAlignment="Top">
                 <Image x:Name="_27img"  ></Image>
             </Button>
-            <Button x:Name="_28" Background="#171717" Height="60" Width="60" HorizontalAlignment="Left" Margin="540,340,0,0" VerticalAlignment="Top">
+            <Button x:Name="_28" Background="#171717" Height="75" Width="73" HorizontalAlignment="Left" Margin="521,344,0,0" VerticalAlignment="Top">
                 <Image x:Name="_28img"  ></Image>
             </Button>
-            <Button x:Name="_29" Background="#ffff" Height="60" Width="60" HorizontalAlignment="Left" Margin="600,340,0,0" VerticalAlignment="Top">
+            <Button x:Name="_29" Background="#ffff" Height="75" Width="74" HorizontalAlignment="Left" Margin="594,344,0,0" VerticalAlignment="Top">
                 <Image x:Name="_29img" ></Image>
             </Button>
-            <Button x:Name="_30" Background="#171717" Height="60" Width="60" HorizontalAlignment="Left" Margin="660,340,0,0" VerticalAlignment="Top">
+            <Button x:Name="_30" Background="#171717" Height="75" Width="74" HorizontalAlignment="Left" Margin="668,344,0,0" VerticalAlignment="Top">
                 <Image x:Name="_30img" ></Image>
             </Button>
-            <Button x:Name="_31" Background="#ffff" Height="60" Width="60" HorizontalAlignment="Left" Margin="720,340,0,0" VerticalAlignment="Top">
+            <Button x:Name="_31" Background="#ffff" Height="75" Width="74" HorizontalAlignment="Left" Margin="742,344,0,0" VerticalAlignment="Top">
                 <Image x:Name="_31img"  ></Image>
             </Button>
-            <Button x:Name="_32" Background="#171717" Height="60" Width="60" HorizontalAlignment="Left" Margin="780,340,0,0" VerticalAlignment="Top">
+            <Button x:Name="_32" Background="#171717" Height="75" Width="74" HorizontalAlignment="Left" Margin="816,344,0,0" VerticalAlignment="Top">
                 <Image x:Name="_32img" ></Image>
             </Button>
-            <Button x:Name="_33" Background="#171717" Height="60" Width="60" HorizontalAlignment="Left" Margin="360,280,0,0" VerticalAlignment="Top">
+            <Button x:Name="_33" Background="#171717" Height="74" Width="74" HorizontalAlignment="Left" Margin="298,270,0,0" VerticalAlignment="Top">
                 <Image x:Name="_33img"  ></Image>
             </Button>
-            <Button x:Name="_34" Background="#ffff" Height="60" Width="60" HorizontalAlignment="Left" Margin="420,280,0,0" VerticalAlignment="Top">
+            <Button x:Name="_34" Background="#ffff" Height="74" Width="74" HorizontalAlignment="Left" Margin="372,270,0,0" VerticalAlignment="Top">
                 <Image x:Name="_34img"  ></Image>
             </Button>
-            <Button x:Name="_35" Background="#171717" Height="60" Width="60" HorizontalAlignment="Left" Margin="480,280,0,0" VerticalAlignment="Top">
+            <Button x:Name="_35" Background="#171717" Height="74" Width="75" HorizontalAlignment="Left" Margin="446,270,0,0" VerticalAlignment="Top">
                 <Image x:Name="_35img" ></Image>
             </Button>
-            <Button x:Name="_36" Background="#ffff" Height="60" Width="60" HorizontalAlignment="Left" Margin="540,280,0,0" VerticalAlignment="Top">
+            <Button x:Name="_36" Background="#ffff" Height="74" Width="73" HorizontalAlignment="Left" Margin="521,270,0,0" VerticalAlignment="Top">
                 <Image x:Name="_36img" ></Image>
             </Button>
-            <Button x:Name="_37" Background="#171717" Height="60" Width="60" HorizontalAlignment="Left" Margin="600,280,0,0" VerticalAlignment="Top">
+            <Button x:Name="_37" Background="#171717" Height="74" Width="74" HorizontalAlignment="Left" Margin="594,270,0,0" VerticalAlignment="Top">
                 <Image x:Name="_37img" ></Image>
             </Button>
-            <Button x:Name="_38" Background="#ffff" Height="60" Width="60" HorizontalAlignment="Left" Margin="660,280,0,0" VerticalAlignment="Top">
+            <Button x:Name="_38" Background="#ffff" Height="74" Width="74" HorizontalAlignment="Left" Margin="668,270,0,0" VerticalAlignment="Top">
                 <Image x:Name="_38img" ></Image>
             </Button>
-            <Button x:Name="_39" Background="#171717" Height="60" Width="60" HorizontalAlignment="Left" Margin="720,280,0,0" VerticalAlignment="Top">
+            <Button x:Name="_39" Background="#171717" Height="74" Width="74" HorizontalAlignment="Left" Margin="742,270,0,0" VerticalAlignment="Top">
                 <Image x:Name="_39img"  ></Image>
             </Button>
-            <Button x:Name="_40" Background="#ffff" Height="60" Width="60" HorizontalAlignment="Left" Margin="780,280,0,0" VerticalAlignment="Top">
+            <Button x:Name="_40" Background="#ffff" Height="74" Width="74" HorizontalAlignment="Left" Margin="816,270,0,0" VerticalAlignment="Top">
                 <Image x:Name="_40img"  ></Image>
             </Button>
-            <Button x:Name="_41" Background="#ffff" Height="60" Width="60" HorizontalAlignment="Left" Margin="360,220,0,0" VerticalAlignment="Top">
+            <Button x:Name="_41" Background="#ffff" Height="74" Width="74" HorizontalAlignment="Left" Margin="298,196,0,0" VerticalAlignment="Top">
                 <Image x:Name="_41img" ></Image>
             </Button>
-            <Button x:Name="_42" Background="#171717" Height="60" Width="60" HorizontalAlignment="Left" Margin="420,220,0,0" VerticalAlignment="Top">
+            <Button x:Name="_42" Background="#171717" Height="74" Width="74" HorizontalAlignment="Left" Margin="372,196,0,0" VerticalAlignment="Top">
                 <Image x:Name="_42img"  ></Image>
             </Button>
-            <Button x:Name="_43" Background="#ffff" Height="60" Width="60" HorizontalAlignment="Left" Margin="480,220,0,0" VerticalAlignment="Top">
+            <Button x:Name="_43" Background="#ffff" Height="74" Width="75" HorizontalAlignment="Left" Margin="446,196,0,0" VerticalAlignment="Top">
                 <Image x:Name="_43img"  ></Image>
             </Button>
-            <Button x:Name="_44" Background="#171717" Height="60" Width="60" HorizontalAlignment="Left" Margin="540,220,0,0" VerticalAlignment="Top">
+            <Button x:Name="_44" Background="#171717" Height="74" Width="73" HorizontalAlignment="Left" Margin="521,196,0,0" VerticalAlignment="Top">
                 <Image x:Name="_44img"  ></Image>
             </Button>
-            <Button x:Name="_45" Background="#ffff" Height="60" Width="60" HorizontalAlignment="Left" Margin="600,220,0,0" VerticalAlignment="Top">
+            <Button x:Name="_45" Background="#ffff" Height="74" Width="74" HorizontalAlignment="Left" Margin="594,196,0,0" VerticalAlignment="Top">
                 <Image x:Name="_45img"  ></Image>
             </Button>
-            <Button x:Name="_46" Background="#171717" Height="60" Width="60" HorizontalAlignment="Left" Margin="660,220,0,0" VerticalAlignment="Top">
+            <Button x:Name="_46" Background="#171717" Height="74" Width="74" HorizontalAlignment="Left" Margin="668,196,0,0" VerticalAlignment="Top">
                 <Image x:Name="_46img"  ></Image>
             </Button>
-            <Button x:Name="_47" Background="#ffff" Height="60" Width="60" HorizontalAlignment="Left" Margin="720,220,0,0" VerticalAlignment="Top">
+            <Button x:Name="_47" Background="#ffff" Height="74" Width="74" HorizontalAlignment="Left" Margin="742,196,0,0" VerticalAlignment="Top">
                 <Image x:Name="_47img"  ></Image>
             </Button>
-            <Button x:Name="_48" Background="#171717" Height="60" Width="60" HorizontalAlignment="Left" Margin="780,220,0,0" VerticalAlignment="Top">
+            <Button x:Name="_48" Background="#171717" Height="74" Width="74" HorizontalAlignment="Left" Margin="816,196,0,0" VerticalAlignment="Top">
                 <Image x:Name="_48img"  ></Image>
             </Button>
-            <Button x:Name="_49" Background="#171717" Height="60" Width="60" HorizontalAlignment="Left" Margin="360,160,0,0" VerticalAlignment="Top">
+            <Button x:Name="_49" Background="#171717" Height="75" Width="74" HorizontalAlignment="Left" Margin="298,121,0,0" VerticalAlignment="Top">
                 <Image x:Name="_49img"  ></Image>
             </Button>
-            <Button x:Name="_50" Background="#ffff" Height="60" Width="60" HorizontalAlignment="Left" Margin="420,160,0,0" VerticalAlignment="Top">
+            <Button x:Name="_50" Background="#ffff" Height="75" Width="74" HorizontalAlignment="Left" Margin="372,121,0,0" VerticalAlignment="Top">
                 <Image x:Name="_50img"  ></Image>
             </Button>
-            <Button x:Name="_51" Background="#171717" Height="60" Width="60" HorizontalAlignment="Left" Margin="480,160,0,0" VerticalAlignment="Top">
+            <Button x:Name="_51" Background="#171717" Height="75" Width="75" HorizontalAlignment="Left" Margin="446,121,0,0" VerticalAlignment="Top">
                 <Image x:Name="_51img"  ></Image>
             </Button>
-            <Button x:Name="_52" Background="#ffff" Height="60" Width="60" HorizontalAlignment="Left" Margin="540,160,0,0" VerticalAlignment="Top">
+            <Button x:Name="_52" Background="#ffff" Height="75" Width="73" HorizontalAlignment="Left" Margin="521,121,0,0" VerticalAlignment="Top">
                 <Image x:Name="_52img"  ></Image>
             </Button>
-            <Button x:Name="_53" Background="#171717" Height="60" Width="60" HorizontalAlignment="Left" Margin="600,160,0,0" VerticalAlignment="Top">
+            <Button x:Name="_53" Background="#171717" Height="75" Width="74" HorizontalAlignment="Left" Margin="594,121,0,0" VerticalAlignment="Top">
                 <Image x:Name="_53img" ></Image>
             </Button>
-            <Button x:Name="_54" Background="#ffff" Height="60" Width="60" HorizontalAlignment="Left" Margin="660,160,0,0" VerticalAlignment="Top">
+            <Button x:Name="_54" Background="#ffff" Height="75" Width="74" HorizontalAlignment="Left" Margin="668,121,0,0" VerticalAlignment="Top">
                 <Image x:Name="_54img"  ></Image>
             </Button>
-            <Button x:Name="_55" Background="#171717" Height="60" Width="60" HorizontalAlignment="Left" Margin="720,160,0,0" VerticalAlignment="Top">
+            <Button x:Name="_55" Background="#171717" Height="75" Width="74" HorizontalAlignment="Left" Margin="742,121,0,0" VerticalAlignment="Top">
                 <Image x:Name="_55img"  ></Image>
             </Button>
-            <Button x:Name="_56" Background="#ffff" Height="60" Width="60" HorizontalAlignment="Left" Margin="780,160,0,0" VerticalAlignment="Top">
+            <Button x:Name="_56" Background="#ffff" Height="75" Width="74" HorizontalAlignment="Left" Margin="816,121,0,0" VerticalAlignment="Top">
                 <Image x:Name="_56img" ></Image>
             </Button>
-            <Button x:Name="_57" Background="#ffff" Height="60" Width="60" HorizontalAlignment="Left" Margin="360,100,0,0" VerticalAlignment="Top">
+            <Button x:Name="_57" Background="#ffff" Height="75" Width="74" HorizontalAlignment="Left" Margin="298,46,0,0" VerticalAlignment="Top">
                 <Image x:Name="_57img"  ></Image>
             </Button>
-            <Button x:Name="_58" Background="#171717" Height="60" Width="60" HorizontalAlignment="Left" Margin="420,100,0,0" VerticalAlignment="Top">
+            <Button x:Name="_58" Background="#171717" Height="75" Width="74" HorizontalAlignment="Left" Margin="372,46,0,0" VerticalAlignment="Top">
                 <Image x:Name="_58img"  ></Image>
             </Button>
-            <Button x:Name="_59" Background="#ffff" Height="60" Width="60" HorizontalAlignment="Left" Margin="480,100,0,0" VerticalAlignment="Top">
+            <Button x:Name="_59" Background="#ffff" Height="75" Width="75" HorizontalAlignment="Left" Margin="446,46,0,0" VerticalAlignment="Top">
                 <Image x:Name="_59img"  ></Image>
             </Button>
-            <Button x:Name="_60" Background="#171717" Height="60" Width="60" HorizontalAlignment="Left" Margin="540,100,0,0" VerticalAlignment="Top">
+            <Button x:Name="_60" Background="#171717" Height="75" Width="73" HorizontalAlignment="Left" Margin="521,46,0,0" VerticalAlignment="Top">
                 <Image x:Name="_60img" ></Image>
             </Button>
-            <Button x:Name="_61" Background="#ffff" Height="60" Width="60" HorizontalAlignment="Left" Margin="600,100,0,0" VerticalAlignment="Top">
+            <Button x:Name="_61" Background="#ffff" Height="75" Width="74" HorizontalAlignment="Left" Margin="594,46,0,0" VerticalAlignment="Top">
                 <Image x:Name="_61img"  ></Image>
             </Button>
-            <Button x:Name="_62" Background="#171717" Height="60" Width="60" HorizontalAlignment="Left" Margin="660,100,0,0" VerticalAlignment="Top">
+            <Button x:Name="_62" Background="#171717" Height="75" Width="74" HorizontalAlignment="Left" Margin="668,46,0,0" VerticalAlignment="Top">
                 <Image x:Name="_62img" ></Image>
             </Button>
-            <Button x:Name="_63" Background="#ffff" Height="60" Width="60" HorizontalAlignment="Left" Margin="720,100,0,0" VerticalAlignment="Top">
+            <Button x:Name="_63" Background="#ffff" Height="75" Width="74" HorizontalAlignment="Left" Margin="742,46,0,0" VerticalAlignment="Top">
                 <Image x:Name="_63img" ></Image>
             </Button>
-            <Button x:Name="_64" Background="#171717" Height="60" Width="60" HorizontalAlignment="Left" Margin="780,100,0,0" VerticalAlignment="Top">
+            <Button x:Name="_64" Background="#171717" Height="75" Width="74" HorizontalAlignment="Left" Margin="816,46,0,0" VerticalAlignment="Top">
                 <Image x:Name="_64img"  ></Image>
             </Button>
-            <Label Content="server name" Foreground="White" FontSize="50" HorizontalAlignment="Left" Margin="462,580,0,0" VerticalAlignment="Top" Height="90" Width="300"/>
-            <Label Content="client name" Foreground="White" FontSize="50" HorizontalAlignment="Left" Margin="462,16,0,0" VerticalAlignment="Top" Height="90" Width="300"/>
+            <Label Content="server name" Foreground="White" FontSize="50" HorizontalAlignment="Left" Margin="940,588,0,0" VerticalAlignment="Top" Height="103" Width="341"/>
+            <Label Content="client name" Foreground="White" FontSize="50" HorizontalAlignment="Left" Margin="975,28,0,0" VerticalAlignment="Top" Height="90" Width="300"/>
             <Label Content="00:00" Foreground="White" FontSize="50" HorizontalAlignment="Left" Margin="117,19,0,0" VerticalAlignment="Top" Height="90" Width="138"/>
 
         </Grid>
