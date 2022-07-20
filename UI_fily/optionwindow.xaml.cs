@@ -93,7 +93,16 @@ namespace UI_fily
         {
             rbtnground = "4";
         }
-        
+        public static string rbtnnut { get; set; }
+
+
+
+
+
+
+
+
+
     }
     
 }
