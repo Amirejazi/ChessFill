@@ -207,5 +207,33 @@
       <Name>Socket_Fily</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="sorce\asbsarbaz_white_1.png" />
+    <Resource Include="sorce\asb_black_1.png" />
+    <Resource Include="sorce\filsarbaz_white_1.png" />
+    <Resource Include="sorce\fil_black_1.png" />
+    <Resource Include="sorce\rokhsarbaz_white_1.png" />
+    <Resource Include="sorce\rokh_black_1.png" />
+    <Resource Include="sorce\sarbaz_black_1.png" />
+    <Resource Include="sorce\sarbaz_white_1.png" />
+    <Resource Include="sorce\shahsarbaz_white_1.png" />
+    <Resource Include="sorce\shah_black_1.png" />
+    <Resource Include="sorce\vazirsarbaz_white_1.png" />
+    <Resource Include="sorce\vazir_black_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="sorce\asb_black_4.png" />
+    <Resource Include="sorce\asb_white_4.png" />
+    <Resource Include="sorce\fil_black_4.png" />
+    <Resource Include="sorce\fil_white_4.png" />
+    <Resource Include="sorce\rokh_black_4.png" />
+    <Resource Include="sorce\rokh_white_4.png" />
+    <Resource Include="sorce\sarbaz_black_4.png" />
+    <Resource Include="sorce\sarbaz_white_4.png" />
+    <Resource Include="sorce\shah_black_4.png" />
+    <Resource Include="sorce\shah_white_4.png" />
+    <Resource Include="sorce\vazir_black_4.png" />
+    <Resource Include="sorce\vazir_white_4.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
