@@ -74,33 +74,30 @@ namespace UI_fily
             portipserverwindow.ShowDialog();
         }
 
+
+        public string rbtngroundp { get; set; }
         
-        string rbtnground = "";
 
         private void rbtngroundblue_Checked(object sender, RoutedEventArgs e)
         {
-            rbtnground = "1";
+            rbtngroundp = "1";
         }
 
         private void rbtngroundblack_Checked(object sender, RoutedEventArgs e)
         {
-            rbtnground = "2";
+            rbtngroundp = "2";
         }
 
         private void rbtngroundgreend_Checked(object sender, RoutedEventArgs e)
         {
-            rbtnground = "3";
+            rbtngroundp = "3";
         }
 
         private void rbtngroundbrown_Checked(object sender, RoutedEventArgs e)
         {
-            rbtnground = "4";
+            rbtngroundp = "4";
         }
-        public string rbtngroundp
-        {
-            get { return rbtngroundp; }
-            set { rbtngroundp = rbtnground;}
-        }
+        
     }
     
 }

@@ -22,8 +22,8 @@ namespace UI_fily
         public gameserverwindow()
         {
             InitializeComponent();
+            
         }
-
         
     }
 }
