@@ -33,7 +33,7 @@ namespace UI_fily
             try
             {
                 //ChangeState("Starting Server", new SolidColorBrush(Colors.Orange));
-                _serverstartup = new ServerStartup(int.Parse(Port.Text), Ip.Text, acceptedCallback, acceptedErrorcallback);
+                _serverstartup = new ServerStartup(int.Parse(Port.Text), Ip.Text, acceptedCallback, acceptedErrorcallback); ;
                 _serverstartup.InitServer();
                 //StartState(false);
                 //ChangeState("Accepting Client...", new SolidColorBrush(Colors.Blue));
@@ -61,10 +61,20 @@ namespace UI_fily
                 //ChangeState("Connect to Client...", new SolidColorBrush(Colors.Orange));
             });
             _transmission = new ServerTransmission(acceptedsocket, recieveCallback, receiveErrorCallback);
+            
             //this.Dispatcher.Invoke(() => {
             //    SendBtn.IsEnabled = true;
             //});
             await _transmission.RecieveAsync();
+            try
+            {
+                _transmission.Send(Pass.Text);
+                //RecieveBox.Text += $"Me : {SendBox.Text}\n";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + "\n try again", "sending error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private async void receiveErrorCallback(string error)
