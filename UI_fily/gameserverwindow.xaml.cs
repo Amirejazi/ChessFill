@@ -160,6 +160,144 @@ namespace UI_fily
                 _63.Background = new SolidColorBrush(Color.FromRgb(255, 255, 255));
                 // button haye bala blue kamrang shodand --------------------------
             }
+            if (optionwindow.rbtnground == "3")
+            {
+                _1.Background = new SolidColorBrush(Color.FromRgb(125, 148, 92));
+                _3.Background = new SolidColorBrush(Color.FromRgb(125, 148, 92));
+                _5.Background = new SolidColorBrush(Color.FromRgb(125, 148, 92));
+                _7.Background = new SolidColorBrush(Color.FromRgb(125, 148, 92));
+                _10.Background = new SolidColorBrush(Color.FromRgb(125, 148, 92));
+                _12.Background = new SolidColorBrush(Color.FromRgb(125, 148, 92));
+                _14.Background = new SolidColorBrush(Color.FromRgb(125, 148, 92));
+                _16.Background = new SolidColorBrush(Color.FromRgb(125, 148, 92));
+                _17.Background = new SolidColorBrush(Color.FromRgb(125, 148, 92));
+                _19.Background = new SolidColorBrush(Color.FromRgb(125, 148, 92));
+                _21.Background = new SolidColorBrush(Color.FromRgb(125, 148, 92));
+                _23.Background = new SolidColorBrush(Color.FromRgb(125, 148, 92));
+                _26.Background = new SolidColorBrush(Color.FromRgb(125, 148, 92));
+                _28.Background = new SolidColorBrush(Color.FromRgb(125, 148, 92));
+                _30.Background = new SolidColorBrush(Color.FromRgb(125, 148, 92));
+                _32.Background = new SolidColorBrush(Color.FromRgb(125, 148, 92));
+                _33.Background = new SolidColorBrush(Color.FromRgb(125, 148, 92));
+                _35.Background = new SolidColorBrush(Color.FromRgb(125, 148, 92));
+                _37.Background = new SolidColorBrush(Color.FromRgb(125, 148, 92));
+                _39.Background = new SolidColorBrush(Color.FromRgb(125, 148, 92));
+                _42.Background = new SolidColorBrush(Color.FromRgb(125, 148, 92));
+                _44.Background = new SolidColorBrush(Color.FromRgb(125, 148, 92));
+                _46.Background = new SolidColorBrush(Color.FromRgb(125, 148, 92));
+                _48.Background = new SolidColorBrush(Color.FromRgb(125, 148, 92));
+                _49.Background = new SolidColorBrush(Color.FromRgb(125, 148, 92));
+                _51.Background = new SolidColorBrush(Color.FromRgb(125, 148, 92));
+                _53.Background = new SolidColorBrush(Color.FromRgb(125, 148, 92));
+                _55.Background = new SolidColorBrush(Color.FromRgb(125, 148, 92));
+                _58.Background = new SolidColorBrush(Color.FromRgb(125, 148, 92));
+                _60.Background = new SolidColorBrush(Color.FromRgb(125, 148, 92));
+                _62.Background = new SolidColorBrush(Color.FromRgb(125, 148, 92));
+                _64.Background = new SolidColorBrush(Color.FromRgb(125, 148, 92));
+                // button haye bala green shodand -------------------------------
+                _2.Background = new SolidColorBrush(Color.FromRgb(238, 238, 214));
+                _4.Background = new SolidColorBrush(Color.FromRgb(238, 238, 214));
+                _6.Background = new SolidColorBrush(Color.FromRgb(238, 238, 214));
+                _8.Background = new SolidColorBrush(Color.FromRgb(238, 238, 214));
+                _9.Background = new SolidColorBrush(Color.FromRgb(238, 238, 214));
+                _11.Background = new SolidColorBrush(Color.FromRgb(238, 238, 214));
+                _13.Background = new SolidColorBrush(Color.FromRgb(238, 238, 214));
+                _15.Background = new SolidColorBrush(Color.FromRgb(238, 238, 214));
+                _18.Background = new SolidColorBrush(Color.FromRgb(238, 238, 214));
+                _20.Background = new SolidColorBrush(Color.FromRgb(238, 238, 214));
+                _22.Background = new SolidColorBrush(Color.FromRgb(238, 238, 214));
+                _24.Background = new SolidColorBrush(Color.FromRgb(238, 238, 214));
+                _25.Background = new SolidColorBrush(Color.FromRgb(238, 238, 214));
+                _27.Background = new SolidColorBrush(Color.FromRgb(238, 238, 214));
+                _29.Background = new SolidColorBrush(Color.FromRgb(238, 238, 214));
+                _31.Background = new SolidColorBrush(Color.FromRgb(238, 238, 214));
+                _34.Background = new SolidColorBrush(Color.FromRgb(238, 238, 214));
+                _36.Background = new SolidColorBrush(Color.FromRgb(238, 238, 214));
+                _38.Background = new SolidColorBrush(Color.FromRgb(238, 238, 214));
+                _40.Background = new SolidColorBrush(Color.FromRgb(238, 238, 214));
+                _41.Background = new SolidColorBrush(Color.FromRgb(238, 238, 214));
+                _43.Background = new SolidColorBrush(Color.FromRgb(238, 238, 214));
+                _45.Background = new SolidColorBrush(Color.FromRgb(238, 238, 214));
+                _47.Background = new SolidColorBrush(Color.FromRgb(238, 238, 214));
+                _50.Background = new SolidColorBrush(Color.FromRgb(238, 238, 214));
+                _52.Background = new SolidColorBrush(Color.FromRgb(238, 238, 214));
+                _54.Background = new SolidColorBrush(Color.FromRgb(238, 238, 214));
+                _56.Background = new SolidColorBrush(Color.FromRgb(238, 238, 214));
+                _57.Background = new SolidColorBrush(Color.FromRgb(238, 238, 214));
+                _59.Background = new SolidColorBrush(Color.FromRgb(238, 238, 214));
+                _61.Background = new SolidColorBrush(Color.FromRgb(238, 238, 214));
+                _63.Background = new SolidColorBrush(Color.FromRgb(238, 238, 214));
+                // button haye bala green kam rang kamrang shodand ----------------
+            }
+            if (optionwindow.rbtnground == "4")
+            {
+                _1.Background = new SolidColorBrush(Color.FromRgb(125, 148, 92));
+                _3.Background = new SolidColorBrush(Color.FromRgb(125, 148, 92));
+                _5.Background = new SolidColorBrush(Color.FromRgb(125, 148, 92));
+                _7.Background = new SolidColorBrush(Color.FromRgb(125, 148, 92));
+                _10.Background = new SolidColorBrush(Color.FromRgb(125, 148, 92));
+                _12.Background = new SolidColorBrush(Color.FromRgb(125, 148, 92));
+                _14.Background = new SolidColorBrush(Color.FromRgb(125, 148, 92));
+                _16.Background = new SolidColorBrush(Color.FromRgb(125, 148, 92));
+                _17.Background = new SolidColorBrush(Color.FromRgb(125, 148, 92));
+                _19.Background = new SolidColorBrush(Color.FromRgb(125, 148, 92));
+                _21.Background = new SolidColorBrush(Color.FromRgb(125, 148, 92));
+                _23.Background = new SolidColorBrush(Color.FromRgb(125, 148, 92));
+                _26.Background = new SolidColorBrush(Color.FromRgb(125, 148, 92));
+                _28.Background = new SolidColorBrush(Color.FromRgb(125, 148, 92));
+                _30.Background = new SolidColorBrush(Color.FromRgb(125, 148, 92));
+                _32.Background = new SolidColorBrush(Color.FromRgb(125, 148, 92));
+                _33.Background = new SolidColorBrush(Color.FromRgb(125, 148, 92));
+                _35.Background = new SolidColorBrush(Color.FromRgb(125, 148, 92));
+                _37.Background = new SolidColorBrush(Color.FromRgb(125, 148, 92));
+                _39.Background = new SolidColorBrush(Color.FromRgb(125, 148, 92));
+                _42.Background = new SolidColorBrush(Color.FromRgb(125, 148, 92));
+                _44.Background = new SolidColorBrush(Color.FromRgb(125, 148, 92));
+                _46.Background = new SolidColorBrush(Color.FromRgb(125, 148, 92));
+                _48.Background = new SolidColorBrush(Color.FromRgb(125, 148, 92));
+                _49.Background = new SolidColorBrush(Color.FromRgb(125, 148, 92));
+                _51.Background = new SolidColorBrush(Color.FromRgb(125, 148, 92));
+                _53.Background = new SolidColorBrush(Color.FromRgb(125, 148, 92));
+                _55.Background = new SolidColorBrush(Color.FromRgb(125, 148, 92));
+                _58.Background = new SolidColorBrush(Color.FromRgb(125, 148, 92));
+                _60.Background = new SolidColorBrush(Color.FromRgb(125, 148, 92));
+                _62.Background = new SolidColorBrush(Color.FromRgb(125, 148, 92));
+                _64.Background = new SolidColorBrush(Color.FromRgb(125, 148, 92));
+                // button haye bala green shodand -------------------------------
+                _2.Background = new SolidColorBrush(Color.FromRgb(238, 238, 214));
+                _4.Background = new SolidColorBrush(Color.FromRgb(238, 238, 214));
+                _6.Background = new SolidColorBrush(Color.FromRgb(238, 238, 214));
+                _8.Background = new SolidColorBrush(Color.FromRgb(238, 238, 214));
+                _9.Background = new SolidColorBrush(Color.FromRgb(238, 238, 214));
+                _11.Background = new SolidColorBrush(Color.FromRgb(238, 238, 214));
+                _13.Background = new SolidColorBrush(Color.FromRgb(238, 238, 214));
+                _15.Background = new SolidColorBrush(Color.FromRgb(238, 238, 214));
+                _18.Background = new SolidColorBrush(Color.FromRgb(238, 238, 214));
+                _20.Background = new SolidColorBrush(Color.FromRgb(238, 238, 214));
+                _22.Background = new SolidColorBrush(Color.FromRgb(238, 238, 214));
+                _24.Background = new SolidColorBrush(Color.FromRgb(238, 238, 214));
+                _25.Background = new SolidColorBrush(Color.FromRgb(238, 238, 214));
+                _27.Background = new SolidColorBrush(Color.FromRgb(238, 238, 214));
+                _29.Background = new SolidColorBrush(Color.FromRgb(238, 238, 214));
+                _31.Background = new SolidColorBrush(Color.FromRgb(238, 238, 214));
+                _34.Background = new SolidColorBrush(Color.FromRgb(238, 238, 214));
+                _36.Background = new SolidColorBrush(Color.FromRgb(238, 238, 214));
+                _38.Background = new SolidColorBrush(Color.FromRgb(238, 238, 214));
+                _40.Background = new SolidColorBrush(Color.FromRgb(238, 238, 214));
+                _41.Background = new SolidColorBrush(Color.FromRgb(238, 238, 214));
+                _43.Background = new SolidColorBrush(Color.FromRgb(238, 238, 214));
+                _45.Background = new SolidColorBrush(Color.FromRgb(238, 238, 214));
+                _47.Background = new SolidColorBrush(Color.FromRgb(238, 238, 214));
+                _50.Background = new SolidColorBrush(Color.FromRgb(238, 238, 214));
+                _52.Background = new SolidColorBrush(Color.FromRgb(238, 238, 214));
+                _54.Background = new SolidColorBrush(Color.FromRgb(238, 238, 214));
+                _56.Background = new SolidColorBrush(Color.FromRgb(238, 238, 214));
+                _57.Background = new SolidColorBrush(Color.FromRgb(238, 238, 214));
+                _59.Background = new SolidColorBrush(Color.FromRgb(238, 238, 214));
+                _61.Background = new SolidColorBrush(Color.FromRgb(238, 238, 214));
+                _63.Background = new SolidColorBrush(Color.FromRgb(238, 238, 214));
+                // button haye bala green kam rang kamrang shodand ----------------
+            }
         }
         
     }
