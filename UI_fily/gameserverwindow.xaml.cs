@@ -1258,6 +1258,19 @@ namespace UI_fily
             else
                 return false;
         }
+        bool ShahChecker(bool flagc, string img)
+        {
+            string pattern;
+            if (flagc)
+                pattern = @"^.{0,}shah_w.{0,}$";
+            else
+                pattern = @"^.{0,}shah_b.{0,}$";
+            Regex t = new Regex(pattern);
+            if (t.IsMatch(img))
+                return true;
+            else
+                return false;
+        }
 
 
         bool ColorChecker(bool flag, string img)
