@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -642,6 +643,19 @@ namespace UI_fily
             }
             loc = asb_b;
             indexg = index;
+        }
+        bool ColorChecker(bool flag, string img)
+        {
+            string pattern;
+            if (flag)
+                pattern = @"^.{0,}white.{0,}$";
+            else
+                pattern = @"^.{0,}black.{0,}$";
+            Regex t = new Regex(pattern);
+            if (t.IsMatch(img))
+                return true;
+            else
+                return false;
         }
     }
 }
