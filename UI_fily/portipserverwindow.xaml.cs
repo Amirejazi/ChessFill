@@ -127,6 +127,10 @@ namespace UI_fily
                 MessageBox.Show(ex.Message + "\n try again", "sending error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
+        private void closee(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
 
 
 

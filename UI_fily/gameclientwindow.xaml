@@ -208,9 +208,11 @@
                 <Image x:Name="_64img"  ></Image>
             </Button>
             <Label x:Name="servername" Content="server name" Foreground="White" FontSize="50" HorizontalAlignment="Left" Margin="919,574,0,0" VerticalAlignment="Top" Height="103" Width="341"/>
-            <Label x:Name="clientname" Content="client name" Foreground="White" FontSize="50" HorizontalAlignment="Left" Margin="916,40,0,0" VerticalAlignment="Top" Height="90" Width="300"/>
+            <Label x:Name="clientname" Content="client name" Foreground="White" FontSize="50" HorizontalAlignment="Left" Margin="919,158,0,0" VerticalAlignment="Top" Height="90" Width="300"/>
             <Label Content="00:00" Foreground="White" FontSize="50" HorizontalAlignment="Left" Margin="117,19,0,0" VerticalAlignment="Top" Height="90" Width="138"/>
-
+            <Button x:Name="close" BorderThickness="0" Height="53" Width="54" Background="Transparent" Margin="1146,0,0,0" Click="closee" VerticalAlignment="Top">
+                <Image Source="sorce/close.png" Height="47" Width="45"></Image>
+            </Button>
         </Grid>
     </Border>
 </Window>

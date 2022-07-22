@@ -232,7 +232,10 @@ namespace UI_fily
             rbtn2 = "2";
         }
 
-        
+        private void closee(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
     
     

@@ -1597,5 +1597,9 @@ namespace UI_fily
         {
             EventOfButtons(64);
         }
+        private void closee(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

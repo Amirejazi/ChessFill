@@ -207,7 +207,7 @@
                     </Border>
                 </Grid>
                 <Grid Grid.ColumnSpan="2" Margin="676,0,690,28" Grid.Column="3">
-                    <Button Width="75" Height="75" HorizontalAlignment="Left" Background="Transparent" Margin="84,-7,0,-9">
+                    <Button x:Name="close" BorderThickness="0" Width="53" Height="53" HorizontalAlignment="Left" Background="Transparent" Margin="98,0,0,6" Click="closee">
                         <Image Source="sorce/close.png" Height="47" Width="45"></Image>
                     </Button>
 
