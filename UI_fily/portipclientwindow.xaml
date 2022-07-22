@@ -26,7 +26,9 @@
             <Button Name="btnstartclient" Content="Start" FontSize="35" Height="50" Width="250" HorizontalAlignment="Center" Margin="0,594,0,0" VerticalAlignment="Top" Click="btnstartclient_Click"/>
             <Button x:Name="btnconnectclient" Content="connecting" FontSize="35" Height="50" Width="250" HorizontalAlignment="Center" Margin="0,441,0,0" VerticalAlignment="Top" Click="btnconnectclient_Click"/>
             <Button x:Name="test" Content="test" FontSize="35" Height="50" Width="250" HorizontalAlignment="Left" Margin="776,145,0,0" VerticalAlignment="Top" Click="test2"/>
-
+            <Button x:Name="close" BorderThickness="0" Height="53" Width="54" Background="Transparent" Margin="1146,0,0,0" Click="closee" VerticalAlignment="Top">
+                <Image Source="sorce/close2.png" Height="47" Width="45"></Image>
+            </Button>
         </Grid>
     </Border>
 </Window>

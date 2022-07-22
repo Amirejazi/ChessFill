@@ -306,6 +306,7 @@ namespace UI_fily
         public static string sarbaz_b { get; set; }
         public List<Button> Button { get; set; }
         public List<Image> images { get; set; }
+
         void ResetBrush()
         {
             if (optionwindow.rbtnground == "1")
@@ -1648,6 +1649,9 @@ namespace UI_fily
         {
             EventOfButtons(64);
         }
-
+        private void closee(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

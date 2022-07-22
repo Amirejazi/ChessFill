@@ -74,6 +74,9 @@
                     <Grid Grid.Row="4">
                         <Image Source="sorce/setting.png"></Image>
                     </Grid>
+                    <Grid Grid.Row="5">
+                        <Image Source="sorce/heart.png"></Image>
+                    </Grid>
                 </Grid>
                 <Grid Grid.Row="2"
                       Grid.Column="2">
@@ -99,6 +102,9 @@
                     </Grid>
                     <Grid Grid.Row="4">
                         <Button Content="setting" Name="btnsetting" BorderThickness="0" Foreground="Black" Background="Transparent" FontSize="45" HorizontalContentAlignment="Left" Margin="12,0,10,0" Click="btnsetting_Click"></Button>
+                    </Grid>
+                    <Grid Grid.Row="5">
+                        <Button Content="about us" Name="btnsettingd" BorderThickness="0" Foreground="Black" Background="Transparent" FontSize="45" HorizontalContentAlignment="Left" Margin="12,0,10,0" Click="btnsettingd_Click" ></Button>
                     </Grid>
 
                 </Grid>
@@ -134,7 +140,7 @@
                         </Grid>
 
                     </Border>
-                    <Border x:Name="informationborder" Visibility="Visible">
+                    <Border x:Name="informationborder" Visibility="Collapsed">
                         <Grid>
                             <Label Content="Choose a Color :" FontSize="40" Height="62" VerticalAlignment="Top" Margin="6,0,430,0" ></Label>
                             <Label Content="The Possibility of Ctrl + Z :" FontSize="40" Height="62" VerticalAlignment="Top" Margin="6,66,291,0" />
@@ -194,6 +200,219 @@
                             </Grid>
                         </Grid>
                     </Border>
+                    <Border x:Name="aboutusborder" Visibility="Visible">
+                        <Grid>
+                            <Ellipse Fill="#3A0CA3"
+                                 Height="150"
+                                 Width="150"
+                                 x:Name="EG_1">
+                            </Ellipse>
+                            <Ellipse Fill="#3A0CA3"
+                                 Height="150"
+                                 Width="150"
+                                 x:Name="EG_2">
+                            </Ellipse>
+                            <Ellipse Fill="#3A0CA3"
+                                 Height="150"
+                                 Width="150"
+                                 x:Name="EG_3">
+                            </Ellipse>
+                            <Ellipse Fill="#4361EE"
+                                 Height="150"
+                                 Width="150"
+                                 x:Name="ER_1">
+                            </Ellipse>
+                            <Ellipse Fill="#4361EE"
+                                 Height="150"
+                                 Width="150"
+                                 x:Name="ER_2">
+                            </Ellipse>
+                            <Ellipse Fill="#4361EE"
+                                 Height="150"
+                                 Width="150"
+                                 x:Name="ER_3">
+                            </Ellipse>
+                            <ToggleButton x:Name="Tg_btn"
+                                      Style="{StaticResource TgBtnStyle}" Margin="304,135,304,132">
+
+                                <ToggleButton.Triggers>
+
+                                    <EventTrigger RoutedEvent="ToggleButton.Checked">
+
+                                        <EventTrigger.Actions>
+
+                                            <BeginStoryboard x:Name="Ellipse_Activated">
+
+                                                <Storyboard>
+
+                                                    <DoubleAnimation BeginTime="00:00:00"
+                                                                 Duration="00:00:03"
+                                                                 From="150"
+                                                                 To="450"
+                                                                 Storyboard.TargetProperty="(Ellipse.Width)"
+                                                                 Storyboard.TargetName="EG_1"
+                                                                 RepeatBehavior="Forever"/>
+
+                                                    <DoubleAnimation BeginTime="00:00:00"
+                                                                 Duration="00:00:03"
+                                                                 From="150"
+                                                                 To="450"
+                                                                 Storyboard.TargetProperty="(Ellipse.Height)"
+                                                                 Storyboard.TargetName="EG_1"
+                                                                 RepeatBehavior="Forever"/>
+
+                                                    <DoubleAnimation Storyboard.TargetProperty="Opacity"
+                                                                 Storyboard.TargetName="EG_1"
+                                                                 From="1.0"
+                                                                 To="0.0"
+                                                                 BeginTime="00:00:00"
+                                                                 Duration="00:00:03"
+                                                                 RepeatBehavior="Forever"/>
+
+                                                    <DoubleAnimation BeginTime="00:00:01"
+                                                                 Duration="00:00:03"
+                                                                 From="150"
+                                                                 To="450"
+                                                                 Storyboard.TargetProperty="(Ellipse.Width)"
+                                                                 Storyboard.TargetName="EG_2"
+                                                                 RepeatBehavior="Forever"/>
+
+                                                    <DoubleAnimation BeginTime="00:00:01"
+                                                                 Duration="00:00:03"
+                                                                 From="150"
+                                                                 To="450"
+                                                                 Storyboard.TargetProperty="(Ellipse.Height)"
+                                                                 Storyboard.TargetName="EG_2"
+                                                                 RepeatBehavior="Forever"/>
+
+                                                    <DoubleAnimation Storyboard.TargetProperty="Opacity"
+                                                                 Storyboard.TargetName="EG_2"
+                                                                 From="1.0"
+                                                                 To="0.0"
+                                                                 BeginTime="00:00:01"
+                                                                 Duration="00:00:03"
+                                                                 RepeatBehavior="Forever"/>
+
+                                                    <DoubleAnimation BeginTime="00:00:02"
+                                                                 Duration="00:00:03"
+                                                                 From="150"
+                                                                 To="450"
+                                                                 Storyboard.TargetProperty="(Ellipse.Width)"
+                                                                 Storyboard.TargetName="EG_3"
+                                                                 RepeatBehavior="Forever"/>
+
+                                                    <DoubleAnimation BeginTime="00:00:02"
+                                                                 Duration="00:00:03"
+                                                                 From="150"
+                                                                 To="450"
+                                                                 Storyboard.TargetProperty="(Ellipse.Height)"
+                                                                 Storyboard.TargetName="EG_3"
+                                                                 RepeatBehavior="Forever"/>
+
+                                                    <DoubleAnimation Storyboard.TargetProperty="Opacity"
+                                                                 Storyboard.TargetName="EG_3"
+                                                                 From="1.0"
+                                                                 To="0.0"
+                                                                 BeginTime="00:00:02"
+                                                                 Duration="00:00:03"
+                                                                 RepeatBehavior="Forever"/>
+                                                </Storyboard>
+
+                                            </BeginStoryboard>
+
+                                        </EventTrigger.Actions>
+
+                                    </EventTrigger>
+
+                                    <EventTrigger RoutedEvent="ToggleButton.Unchecked">
+
+                                        <EventTrigger.Actions>
+
+                                            <RemoveStoryboard BeginStoryboardName="Ellipse_Activated"/>
+                                            <BeginStoryboard x:Name="Ellipse_Deactivated">
+
+                                                <Storyboard>
+
+                                                    <DoubleAnimation BeginTime="00:00:00"
+                                                                 Duration="00:00:03"
+                                                                 From="450"
+                                                                 To="150"
+                                                                 Storyboard.TargetProperty="(Ellipse.Width)"
+                                                                 Storyboard.TargetName="ER_1"/>
+                                                    <DoubleAnimation BeginTime="00:00:00"
+                                                                 Duration="00:00:03"
+                                                                 From="450"
+                                                                 To="150"
+                                                                 Storyboard.TargetProperty="(Ellipse.Height)"
+                                                                 Storyboard.TargetName="ER_1"/>
+                                                    <DoubleAnimation Storyboard.TargetProperty="Opacity"
+                                                                 Storyboard.TargetName="ER_1"
+                                                                 From="0.0"
+                                                                 To="1.0"
+                                                                 BeginTime="00:00:00"
+                                                                 Duration="00:00:03"/>
+
+                                                    <DoubleAnimation BeginTime="00:00:00"
+                                                                 Duration="00:00:02"
+                                                                 From="350"
+                                                                 To="150"
+                                                                 Storyboard.TargetProperty="(Ellipse.Width)"
+                                                                 Storyboard.TargetName="ER_2"/>
+                                                    <DoubleAnimation BeginTime="00:00:00"
+                                                                 Duration="00:00:02"
+                                                                 From="350"
+                                                                 To="150"
+                                                                 Storyboard.TargetProperty="(Ellipse.Height)"
+                                                                 Storyboard.TargetName="ER_2"/>
+                                                    <DoubleAnimation Storyboard.TargetProperty="Opacity"
+                                                                 Storyboard.TargetName="ER_2"
+                                                                 From="0.0"
+                                                                 To="1.0"
+                                                                 BeginTime="00:00:00"
+                                                                 Duration="00:00:02"/>
+
+                                                    <DoubleAnimation BeginTime="00:00:00"
+                                                                 Duration="00:00:01"
+                                                                 From="250"
+                                                                 To="150"
+                                                                 Storyboard.TargetProperty="(Ellipse.Width)"
+                                                                 Storyboard.TargetName="ER_3"/>
+                                                    <DoubleAnimation BeginTime="00:00:00"
+                                                                 Duration="00:00:01"
+                                                                 From="250"
+                                                                 To="150"
+                                                                 Storyboard.TargetProperty="(Ellipse.Height)"
+                                                                 Storyboard.TargetName="ER_3"/>
+                                                    <DoubleAnimation Storyboard.TargetProperty="Opacity"
+                                                                 Storyboard.TargetName="ER_3"
+                                                                 From="0.0"
+                                                                 To="1.0"
+                                                                 BeginTime="00:00:00"
+                                                                 Duration="00:00:01"/>
+
+                                                </Storyboard>
+
+                                            </BeginStoryboard>
+
+                                        </EventTrigger.Actions>
+
+                                    </EventTrigger>
+
+                                </ToggleButton.Triggers>
+
+                            </ToggleButton>
+                            <Label Content="Made with love in G team" FontSize="45" Foreground="#3A0CA3" HorizontalAlignment="Center" Margin="0,21,0,0" VerticalAlignment="Top"/>
+                            <Label Content="Team member :" FontSize="40" Foreground="#3A0CA3" HorizontalAlignment="Center" Margin="0,318,0,0" VerticalAlignment="Top"/>
+                            <Label Content="1-Fateme Gholami    2-Amirhossein Ejazi    3-Mohammad Reza Nahi" FontSize="22" Foreground="Black" HorizontalAlignment="Center" Margin="0,379,0,0" VerticalAlignment="Top"/>
+
+                        </Grid>
+                    </Border>
+                </Grid>
+                <Grid Grid.ColumnSpan="2" Margin="676,0,690,28" Grid.Column="3">
+                    <Button x:Name="close" BorderThickness="0" Width="53" Height="53" HorizontalAlignment="Left" Background="Transparent" Margin="98,0,0,6" Click="closee">
+                        <Image Source="sorce/close.png" Height="47" Width="45"></Image>
+                    </Button>
+
                 </Grid>
             </Grid>
         </Grid>

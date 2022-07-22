@@ -37,5 +37,9 @@ namespace UI_fily
             this.Close();
             portipclientwindow.ShowDialog();
         }
+        private void closee(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -13,7 +13,7 @@
         ResizeMode="NoResize"
         Background="Transparent"
         AllowsTransparency="True">
-    <Border CornerRadius="40">
+    <Border CornerRadius="20">
         <Border.Background>
             <ImageBrush ImageSource="\sorce\background.jpg" Stretch="UniformToFill"/>
         </Border.Background>
@@ -38,6 +38,9 @@
                 FontWeight="Bold"
                 FontFamily="Arial"
                 BorderThickness="2" Margin="400,545,400,65" Click="btnloadgame_Click"/>
+            <Button x:Name="close" BorderThickness="0" Height="53" Width="54" Background="Transparent" Margin="1146,0,0,0" Click="closee" VerticalAlignment="Top">
+                <Image Source="sorce/close.png" Height="47" Width="45"></Image>
+            </Button>
         </Grid>
     </Border>
 </Window>

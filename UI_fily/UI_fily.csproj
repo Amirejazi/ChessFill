@@ -244,5 +244,14 @@
   <ItemGroup>
     <Resource Include="sorce\asb_white_1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="sorce\heart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="sorce\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="sorce\close2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

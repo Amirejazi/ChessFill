@@ -150,5 +150,9 @@ namespace UI_fily
             this.Close();
             gameclientwindow.ShowDialog();
         }
+        private void closee(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }
