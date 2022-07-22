@@ -306,7 +306,7 @@ namespace UI_fily
         public static string sarbaz_b { get; set; }
         public List<Button> Button { get; set; }
         public List<Image> images { get; set; }
-        void LocationSaver()
+        public void LocationSaver()
         {
             locationSaver = "-,";
             for (int i = 1; i < 65; i++)
@@ -343,7 +343,7 @@ namespace UI_fily
             }
             locationSaver = locationSaver.Remove(locationSaver.Length - 1);
         }
-        void RecieveLocation(string str)
+        public void RecieveLocation(string str)
         {
             string[] locations = str.Split(',');
             for (int i = 1; i < locations.Length; i++)
@@ -392,7 +392,7 @@ namespace UI_fily
                 else if (locations[i] == "sw")
                 {
                     images[65 - i].Source = new BitmapImage(new Uri(sarbaz_w));
-}
+                }
                 else if (locations[i] == "vw")
                 {
                     images[65 - i].Source = new BitmapImage(new Uri(vazir_w));
@@ -402,9 +402,9 @@ namespace UI_fily
                     images[65 - i].Source = new BitmapImage(new Uri(shah_w));
                 }
             }
-        }
 
-        void ResetBrush()
+        }
+        public void ResetBrush()
         {
             if (optionwindow.rbtnground == "1")
             {
@@ -683,7 +683,7 @@ namespace UI_fily
                 // button haye bala brown kam rang kamrang shodand ----------------
             }
         }
-        void Brush(int index)
+        public void Brush(int index)
         {
             try
             {
@@ -693,7 +693,7 @@ namespace UI_fily
             {
             }
         }
-        void Brushr(int index)
+        public void Brushr(int index)
         {
             try
             {
@@ -703,7 +703,7 @@ namespace UI_fily
             {
             }
         }
-        void Asb(int index)
+        public void Asb(int index)
         {
             ResetBrush();
             int brush = index + 10;
@@ -796,7 +796,7 @@ namespace UI_fily
                 loc = asb_b;
             indexg = index;
         }
-        void Fil(int index)
+        public void Fil(int index)
         {
             ResetBrush();
             int brush = index;
@@ -909,7 +909,7 @@ namespace UI_fily
                 loc = fil_b;
             indexg = index;
         }
-        void Rokh(int index)
+        public void Rokh(int index)
         {
             ResetBrush();
             int brush = index;
@@ -1014,7 +1014,7 @@ namespace UI_fily
                 loc = rokh_b;
             indexg = index;
         }
-        void Vazir(int index)
+        public void Vazir(int index)
         {
             ResetBrush();
             int brush = index;
@@ -1223,7 +1223,7 @@ namespace UI_fily
                 loc = vazir_b;
             indexg = index;
         }
-        void Shah(int index)
+        public void Shah(int index)
         {
 
             ResetBrush();
@@ -1309,7 +1309,7 @@ namespace UI_fily
                 loc = shah_b;
             indexg = index;
         }
-        void Sarbaz_firstTime(int index)
+        public void Sarbaz_firstTime(int index)
         {
             ResetBrush();
             int brush = index + 8;
@@ -1343,7 +1343,7 @@ namespace UI_fily
                 loc = sarbaz_b;
             indexg = index;
         }
-        void Sarbaz(int index)
+        public void Sarbaz(int index)
         {
             ResetBrush();
             int brush = index + 8;
@@ -1363,7 +1363,7 @@ namespace UI_fily
                 loc = sarbaz_b;
             indexg = index;
         }
-        bool RokhChecker(bool flagc, string img)
+        public bool RokhChecker(bool flagc, string img)
         {
             string pattern;
             if (flagc)
@@ -1376,7 +1376,7 @@ namespace UI_fily
             else
                 return false;
         }
-        bool AsbChecker(bool flagc, string img)
+        public bool AsbChecker(bool flagc, string img)
         {
             string pattern;
             if (flagc)
@@ -1389,7 +1389,7 @@ namespace UI_fily
             else
                 return false;
         }
-        bool FilChecker(bool flagc, string img)
+        public bool FilChecker(bool flagc, string img)
         {
             string pattern;
             if (flagc)
@@ -1402,7 +1402,7 @@ namespace UI_fily
             else
                 return false;
         }
-        bool SarbazChecker(bool flagc, string img)
+        public bool SarbazChecker(bool flagc, string img)
         {
             string pattern;
             if (flagc)
@@ -1415,7 +1415,7 @@ namespace UI_fily
             else
                 return false;
         }
-        bool VazirChecker(bool flagc, string img)
+        public bool VazirChecker(bool flagc, string img)
         {
             string pattern;
             if (flagc)
@@ -1428,7 +1428,7 @@ namespace UI_fily
             else
                 return false;
         }
-        bool ShahChecker(bool flagc, string img)
+        public bool ShahChecker(bool flagc, string img)
         {
             string pattern;
             if (flagc)
@@ -1441,7 +1441,7 @@ namespace UI_fily
             else
                 return false;
         }
-        bool ColorChecker(bool flag, string img)
+        public bool ColorChecker(bool flag, string img)
         {
             string pattern;
             if (flag)
@@ -1454,7 +1454,7 @@ namespace UI_fily
             else
                 return false;
         }
-        void EventOfButtons(int index)
+        public void EventOfButtons(int index)
         {
             if (images[index].Source != null)
             {
@@ -1486,8 +1486,8 @@ namespace UI_fily
                 images[indexg].Source = null;
                 ResetBrush();
                 clientname.Content = optionwindow.clientname;
-                //LocationSaver();
-                //_transmission.Send(locationSaver);
+                LocationSaver();
+                portipclientwindow.Send(locationSaver);
             }
         }
         private void _1b(object sender, RoutedEventArgs e)

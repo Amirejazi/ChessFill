@@ -254,7 +254,7 @@ namespace UI_fily
         public static string sarbaz_b { get; set; }
         public List<Button> Button { get; set; }
         public List<Image> images { get; set; }
-        void LocationSaver()
+        public void LocationSaver()
         {
             locationSaver = "-,";
             for (int i = 1; i < 65; i++)
@@ -291,7 +291,7 @@ namespace UI_fily
             }
             locationSaver = locationSaver.Remove(locationSaver.Length - 1);
         }
-        void RecieveLocation(string str)
+        public void RecieveLocation(string str)
         {
             string[] locations = str.Split(',');
             for (int i = 1; i < locations.Length; i++)
@@ -351,7 +351,7 @@ namespace UI_fily
                 }
             }
         }
-        void ResetBrush()
+        public void ResetBrush()
         {
             if (optionwindow.rbtnground == "1")
             {
@@ -1433,8 +1433,8 @@ namespace UI_fily
                 images[index].Source = new BitmapImage(new Uri(loc));
                 images[indexg].Source = null;
                 ResetBrush();
-                //LocationSaver();
-                //_transmission.Send(locationSaver);
+                LocationSaver();
+                portipserverwindow.Send(locationSaver);
             }
         }
         private void _1b(object sender, RoutedEventArgs e)

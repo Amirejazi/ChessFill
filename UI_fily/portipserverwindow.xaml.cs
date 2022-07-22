@@ -111,9 +111,10 @@ namespace UI_fily
                 if(Recieve == "connected")
                 {
                     Send(propSend);
-                    gameserverwindow gameserverwindow = new gameserverwindow();
-                    gameserverwindow.ShowDialog();
+                    gameserverwindow gameServerwindow = new gameserverwindow();
+                    gameServerwindow.ShowDialog();
                 }
+                //gameserverwindow.RecieveLocation(recieveMessage);
             });
         }
         public static void Send(string send)

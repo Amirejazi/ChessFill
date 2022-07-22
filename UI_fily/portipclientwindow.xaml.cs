@@ -109,9 +109,10 @@ namespace UI_fily
                         optionwindow.servername= items[3];
                         optionwindow.clientname= items[4];
                         optionwindow.rbtn1 = items[5];
-                        gameclientwindow gameclientwindow = new gameclientwindow();
-                        gameclientwindow.ShowDialog();
+                        gameclientwindow gameClientwindow = new gameclientwindow();
+                        gameClientwindow.ShowDialog();
                     }
+                    //gameClientwindow.RecieveLocation(recieveMessage);
                 });
             }
             else
