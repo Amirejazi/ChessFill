@@ -99,7 +99,6 @@ namespace UI_fily
                 _63img.Source = new BitmapImage(new Uri(asb_w));
                 _64img.Source = new BitmapImage(new Uri(rokh_w));
             }
-            portipserverwindow.Send("la");
             servername.Content = optionwindow.servername;
             clientname.Content = optionwindow.clientname;
             Button = new List<Button>();
@@ -255,6 +254,103 @@ namespace UI_fily
         public static string sarbaz_b { get; set; }
         public List<Button> Button { get; set; }
         public List<Image> images { get; set; }
+        void LocationSaver()
+        {
+            locationSaver = "-,";
+            for (int i = 1; i < 65; i++)
+            {
+                if (images[i].Source == null)
+                    locationSaver += "-,";
+                else
+                {
+                    if (RokhChecker(false, images[i].Source.ToString()))
+                        locationSaver += "rb,";
+                    else if (SarbazChecker(false, images[i].Source.ToString()))
+                        locationSaver += "sb,";
+                    else if (AsbChecker(false, images[i].Source.ToString()))
+                        locationSaver += "ab,";
+                    else if (FilChecker(false, images[i].Source.ToString()))
+                        locationSaver += "fb,";
+                    else if (VazirChecker(false, images[i].Source.ToString()))
+                        locationSaver += "vb,";
+                    else if (ShahChecker(false, images[i].Source.ToString()))
+                        locationSaver += "kb,";
+                    else if (RokhChecker(true, images[i].Source.ToString()))
+                        locationSaver += "rw,";
+                    else if (SarbazChecker(true, images[i].Source.ToString()))
+                        locationSaver += "sw,";
+                    else if (AsbChecker(true, images[i].Source.ToString()))
+                        locationSaver += "aw,";
+                    else if (FilChecker(true, images[i].Source.ToString()))
+                        locationSaver += "fw,";
+                    else if (VazirChecker(true, images[i].Source.ToString()))
+                        locationSaver += "vw,";
+                    else if (ShahChecker(true, images[i].Source.ToString()))
+                        locationSaver += "kw,";
+                }
+            }
+            locationSaver = locationSaver.Remove(locationSaver.Length - 1);
+        }
+        void RecieveLocation(string str)
+        {
+            string[] locations = str.Split(',');
+            for (int i = 1; i < locations.Length; i++)
+            {
+                if (locations[i] == "rb")
+                {
+                    images[65 - i].Source = new BitmapImage(new Uri(rokh_b));
+                }
+                else if (locations[i] == "ab")
+                {
+                    images[65 - i].Source = new BitmapImage(new Uri(asb_b));
+                }
+                else if (locations[i] == "fb")
+                {
+                    images[65 - i].Source = new BitmapImage(new Uri(fil_b));
+                }
+                else if (locations[i] == "sb")
+                {
+                    images[65 - i].Source = new BitmapImage(new Uri(sarbaz_b));
+
+                }
+                else if (locations[i] == "vb")
+                {
+                    images[65 - i].Source = new BitmapImage(new Uri(vazir_b));
+                }
+                else if (locations[i] == "kb")
+                {
+                    images[65 - i].Source = new BitmapImage(new Uri(shah_b));
+                }
+                else if (locations[i] == "-")
+                {
+                    images[65 - i].Source = null;
+                }
+                else if (locations[i] == "rw")
+                {
+                    images[65 - i].Source = new BitmapImage(new Uri(rokh_w));
+                }
+                else if (locations[i] == "aw")
+                {
+                    images[65 - i].Source = new BitmapImage(new Uri(asb_w));
+                }
+                else if (locations[i] == "fw")
+                {
+                    images[65 - i].Source = new BitmapImage(new Uri(fil_w));
+                }
+                else if (locations[i] == "sw")
+                {
+                    images[65 - i].Source = new BitmapImage(new Uri(sarbaz_w));
+}
+                else if (locations[i] == "vw")
+                {
+                    images[65 - i].Source = new BitmapImage(new Uri(vazir_w));
+                }
+                else if (locations[i] == "kw")
+                {
+                    images[65 - i].Source = new BitmapImage(new Uri(shah_w));
+                }
+            }
+        }
         void ResetBrush()
         {
             if (optionwindow.rbtnground == "1")
