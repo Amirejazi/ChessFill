@@ -28,7 +28,7 @@ namespace UI_fily
             clientname.Content = optionwindow.clientname;
             if (optionwindow.rbtncolor == "1")
             {
-
+                flag = true;
                 _1img.Source = new BitmapImage(new Uri(rokh_w));
                 _2img.Source = new BitmapImage(new Uri(asb_w));
                 _3img.Source = new BitmapImage(new Uri(fil_w));
@@ -64,7 +64,7 @@ namespace UI_fily
             }
             if (optionwindow.rbtncolor == "2")
             {
-
+                flag = false;
                 _1img.Source = new BitmapImage(new Uri(rokh_b));
                 _2img.Source = new BitmapImage(new Uri(asb_b));
                 _3img.Source = new BitmapImage(new Uri(fil_b));
@@ -236,6 +236,10 @@ namespace UI_fily
 
 
         }
+        public bool flag { get; set; }
+        public string loc { get; set; }
+        public string locationSaver { get; set; }
+        public int indexg { get; set; }
         public static string rokh_b { get; set; }
         public static string asb_b { get; set; }
         public static string fil_b { get; set; }
@@ -548,6 +552,96 @@ namespace UI_fily
             catch
             {
             }
+        }
+        void Asb(int index)
+        {
+            ResetBrush();
+            int brush = index + 10;
+            if (brush % 8 != 1 && brush % 8 != 2 && brush < 65)
+            {
+                if (images[brush].Source == null)
+                    Brush(brush);
+                else
+                {
+                    if (ColorChecker(!flag, images[brush].Source.ToString()))
+                        Brushr(brush);
+                }
+            }
+            brush = index + 6;
+            if (brush % 8 != 0 && brush % 8 != 7 && brush < 65)
+            {
+                if (images[brush].Source == null)
+                    Brush(brush);
+                else
+                {
+                    if (ColorChecker(!flag, images[brush].Source.ToString()))
+                        Brushr(brush);
+                }
+            }
+            brush = index + 15;
+            if (brush % 8 != 0 && brush < 65)
+            {
+                if (images[brush].Source == null)
+                    Brush(brush);
+                else
+                {
+                    if (ColorChecker(!flag, images[brush].Source.ToString()))
+                        Brushr(brush);
+                }
+            }
+            brush = index + 17;
+            if (brush % 8 != 1 && brush < 65)
+            {
+                if (images[brush].Source == null)
+                    Brush(brush);
+                else
+                {
+                    if (ColorChecker(!flag, images[brush].Source.ToString()))
+                        Brushr(brush);
+                }
+            }
+            brush = index - 15;
+            if (brush % 8 != 1 && brush > 0)
+                if (images[brush].Source == null)
+                    Brush(brush);
+                else
+                {
+                    if (ColorChecker(!flag, images[brush].Source.ToString()))
+                        Brushr(brush);
+                }
+            brush = index - 17;
+            if (brush % 8 != 0 && brush > 0)
+                if (images[brush].Source == null)
+                    Brush(brush);
+                else
+                {
+                    if (ColorChecker(!flag, images[brush].Source.ToString()))
+                        Brushr(brush);
+                }
+            brush = index - 6;
+            if (brush % 8 != 1 && brush % 8 != 2 && brush > 0)
+            {
+                if (images[brush].Source == null)
+                    Brush(brush);
+                else
+                {
+                    if (ColorChecker(!flag, images[brush].Source.ToString()))
+                        Brushr(brush);
+                }
+            }
+            brush = index - 10;
+            if (brush % 8 != 0 && brush % 8 != 7 && brush > 0)
+            {
+                if (images[brush].Source == null)
+                    Brush(brush);
+                else
+                {
+                    if (ColorChecker(!flag, images[brush].Source.ToString()))
+                        Brushr(brush);
+                }
+            }
+            loc = asb_b;
+            indexg = index;
         }
     }
 }
