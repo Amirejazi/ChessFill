@@ -530,6 +530,6 @@ namespace UI_fily
                 _64img.Source = new BitmapImage(new Uri(rokh_w));
             }
 
-
+        }
     }
 }
