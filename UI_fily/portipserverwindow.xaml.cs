@@ -23,6 +23,8 @@ namespace UI_fily
     {
         ServerStartup _serverstartup;
         ServerTransmission _transmission;
+        public string Recieve { get; set; }
+        public string propSend { get; set; } = $"i:{optionwindow.rbtnground},{optionwindow.rbtnnut},{optionwindow.rbtncolor},{optionwindow.servername},{optionwindow.clientname},{optionwindow.rbtn1}";
         public portipserverwindow()
         {
             InitializeComponent();
@@ -48,15 +50,7 @@ namespace UI_fily
                 StartState(false);
                 ChangeState("Accepting Client...", new SolidColorBrush(Colors.Blue));
                 await _serverstartup.AcceptAsync();
-                try
-                {
-                    _transmission.Send(Pass.Text);
-                    //RecieveBox.Text += $"Me : {SendBox.Text}\n";
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message + "\n try again", "sending error", MessageBoxButton.OK, MessageBoxImage.Error);
-                }
+                Send(Pass.Text);
 
             }
             catch (Exception ex)
@@ -105,10 +99,52 @@ namespace UI_fily
 
         private void recieveCallback(string recieveMessage)
         {
+            Recieve = "";
+            for (int i = 0; i < recieveMessage.Length; i++)
+            {
+                if (recieveMessage[i] != '\0')
+                {
+                    Recieve += recieveMessage[i];
+                }
+            }
             this.Dispatcher.Invoke(() => {
-                //RecieveBox.Text += $"Recieve : {recieveMessage}\n";
+                if(recieveMessage == "connected")
+                {
+                    Send(propSend);
+                    gameserverwindow gameserverwindow = new gameserverwindow();
+                    gameserverwindow.ShowDialog();
+                }
             });
         }
+        private void Send(string send)
+        {
+            try
+            {
+                _transmission.Send(send);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + "\n try again", "sending error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         private void btntest_Click(object sender, RoutedEventArgs e)
         {

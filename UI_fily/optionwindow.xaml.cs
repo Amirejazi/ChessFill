@@ -24,6 +24,11 @@ namespace UI_fily
             InitializeComponent();
         }
         public static string rbtnground {get; set;}
+        public static string rbtnnut { get; set; }
+        public static string rbtncolor { get; set; }
+        public static string servername { get; set; }
+        public static string clientname { get; set; }
+
         public void bordercollaps()
         {
             textureborder.Visibility = Visibility.Collapsed;
@@ -161,8 +166,7 @@ namespace UI_fily
         {
             rbtnground = "4";
         }
-        public static string rbtnnut { get; set; }
-
+        
         private void rbtnnut1_Checked(object sender, RoutedEventArgs e)
         {
             rbtnnut = "1";
@@ -183,8 +187,6 @@ namespace UI_fily
             rbtnnut = "4";
         }
 
-        public static string rbtncolor { get; set; }
-
         private void rbtnwhitecolor_Checked(object sender, RoutedEventArgs e)
         {
             rbtncolor = "1";
@@ -196,9 +198,6 @@ namespace UI_fily
             rbtncolor = "2";
             
         }
-
-        public static string servername { get; set; }
-        public static string clientname { get; set; }
 
         private void rbtntimeryes_Checked(object sender, RoutedEventArgs e)
         {
