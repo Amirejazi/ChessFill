@@ -111,11 +111,6 @@ namespace UI_fily
                         optionwindow.rbtn1 = items[5];
                         gameclientwindow gameclientwindow = new gameclientwindow();
                         gameclientwindow.ShowDialog();
-                        this.Close();
-                    }
-                    if (Recieve == "la")
-                    {
-                        optionwindow.servername = "hammalak";
                     }
                 });
             }

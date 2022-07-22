@@ -112,10 +112,7 @@ namespace UI_fily
                 {
                     Send(propSend);
                     gameserverwindow gameserverwindow = new gameserverwindow();
-                    this.Close();
                     gameserverwindow.ShowDialog();
-                    Send("la");
-
                 }
             });
         }
