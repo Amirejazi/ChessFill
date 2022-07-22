@@ -111,5 +111,6 @@ namespace UI_fily
         public static string vazir_w { get; set; }
         public static string shah_w { get; set; }
         public static string sarbaz_b { get; set; }
+
     }
 }
