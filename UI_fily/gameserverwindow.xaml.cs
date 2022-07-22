@@ -24,8 +24,6 @@ namespace UI_fily
         {
             InitializeComponent();
             ResetBrush();
-            
-            
             if (optionwindow.rbtncolor == "1")
             {
 
@@ -468,18 +466,5 @@ namespace UI_fily
             servername.Content = optionwindow.servername;
             //clientname.Content = optionwindow.clientname;
         }
-        public static string rokh_b { get; set; }
-        public static string asb_b { get; set; }
-        public static string fil_b { get; set; }
-        public static string vazir_b { get; set; }
-        public static string shah_b { get; set; }
-        public static string sarbaz_w { get; set; }
-        public static string rokh_w { get; set; }
-        public static string asb_w { get; set; }
-        public static string fil_w { get; set; }
-        public static string vazir_w { get; set; }
-        public static string shah_w { get; set; }
-        public static string sarbaz_b { get; set; }
     }
-
 }
