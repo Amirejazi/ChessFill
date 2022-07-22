@@ -115,5 +115,12 @@ namespace UI_fily
                 });
             }
         }
+
+        private void test2(object sender, RoutedEventArgs e)
+        {
+            gameclientwindow gameclientwindow = new gameclientwindow();
+            this.Close();
+            gameclientwindow.ShowDialog();
+        }
     }
 }

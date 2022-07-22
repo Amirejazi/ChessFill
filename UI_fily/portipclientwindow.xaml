@@ -25,6 +25,7 @@
             <TextBox x:Name="Pass" HorizontalAlignment="Left" FontSize="35" Margin="435,520,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="600" Height="45"/>
             <Button Name="btnstartclient" Content="Start" FontSize="35" Height="50" Width="250" HorizontalAlignment="Center" Margin="0,594,0,0" VerticalAlignment="Top" Click="btnstartclient_Click"/>
             <Button x:Name="btnconnectclient" Content="connecting" FontSize="35" Height="50" Width="250" HorizontalAlignment="Center" Margin="0,441,0,0" VerticalAlignment="Top" Click="btnconnectclient_Click"/>
+            <Button x:Name="test" Content="test" FontSize="35" Height="50" Width="250" HorizontalAlignment="Left" Margin="776,145,0,0" VerticalAlignment="Top" Click="test2"/>
 
         </Grid>
     </Border>
