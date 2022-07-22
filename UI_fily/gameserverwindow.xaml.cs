@@ -644,6 +644,119 @@ namespace UI_fily
             loc = asb_b;
             indexg = index;
         }
+        void Fil(int index)
+        {
+            ResetBrush();
+            int brush = index;
+            while (true)
+            {
+                brush += 7;
+                if (index % 8 == 1)
+                    break;
+                if (brush < 65)
+                {
+                    if (images[brush].Source == null)
+                        Brush(brush);
+                    else
+                    {
+                        if (ColorChecker(!flag, images[brush].Source.ToString()))
+                        {
+                            Brushr(brush);
+                            break;
+                        }
+                        else
+                            break;
+                    }
+                    if (brush % 8 == 1)
+                        break;
+                }
+                else
+                    break;
+            }
+            brush = index;
+            while (true)
+            {
+                if (index % 8 == 0)
+                    break;
+                brush += 9;
+                if (brush < 65)
+                {
+                    if (images[brush].Source == null)
+                        Brush(brush);
+                    else
+                    {
+                        if (ColorChecker(!flag, images[brush].Source.ToString()))
+                        {
+                            Brushr(brush);
+                            break;
+                        }
+                        else
+                            break;
+                    }
+                    if (brush % 8 == 0)
+                        break;
+                }
+                else
+                    break;
+            }
+            brush = index;
+            while (true)
+            {
+                if (index % 8 == 1)
+                    break;
+                brush -= 9;
+                if (brush > 0)
+                {
+                    if (images[brush].Source == null)
+                        Brush(brush);
+                    else
+                    {
+                        if (ColorChecker(!flag, images[brush].Source.ToString()))
+                        {
+                            Brushr(brush);
+                            break;
+                        }
+                        else
+                            break;
+                    }
+                    if (brush % 8 == 1)
+                        break;
+                }
+                else
+                    break;
+            }
+            brush = index;
+            while (true)
+            {
+                if (index % 8 == 0)
+                    break;
+                brush -= 7;
+                if (brush > 0)
+                {
+                    if (images[brush].Source == null)
+                        Brush(brush);
+                    else
+                    {
+                        if (ColorChecker(!flag, images[brush].Source.ToString()))
+                        {
+                            Brushr(brush);
+                            break;
+                        }
+                        else
+                            break;
+                    }
+                    if (brush % 8 == 0)
+                        break;
+                }
+                else
+                    break;
+            }
+            loc = fil_b;
+            indexg = index;
+        }
+
+
+
         bool ColorChecker(bool flag, string img)
         {
             string pattern;
