@@ -27,16 +27,26 @@ namespace UI_fily
         {
             InitializeComponent();
         }
-
+        private void ChangeState(string state, SolidColorBrush color)
+        {
+            btnstart.Content = state;
+            btnstart.Foreground = color;
+        }
+        private void StartState(bool state)
+        {
+            btnstart.IsEnabled = state;
+            //StopBtn.IsEnabled = !state;
+            Port.IsEnabled = state;
+        }
         private async void btnstart_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                //ChangeState("Starting Server", new SolidColorBrush(Colors.Orange));
+                ChangeState("Starting Server", new SolidColorBrush(Colors.Orange));
                 _serverstartup = new ServerStartup(int.Parse(Port.Text), Ip.Text, acceptedCallback, acceptedErrorcallback); ;
                 _serverstartup.InitServer();
-                //StartState(false);
-                //ChangeState("Accepting Client...", new SolidColorBrush(Colors.Blue));
+                StartState(false);
+                ChangeState("Accepting Client...", new SolidColorBrush(Colors.Blue));
                 await _serverstartup.AcceptAsync();
                 try
                 {
@@ -52,8 +62,8 @@ namespace UI_fily
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message + "\n try again", "Init server error", MessageBoxButton.OK, MessageBoxImage.Error);
-                //ChangeState("Stop Server", new SolidColorBrush(Colors.Red));
-                //StartState(true);
+                ChangeState("Stop Server", new SolidColorBrush(Colors.Red));
+                StartState(true);
             }
             
         }
@@ -67,13 +77,14 @@ namespace UI_fily
         private async void acceptedCallback(Socket acceptedsocket)
         {
             this.Dispatcher.Invoke(() => {
-                //ChangeState("Connect to Client...", new SolidColorBrush(Colors.Orange));
+                ChangeState("Connect to Client...", new SolidColorBrush(Colors.Orange));
             });
             _transmission = new ServerTransmission(acceptedsocket, recieveCallback, receiveErrorCallback);
-            
-            //this.Dispatcher.Invoke(() => {
-            //    SendBtn.IsEnabled = true;
-            //});
+
+            this.Dispatcher.Invoke(() =>
+            {
+                btnstart.IsEnabled = true;
+            });
             await _transmission.RecieveAsync();
             
         }
@@ -81,11 +92,12 @@ namespace UI_fily
         private async void receiveErrorCallback(string error)
         {
 
-            //this.Dispatcher.Invoke(() => {
-            //    SendBtn.IsEnabled = false;
-            //    ChangeState("Accepting Client...", new SolidColorBrush(Colors.Blue));
-            //    MessageBox.Show(error + "\n try again", "RecieveError", MessageBoxButton.OK, MessageBoxImage.Error);
-            //});
+            this.Dispatcher.Invoke(() =>
+            {
+                btnstart.IsEnabled = false;
+                ChangeState("Accepting Client...", new SolidColorBrush(Colors.Blue));
+                MessageBox.Show(error + "\n try again", "RecieveError", MessageBoxButton.OK, MessageBoxImage.Error);
+            });
             _serverstartup.CloseClient(_transmission.Socket);
             _transmission = null;
             await _serverstartup.AcceptAsync();
