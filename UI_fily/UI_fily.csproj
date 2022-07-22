@@ -230,7 +230,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="sorce\asb_black_1.png" />
-    <Resource Include="sorce\asb_white_1.png" />
     <Resource Include="sorce\fil_black_1.png" />
     <Resource Include="sorce\fil_white_1.png" />
     <Resource Include="sorce\rokh_black_1.png" />
@@ -241,6 +240,9 @@
     <Resource Include="sorce\shah_white_1.png" />
     <Resource Include="sorce\vazir_black_1.png" />
     <Resource Include="sorce\vazir_white_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="sorce\asb_white_1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -301,7 +301,6 @@ namespace UI_fily
             }
             if (optionwindow.rbtncolor == "1")
             {
-
                 _1img.Source = new BitmapImage(new Uri(rokh_w));
                 _2img.Source = new BitmapImage(new Uri(asb_w));
                 _3img.Source = new BitmapImage(new Uri(fil_w));
@@ -335,9 +334,8 @@ namespace UI_fily
                 _63img.Source = new BitmapImage(new Uri(asb_b));
                 _64img.Source = new BitmapImage(new Uri(rokh_b));
             }
-            if (optionwindow.rbtncolor == "2")
+            else if (optionwindow.rbtncolor == "2")
             {
-
                 _1img.Source = new BitmapImage(new Uri(rokh_b));
                 _2img.Source = new BitmapImage(new Uri(asb_b));
                 _3img.Source = new BitmapImage(new Uri(fil_b));
@@ -374,7 +372,7 @@ namespace UI_fily
 
 
             servername.Content = optionwindow.servername;
-            clientname.Content = optionwindow.clientname;
+            //clientname.Content = optionwindow.clientname;
         }
         public static string rokh_b { get; set; }
         public static string asb_b { get; set; }
@@ -389,4 +387,5 @@ namespace UI_fily
         public static string shah_w { get; set; }
         public static string sarbaz_b { get; set; }
     }
+
 }
