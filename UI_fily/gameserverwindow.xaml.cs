@@ -1062,7 +1062,89 @@ namespace UI_fily
             loc = vazir_b;
             indexg = index;
         }
+        void Shah(int index)
+        {
 
+            ResetBrush();
+            int brush = index + 8;
+            if (brush < 65)
+                if (images[brush].Source == null)
+                    Brush(brush);
+                else
+                {
+                    if (ColorChecker(!flag, images[brush].Source.ToString()))
+                        Brushr(brush);
+                }
+            brush = index - 8;
+            if (brush > 0)
+                if (images[brush].Source == null)
+                    Brush(brush);
+                else
+                {
+                    if (ColorChecker(!flag, images[brush].Source.ToString()))
+                        Brushr(brush);
+                }
+            brush = index + 7;
+            if (brush % 8 != 0 && brush < 65)
+            {
+                if (images[brush].Source == null)
+                    Brush(brush);
+                else
+                {
+                    if (ColorChecker(!flag, images[brush].Source.ToString()))
+                        Brushr(brush);
+                }
+            }
+            brush = index + 9;
+            if (brush % 8 != 1 && brush < 65)
+            {
+                if (images[brush].Source == null)
+                    Brush(brush);
+                else
+                {
+                    if (ColorChecker(!flag, images[brush].Source.ToString()))
+                        Brushr(brush);
+                }
+            }
+            brush = index + 1;
+            if (brush % 8 != 1 && brush < 65)
+                if (images[brush].Source == null)
+                    Brush(brush);
+                else
+                {
+                    if (ColorChecker(!flag, images[brush].Source.ToString()))
+                        Brushr(brush);
+                }
+            brush = index - 1;
+            if (brush % 8 != 0 && brush > 0)
+                if (images[brush].Source == null)
+                    Brush(brush);
+                else
+                {
+                    if (ColorChecker(!flag, images[brush].Source.ToString()))
+                        Brushr(brush);
+                }
+            brush = index - 7;
+            if (brush % 8 != 1 && brush > 0)
+                if (images[brush].Source == null)
+                    Brush(brush);
+                else
+                {
+                    if (ColorChecker(!flag, images[brush].Source.ToString()))
+                        Brushr(brush);
+                }
+            brush = index - 9;
+            if (brush % 8 != 0 && brush > 0)
+                if (images[brush].Source == null)
+                    Brush(brush);
+                else
+                {
+                    if (ColorChecker(!flag, images[brush].Source.ToString()))
+                        Brushr(brush);
+                }
+            loc = shah_b;
+            indexg = index;
+        }
 
 
 
