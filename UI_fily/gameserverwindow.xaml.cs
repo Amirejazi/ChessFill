@@ -754,6 +754,110 @@ namespace UI_fily
             loc = fil_b;
             indexg = index;
         }
+        void Rokh(int index)
+        {
+            ResetBrush();
+            int brush = index;
+            while (true)
+            {
+                brush += 8;
+                if (brush < 65)
+                {
+                    if (images[brush].Source == null)
+                        Brush(brush);
+                    else
+                    {
+                        if (ColorChecker(!flag, images[brush].Source.ToString()))
+                        {
+                            Brushr(brush);
+                            break;
+                        }
+                        else
+                            break;
+                    }
+                }
+                else
+                    break;
+            }
+            brush = index;
+            while (true)
+            {
+                brush -= 8;
+                if (brush > 0)
+                {
+                    if (images[brush].Source == null)
+                        Brush(brush);
+                    else
+                    {
+                        if (ColorChecker(!flag, images[brush].Source.ToString()))
+                        {
+                            Brushr(brush);
+                            break;
+                        }
+                        else
+                            break;
+                    }
+                }
+                else
+                    break;
+            }
+            brush = index;
+            while (true)
+            {
+                if (index % 8 == 1)
+                    break;
+                brush--;
+                if (brush > 0)
+                {
+                    if (images[brush].Source == null)
+                        Brush(brush);
+                    else
+                    {
+                        if (ColorChecker(!flag, images[brush].Source.ToString()))
+                        {
+                            Brushr(brush);
+                            break;
+                        }
+                        else
+                            break;
+                    }
+                    if (brush % 8 == 1)
+                        break;
+                }
+                else
+                    break;
+            }
+            brush = index;
+            while (true)
+            {
+                if (index % 8 == 0)
+                    break;
+                brush++;
+                if (brush < 65)
+                {
+                    if (images[brush].Source == null)
+                        Brush(brush);
+                    else
+                    {
+                        if (ColorChecker(!flag, images[brush].Source.ToString()))
+                        {
+                            Brushr(brush);
+                            break;
+                        }
+                        else
+                            break;
+                    }
+                    if (brush % 8 == 0)
+                        break;
+                }
+                else
+                    break;
+            }
+            loc = rokh_b;
+            indexg = index;
+        }
+
+
 
 
 
