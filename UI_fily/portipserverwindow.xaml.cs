@@ -114,7 +114,7 @@ namespace UI_fily
                     gameserverwindow gameServerwindow = new gameserverwindow();
                     gameServerwindow.ShowDialog();
                 }
-                //gameserverwindow.RecieveLocation(recieveMessage);
+                gameserverwindow.RecieveLocation(recieveMessage);
             });
         }
         public static void Send(string send)

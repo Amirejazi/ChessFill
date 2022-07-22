@@ -253,7 +253,7 @@ namespace UI_fily
         public static string shah_w { get; set; }
         public static string sarbaz_b { get; set; }
         public List<Button> Button { get; set; }
-        public List<Image> images { get; set; }
+        public static List<Image> images { get; set; }
         public void LocationSaver()
         {
             locationSaver = "-,";
@@ -291,7 +291,7 @@ namespace UI_fily
             }
             locationSaver = locationSaver.Remove(locationSaver.Length - 1);
         }
-        public void RecieveLocation(string str)
+        public static void RecieveLocation(string str)
         {
             string[] locations = str.Split(',');
             for (int i = 1; i < locations.Length; i++)

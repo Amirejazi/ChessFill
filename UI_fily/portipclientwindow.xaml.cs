@@ -112,7 +112,7 @@ namespace UI_fily
                         gameclientwindow gameClientwindow = new gameclientwindow();
                         gameClientwindow.ShowDialog();
                     }
-                    //gameClientwindow.RecieveLocation(recieveMessage);
+                    gameclientwindow.RecieveLocation(recieveMessage);
                 });
             }
             else
