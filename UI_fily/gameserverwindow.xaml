@@ -15,7 +15,7 @@
         AllowsTransparency="True">
     <Border CornerRadius="20" Background="#3AB0FF">
         <Grid>
-            <Button x:Name="_1" Background="#171717" Height="75" Width="74" HorizontalAlignment="Left" Margin="298,568,0,0" VerticalAlignment="Top">
+            <Button x:Name="_1" Background="#171717" Height="75" Width="74" HorizontalAlignment="Left" Margin="298,568,0,0" VerticalAlignment="Top" Click="_1b" >
                 <Image x:Name="_1img" ></Image>
             </Button>
             <Button x:Name="_2" Background="#ffff" Height="75" Width="74" HorizontalAlignment="Left" Margin="372,568,0,0" VerticalAlignment="Top">
