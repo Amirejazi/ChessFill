@@ -641,7 +641,10 @@ namespace UI_fily
                         Brushr(brush);
                 }
             }
-            loc = asb_b;
+            if (flag)
+                loc = asb_w;
+            else
+                loc = asb_b;
             indexg = index;
         }
         void Fil(int index)
@@ -751,7 +754,10 @@ namespace UI_fily
                 else
                     break;
             }
-            loc = fil_b;
+            if (flag)
+                loc = fil_w;
+            else
+                loc = fil_b;
             indexg = index;
         }
         void Rokh(int index)
@@ -853,7 +859,10 @@ namespace UI_fily
                 else
                     break;
             }
-            loc = rokh_b;
+            if (flag)
+                loc = rokh_w;
+            else
+                loc = rokh_b;
             indexg = index;
         }
         void Vazir(int index)
@@ -1059,7 +1068,10 @@ namespace UI_fily
                 else
                     break;
             }
-            loc = vazir_b;
+            if (flag)
+                loc = vazir_w;
+            else
+                loc = vazir_b;
             indexg = index;
         }
         void Shah(int index)
@@ -1142,7 +1154,10 @@ namespace UI_fily
                     if (ColorChecker(!flag, images[brush].Source.ToString()))
                         Brushr(brush);
                 }
-            loc = shah_b;
+            if (flag)
+                loc = shah_w;
+            else
+                loc = shah_b;
             indexg = index;
         }
         void Sarbaz_firstTime(int index)
@@ -1173,7 +1188,10 @@ namespace UI_fily
                         Brushr(brush);
                 }
             }
-            loc = sarbaz_b;
+            if (flag)
+                loc = sarbaz_w;
+            else
+                loc = sarbaz_b;
             indexg = index;
         }
         void Sarbaz(int index)
@@ -1190,7 +1208,10 @@ namespace UI_fily
                         Brushr(brush);
                 }
             }
-            loc = sarbaz_b;
+            if (flag)
+                loc = sarbaz_w;
+            else
+                loc = sarbaz_b;
             indexg = index;
         }
         bool RokhChecker(bool flagc, string img)
