@@ -1193,6 +1193,19 @@ namespace UI_fily
             loc = sarbaz_b;
             indexg = index;
         }
+        bool RokhChecker(bool flagc, string img)
+        {
+            string pattern;
+            if (flagc)
+                pattern = @"^.{0,}rokh_w.{0,}$";
+            else
+                pattern = @"^.{0,}rokh_b.{0,}$";
+            Regex t = new Regex(pattern);
+            if (t.IsMatch(img))
+                return true;
+            else
+                return false;
+        }
 
         bool ColorChecker(bool flag, string img)
         {
