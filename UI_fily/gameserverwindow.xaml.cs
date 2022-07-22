@@ -29,7 +29,6 @@ namespace UI_fily
             ResetBrush();
             servername.Content = optionwindow.servername;
             clientname.Content = optionwindow.clientname;
-
             if (optionwindow.rbtncolor == "1")
             {
                 flag = true;
@@ -105,7 +104,6 @@ namespace UI_fily
             servername.Content = optionwindow.servername;
             clientname.Content = optionwindow.clientname;
             start_Server();
-            Send(portipserverwindow.pass);
             Button = new List<Button>();
             Button.Add(_1);
             Button.Add(_1);
@@ -242,6 +240,7 @@ namespace UI_fily
 
         }
         public bool flag { get; set; }
+        public bool enable { get; set; } = true;
         public string loc { get; set; }
         public string locationSaver { get; set; }
         public int indexg { get; set; }
@@ -258,7 +257,7 @@ namespace UI_fily
         public static string shah_w { get; set; }
         public static string sarbaz_b { get; set; }
         public List<Button> Button { get; set; }
-        public static List<Image> images { get; set; }
+        public List<Image> images { get; set; }
         public string Recieve { get; set; }
         public string propSend { get; set; } = $"i:{optionwindow.rbtnground},{optionwindow.rbtnnut},{optionwindow.rbtncolor},{optionwindow.servername},{optionwindow.clientname},{optionwindow.rbtn1}";
         public static ServerStartup _serverstartup;
@@ -300,7 +299,7 @@ namespace UI_fily
             }
             locationSaver = locationSaver.Remove(locationSaver.Length - 1);
         }
-        public static void RecieveLocation(string str)
+        public void RecieveLocation(string str)
         {
             string[] locations = str.Split(',');
             for (int i = 1; i < locations.Length; i++)
@@ -359,7 +358,9 @@ namespace UI_fily
                     images[65 - i].Source = new BitmapImage(new Uri(shah_w));
                 }
             }
+            enable=true;
         }
+        
         public void ResetBrush()
         {
             if (optionwindow.rbtnground == "1")
@@ -1413,37 +1414,41 @@ namespace UI_fily
         }
         void EventOfButtons(int index)
         {
-            if (images[index].Source != null)
+            if (enable)
             {
-                if (RokhChecker(flag, images[index].Source.ToString()))
-                    Rokh(index);
-                else if (AsbChecker(flag, images[index].Source.ToString()))
-                    Asb(index);
-                else if (FilChecker(flag, images[index].Source.ToString()))
-                    Fil(index);
-                else if (ShahChecker(flag, images[index].Source.ToString()))
-                    Shah(index);
-                else if (VazirChecker(flag, images[index].Source.ToString()))
-                    Vazir(index);
-                if (index > 8 && index < 17)
+                if (images[index].Source != null)
                 {
-                    if (SarbazChecker(flag, images[index].Source.ToString()))
-                        Sarbaz_firstTime(index);
+                    if (RokhChecker(flag, images[index].Source.ToString()))
+                        Rokh(index);
+                    else if (AsbChecker(flag, images[index].Source.ToString()))
+                        Asb(index);
+                    else if (FilChecker(flag, images[index].Source.ToString()))
+                        Fil(index);
+                    else if (ShahChecker(flag, images[index].Source.ToString()))
+                        Shah(index);
+                    else if (VazirChecker(flag, images[index].Source.ToString()))
+                        Vazir(index);
+                    if (index > 8 && index < 17)
+                    {
+                        if (SarbazChecker(flag, images[index].Source.ToString()))
+                            Sarbaz_firstTime(index);
+                    }
+                    else if (index > 16)
+                    {
+                        if (SarbazChecker(flag, images[index].Source.ToString()))
+                            Sarbaz(index);
+                    }
                 }
-                else if (index > 16)
+                string colorback = Button[index].Background.ToString();
+                if (colorback == "#FF9ACD32" || colorback == "#FFFF4500")
                 {
-                    if (SarbazChecker(flag, images[index].Source.ToString()))
-                        Sarbaz(index);
+                    images[index].Source = new BitmapImage(new Uri(loc));
+                    images[indexg].Source = null;
+                    ResetBrush();
+                    LocationSaver();
+                    Send(locationSaver);
+                    enable = false;
                 }
-            }
-            string colorback = Button[index].Background.ToString();
-            if (colorback == "#FF9ACD32" || colorback == "#FFFF4500")
-            {
-                images[index].Source = new BitmapImage(new Uri(loc));
-                images[indexg].Source = null;
-                ResetBrush();
-                LocationSaver();
-                Send(locationSaver);
             }
         }
         private void _1b(object sender, RoutedEventArgs e)
@@ -1724,6 +1729,7 @@ namespace UI_fily
                 StartState(false);
                 ChangeState("Accepting Client...", new SolidColorBrush(Colors.Blue));
                 await _serverstartup.AcceptAsync();
+                Send(propSend);
             }
             catch (Exception ex)
             {
@@ -1776,14 +1782,10 @@ namespace UI_fily
                         Recieve += recieveMessage[i];
                     }
                 }
-                if(Recieve == "connected")
-                {
-                    Send(propSend);
-                }
-                RecieveLocation(recieveMessage);
+                RecieveLocation(Recieve);
             });
         }
-        public static void Send(string send)
+        public  void Send(string send)
         {
             try
             {
@@ -1799,19 +1801,6 @@ namespace UI_fily
             this.Close();
         }
 
-        private void btntest_Click(object sender, RoutedEventArgs e)
-        {
-            gameserverwindow gameserverwindow = new gameserverwindow();
-            this.Close();
-            gameserverwindow.ShowDialog();
-        }
-
-        private void btntest2_Click(object sender, RoutedEventArgs e)
-        {
-            gameclientwindow gameclientwindow = new gameclientwindow();
-            this.Close();
-            gameclientwindow.ShowDialog();
-        }
     }
 
-    }
+}

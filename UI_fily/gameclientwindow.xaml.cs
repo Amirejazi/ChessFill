@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -24,149 +25,149 @@ namespace UI_fily
         {
             InitializeComponent();
             startclient();
-            if (Recieve == portipclientwindow.pass)
+            MessageBoxResult res;
+            res = MessageBox.Show("Are you ready ?", "?!", MessageBoxButton.YesNo);
+            if (res == MessageBoxResult.Yes)
             {
-                Send("connected");
+                ResetBrush();
+                if (optionwindow.rbtnnut == "1")
+                {
+                    rokh_w = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\rokh_white_1.png");
+                    asb_w = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\asb_white_1.png");
+                    fil_w = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\fil_white_1.png");
+                    vazir_w = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\vazir_white_1.png");
+                    shah_w = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\shah_white_1.png");
+                    sarbaz_w = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\sarbaz_white_1.png");
+                    rokh_b = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\rokh_black_1.png");
+                    asb_b = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\asb_black_1.png");
+                    fil_b = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\fil_black_1.png");
+                    vazir_b = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\vazir_black_1.png");
+                    shah_b = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\shah_black_1.png");
+                    sarbaz_b = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\sarbaz_black_1.png");
+                }
+                else if (optionwindow.rbtnnut == "2")
+                {
+                    rokh_w = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\rokh_white_2.png");
+                    asb_w = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\asb_white_2.png");
+                    fil_w = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\fil_white_2.png");
+                    vazir_w = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\vazir_white_2.png");
+                    shah_w = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\shah_white_2.png");
+                    sarbaz_w = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\sarbaz_white_2.png");
+                    rokh_b = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\rokh_black_2.png");
+                    asb_b = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\asb_black_2.png");
+                    fil_b = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\fil_black_2.png");
+                    vazir_b = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\vazir_black_2.png");
+                    shah_b = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\shah_black_2.png");
+                    sarbaz_b = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\sarbaz_black_2.png");
+                }
+                else if (optionwindow.rbtnnut == "3")
+                {
+                    rokh_w = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\rokh_white_3.png");
+                    asb_w = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\asb_white_3.png");
+                    fil_w = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\fil_white_3.png");
+                    vazir_w = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\vazir_white_3.png");
+                    shah_w = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\shah_white_3.png");
+                    sarbaz_w = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\sarbaz_white_3.png");
+                    rokh_b = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\rokh_black_3.png");
+                    asb_b = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\asb_black_3.png");
+                    fil_b = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\fil_black_3.png");
+                    vazir_b = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\vazir_black_3.png");
+                    shah_b = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\shah_black_3.png");
+                    sarbaz_b = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\sarbaz_black_3.png");
+                }
+                else if (optionwindow.rbtnnut == "4")
+                {
+                    rokh_w = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\rokh_white_4.png");
+                    asb_w = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\asb_white_4.png");
+                    fil_w = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\fil_white_4.png");
+                    vazir_w = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\vazir_white_4.png");
+                    shah_w = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\shah_white_4.png");
+                    sarbaz_w = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\sarbaz_white_4.png");
+                    rokh_b = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\rokh_black_4.png");
+                    asb_b = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\asb_black_4.png");
+                    fil_b = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\fil_black_4.png");
+                    vazir_b = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\vazir_black_4.png");
+                    shah_b = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\shah_black_4.png");
+                    sarbaz_b = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\sarbaz_black_4.png");
+                }
+                if (optionwindow.rbtncolor == "2")
+                {
+                    flag = true;
+                    _1img.Source = new BitmapImage(new Uri(rokh_w));
+                    _2img.Source = new BitmapImage(new Uri(asb_w));
+                    _3img.Source = new BitmapImage(new Uri(fil_w));
+                    _4img.Source = new BitmapImage(new Uri(vazir_w));
+                    _5img.Source = new BitmapImage(new Uri(shah_w));
+                    _6img.Source = new BitmapImage(new Uri(fil_w));
+                    _7img.Source = new BitmapImage(new Uri(asb_w));
+                    _8img.Source = new BitmapImage(new Uri(rokh_w));
+                    _9img.Source = new BitmapImage(new Uri(sarbaz_w));
+                    _10img.Source = new BitmapImage(new Uri(sarbaz_w));
+                    _11img.Source = new BitmapImage(new Uri(sarbaz_w));
+                    _12img.Source = new BitmapImage(new Uri(sarbaz_w));
+                    _13img.Source = new BitmapImage(new Uri(sarbaz_w));
+                    _14img.Source = new BitmapImage(new Uri(sarbaz_w));
+                    _15img.Source = new BitmapImage(new Uri(sarbaz_w));
+                    _16img.Source = new BitmapImage(new Uri(sarbaz_w));
+                    _49img.Source = new BitmapImage(new Uri(sarbaz_b));
+                    _50img.Source = new BitmapImage(new Uri(sarbaz_b));
+                    _51img.Source = new BitmapImage(new Uri(sarbaz_b));
+                    _52img.Source = new BitmapImage(new Uri(sarbaz_b));
+                    _53img.Source = new BitmapImage(new Uri(sarbaz_b));
+                    _54img.Source = new BitmapImage(new Uri(sarbaz_b));
+                    _55img.Source = new BitmapImage(new Uri(sarbaz_b));
+                    _56img.Source = new BitmapImage(new Uri(sarbaz_b));
+                    _57img.Source = new BitmapImage(new Uri(rokh_b));
+                    _58img.Source = new BitmapImage(new Uri(asb_b));
+                    _59img.Source = new BitmapImage(new Uri(fil_b));
+                    _60img.Source = new BitmapImage(new Uri(vazir_b));
+                    _61img.Source = new BitmapImage(new Uri(shah_b));
+                    _62img.Source = new BitmapImage(new Uri(fil_b));
+                    _63img.Source = new BitmapImage(new Uri(asb_b));
+                    _64img.Source = new BitmapImage(new Uri(rokh_b));
+                }
+                if (optionwindow.rbtncolor == "1")
+                {
+                    flag = false;
+                    _1img.Source = new BitmapImage(new Uri(rokh_b));
+                    _2img.Source = new BitmapImage(new Uri(asb_b));
+                    _3img.Source = new BitmapImage(new Uri(fil_b));
+                    _4img.Source = new BitmapImage(new Uri(shah_b));
+                    _5img.Source = new BitmapImage(new Uri(vazir_b));
+                    _6img.Source = new BitmapImage(new Uri(fil_b));
+                    _7img.Source = new BitmapImage(new Uri(asb_b));
+                    _8img.Source = new BitmapImage(new Uri(rokh_b));
+                    _9img.Source = new BitmapImage(new Uri(sarbaz_b));
+                    _10img.Source = new BitmapImage(new Uri(sarbaz_b));
+                    _11img.Source = new BitmapImage(new Uri(sarbaz_b));
+                    _12img.Source = new BitmapImage(new Uri(sarbaz_b));
+                    _13img.Source = new BitmapImage(new Uri(sarbaz_b));
+                    _14img.Source = new BitmapImage(new Uri(sarbaz_b));
+                    _15img.Source = new BitmapImage(new Uri(sarbaz_b));
+                    _16img.Source = new BitmapImage(new Uri(sarbaz_b));
+                    _49img.Source = new BitmapImage(new Uri(sarbaz_w));
+                    _50img.Source = new BitmapImage(new Uri(sarbaz_w));
+                    _51img.Source = new BitmapImage(new Uri(sarbaz_w));
+                    _52img.Source = new BitmapImage(new Uri(sarbaz_w));
+                    _53img.Source = new BitmapImage(new Uri(sarbaz_w));
+                    _54img.Source = new BitmapImage(new Uri(sarbaz_w));
+                    _55img.Source = new BitmapImage(new Uri(sarbaz_w));
+                    _56img.Source = new BitmapImage(new Uri(sarbaz_w));
+                    _57img.Source = new BitmapImage(new Uri(rokh_w));
+                    _58img.Source = new BitmapImage(new Uri(asb_w));
+                    _59img.Source = new BitmapImage(new Uri(fil_w));
+                    _60img.Source = new BitmapImage(new Uri(vazir_w));
+                    _61img.Source = new BitmapImage(new Uri(shah_w));
+                    _62img.Source = new BitmapImage(new Uri(fil_w));
+                    _63img.Source = new BitmapImage(new Uri(asb_w));
+                    _64img.Source = new BitmapImage(new Uri(rokh_w));
+                }
             }
             else
             {
-                errorPass = true;
-                portipclientwindow portipclientwindow = new portipclientwindow();
+                portipclientwindow portipclientwindow=new portipclientwindow();
                 this.Close();
                 portipclientwindow.ShowDialog();
-            }
-            ResetBrush();
-            if (optionwindow.rbtnnut == "1")
-            {
-                rokh_w = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\rokh_white_1.png");
-                asb_w = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\asb_white_1.png");
-                fil_w = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\fil_white_1.png");
-                vazir_w = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\vazir_white_1.png");
-                shah_w = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\shah_white_1.png");
-                sarbaz_w = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\sarbaz_white_1.png");
-                rokh_b = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\rokh_black_1.png");
-                asb_b = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\asb_black_1.png");
-                fil_b = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\fil_black_1.png");
-                vazir_b = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\vazir_black_1.png");
-                shah_b = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\shah_black_1.png");
-                sarbaz_b = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\sarbaz_black_1.png");
-            }
-            else if (optionwindow.rbtnnut == "2")
-            {
-                rokh_w = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\rokh_white_2.png");
-                asb_w = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\asb_white_2.png");
-                fil_w = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\fil_white_2.png");
-                vazir_w = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\vazir_white_2.png");
-                shah_w = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\shah_white_2.png");
-                sarbaz_w = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\sarbaz_white_2.png");
-                rokh_b = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\rokh_black_2.png");
-                asb_b = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\asb_black_2.png");
-                fil_b = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\fil_black_2.png");
-                vazir_b = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\vazir_black_2.png");
-                shah_b = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\shah_black_2.png");
-                sarbaz_b = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\sarbaz_black_2.png");
-            }
-            else if (optionwindow.rbtnnut == "3")
-            {
-                rokh_w = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\rokh_white_3.png");
-                asb_w = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\asb_white_3.png");
-                fil_w = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\fil_white_3.png");
-                vazir_w = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\vazir_white_3.png");
-                shah_w = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\shah_white_3.png");
-                sarbaz_w = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\sarbaz_white_3.png");
-                rokh_b = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\rokh_black_3.png");
-                asb_b = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\asb_black_3.png");
-                fil_b = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\fil_black_3.png");
-                vazir_b = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\vazir_black_3.png");
-                shah_b = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\shah_black_3.png");
-                sarbaz_b = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\sarbaz_black_3.png");
-            }
-            else if (optionwindow.rbtnnut == "4")
-            {
-                rokh_w = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\rokh_white_4.png");
-                asb_w = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\asb_white_4.png");
-                fil_w = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\fil_white_4.png");
-                vazir_w = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\vazir_white_4.png");
-                shah_w = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\shah_white_4.png");
-                sarbaz_w = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\sarbaz_white_4.png");
-                rokh_b = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\rokh_black_4.png");
-                asb_b = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\asb_black_4.png");
-                fil_b = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\fil_black_4.png");
-                vazir_b = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\vazir_black_4.png");
-                shah_b = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\shah_black_4.png");
-                sarbaz_b = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\sarbaz_black_4.png");
-            }
-            if (optionwindow.rbtncolor == "2")
-            {
-                flag = true;
-                _1img.Source = new BitmapImage(new Uri(rokh_w));
-                _2img.Source = new BitmapImage(new Uri(asb_w));
-                _3img.Source = new BitmapImage(new Uri(fil_w));
-                _4img.Source = new BitmapImage(new Uri(vazir_w));
-                _5img.Source = new BitmapImage(new Uri(shah_w));
-                _6img.Source = new BitmapImage(new Uri(fil_w));
-                _7img.Source = new BitmapImage(new Uri(asb_w));
-                _8img.Source = new BitmapImage(new Uri(rokh_w));
-                _9img.Source = new BitmapImage(new Uri(sarbaz_w));
-                _10img.Source = new BitmapImage(new Uri(sarbaz_w));
-                _11img.Source = new BitmapImage(new Uri(sarbaz_w));
-                _12img.Source = new BitmapImage(new Uri(sarbaz_w));
-                _13img.Source = new BitmapImage(new Uri(sarbaz_w));
-                _14img.Source = new BitmapImage(new Uri(sarbaz_w));
-                _15img.Source = new BitmapImage(new Uri(sarbaz_w));
-                _16img.Source = new BitmapImage(new Uri(sarbaz_w));
-                _49img.Source = new BitmapImage(new Uri(sarbaz_b));
-                _50img.Source = new BitmapImage(new Uri(sarbaz_b));
-                _51img.Source = new BitmapImage(new Uri(sarbaz_b));
-                _52img.Source = new BitmapImage(new Uri(sarbaz_b));
-                _53img.Source = new BitmapImage(new Uri(sarbaz_b));
-                _54img.Source = new BitmapImage(new Uri(sarbaz_b));
-                _55img.Source = new BitmapImage(new Uri(sarbaz_b));
-                _56img.Source = new BitmapImage(new Uri(sarbaz_b));
-                _57img.Source = new BitmapImage(new Uri(rokh_b));
-                _58img.Source = new BitmapImage(new Uri(asb_b));
-                _59img.Source = new BitmapImage(new Uri(fil_b));
-                _60img.Source = new BitmapImage(new Uri(vazir_b));
-                _61img.Source = new BitmapImage(new Uri(shah_b));
-                _62img.Source = new BitmapImage(new Uri(fil_b));
-                _63img.Source = new BitmapImage(new Uri(asb_b));
-                _64img.Source = new BitmapImage(new Uri(rokh_b));
-            }
-            if (optionwindow.rbtncolor == "1")
-            {
-                flag = false;
-                _1img.Source = new BitmapImage(new Uri(rokh_b));
-                _2img.Source = new BitmapImage(new Uri(asb_b));
-                _3img.Source = new BitmapImage(new Uri(fil_b));
-                _4img.Source = new BitmapImage(new Uri(shah_b));
-                _5img.Source = new BitmapImage(new Uri(vazir_b));
-                _6img.Source = new BitmapImage(new Uri(fil_b));
-                _7img.Source = new BitmapImage(new Uri(asb_b));
-                _8img.Source = new BitmapImage(new Uri(rokh_b));
-                _9img.Source = new BitmapImage(new Uri(sarbaz_b));
-                _10img.Source = new BitmapImage(new Uri(sarbaz_b));
-                _11img.Source = new BitmapImage(new Uri(sarbaz_b));
-                _12img.Source = new BitmapImage(new Uri(sarbaz_b));
-                _13img.Source = new BitmapImage(new Uri(sarbaz_b));
-                _14img.Source = new BitmapImage(new Uri(sarbaz_b));
-                _15img.Source = new BitmapImage(new Uri(sarbaz_b));
-                _16img.Source = new BitmapImage(new Uri(sarbaz_b));
-                _49img.Source = new BitmapImage(new Uri(sarbaz_w));
-                _50img.Source = new BitmapImage(new Uri(sarbaz_w));
-                _51img.Source = new BitmapImage(new Uri(sarbaz_w));
-                _52img.Source = new BitmapImage(new Uri(sarbaz_w));
-                _53img.Source = new BitmapImage(new Uri(sarbaz_w));
-                _54img.Source = new BitmapImage(new Uri(sarbaz_w));
-                _55img.Source = new BitmapImage(new Uri(sarbaz_w));
-                _56img.Source = new BitmapImage(new Uri(sarbaz_w));
-                _57img.Source = new BitmapImage(new Uri(rokh_w));
-                _58img.Source = new BitmapImage(new Uri(asb_w));
-                _59img.Source = new BitmapImage(new Uri(fil_w));
-                _60img.Source = new BitmapImage(new Uri(vazir_w));
-                _61img.Source = new BitmapImage(new Uri(shah_w));
-                _62img.Source = new BitmapImage(new Uri(fil_w));
-                _63img.Source = new BitmapImage(new Uri(asb_w));
-                _64img.Source = new BitmapImage(new Uri(rokh_w));
             }
             Button = new List<Button>();
             Button.Add(_1);
@@ -300,10 +301,11 @@ namespace UI_fily
             images.Add(_62img);
             images.Add(_63img);
             images.Add(_64img);
+
         }
 
-        public static bool errorPass { get; set; } = false;
         public bool flag { get; set; }
+        public bool enable { get; set; }=true;
         public string loc { get; set; }
         public string locationSaver { get; set; }
         public int indexg { get; set; }
@@ -324,7 +326,7 @@ namespace UI_fily
         public static ClientStartup _client;
         public static TransmissionClient _transmission;
         public string Recieve { get; set; }
-        public void LocationSaver()
+        void LocationSaver()
         {
             locationSaver = "-,";
             for (int i = 1; i < 65; i++)
@@ -361,7 +363,7 @@ namespace UI_fily
             }
             locationSaver = locationSaver.Remove(locationSaver.Length - 1);
         }
-        public static void RecieveLocation(string str)
+        void RecieveLocation(string str)
         {
             string[] locations = str.Split(',');
             for (int i = 1; i < locations.Length; i++)
@@ -420,7 +422,7 @@ namespace UI_fily
                     images[65 - i].Source = new BitmapImage(new Uri(shah_w));
                 }
             }
-
+            enable = true;
         }
         public void ResetBrush()
         {
@@ -1474,38 +1476,41 @@ namespace UI_fily
         }
         public void EventOfButtons(int index)
         {
-            if (images[index].Source != null)
+            if (enable)
             {
-                if (RokhChecker(flag, images[index].Source.ToString()))
-                    Rokh(index);
-                else if (AsbChecker(flag, images[index].Source.ToString()))
-                    Asb(index);
-                else if (FilChecker(flag, images[index].Source.ToString()))
-                    Fil(index);
-                else if (ShahChecker(flag, images[index].Source.ToString()))
-                    Shah(index);
-                else if (VazirChecker(flag, images[index].Source.ToString()))
-                    Vazir(index);
-                if (index > 8 && index < 17)
+                if (images[index].Source != null)
                 {
-                    if (SarbazChecker(flag, images[index].Source.ToString()))
-                        Sarbaz_firstTime(index);
+                    if (RokhChecker(flag, images[index].Source.ToString()))
+                        Rokh(index);
+                    else if (AsbChecker(flag, images[index].Source.ToString()))
+                        Asb(index);
+                    else if (FilChecker(flag, images[index].Source.ToString()))
+                        Fil(index);
+                    else if (ShahChecker(flag, images[index].Source.ToString()))
+                        Shah(index);
+                    else if (VazirChecker(flag, images[index].Source.ToString()))
+                        Vazir(index);
+                    if (index > 8 && index < 17)
+                    {
+                        if (SarbazChecker(flag, images[index].Source.ToString()))
+                            Sarbaz_firstTime(index);
+                    }
+                    else if (index > 16)
+                    {
+                        if (SarbazChecker(flag, images[index].Source.ToString()))
+                            Sarbaz(index);
+                    }
                 }
-                else if (index > 16)
+                string colorback = Button[index].Background.ToString();
+                if (colorback == "#FF9ACD32" || colorback == "#FFFF4500")
                 {
-                    if (SarbazChecker(flag, images[index].Source.ToString()))
-                        Sarbaz(index);
+                    images[index].Source = new BitmapImage(new Uri(loc));
+                    images[indexg].Source = null;
+                    ResetBrush();
+                    LocationSaver();
+                    Send(locationSaver);
+                    enable = false;
                 }
-            }
-            string colorback = Button[index].Background.ToString();
-            if (colorback == "#FF9ACD32" || colorback == "#FFFF4500")
-            {
-                images[index].Source = new BitmapImage(new Uri(loc));
-                images[indexg].Source = null;
-                ResetBrush();
-                clientname.Content = optionwindow.clientname;
-                LocationSaver();
-                Send(locationSaver);
             }
         }
         private void _1b(object sender, RoutedEventArgs e)
@@ -1828,14 +1833,7 @@ namespace UI_fily
             {
                 this.Dispatcher.Invoke(() =>
                 {
-                    Recieve = "";
-                    for (int i = 0; i < recieveMessage.Length; i++)
-                    {
-                        if (recieveMessage[i] != '\0')
-                        {
-                            Recieve += recieveMessage[i];
-                        }
-                    }
+                    Recieve=recieveMessage;
                     if (Recieve[0] == 'i')
                     {
                         Recieve = Recieve.Remove(0, 2);
@@ -1846,10 +1844,9 @@ namespace UI_fily
                         optionwindow.servername = items[3];
                         optionwindow.clientname = items[4];
                         optionwindow.rbtn1 = items[5];
-                        gameclientwindow gameClientwindow = new gameclientwindow();
-                        gameClientwindow.ShowDialog();
                     }
-                    gameclientwindow.RecieveLocation(recieveMessage);
+                    else
+                        RecieveLocation(Recieve);
                 });
             }
             else
@@ -1887,5 +1884,6 @@ namespace UI_fily
         {
             this.Close();
         }
+
     }
 }

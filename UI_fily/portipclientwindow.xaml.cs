@@ -26,10 +26,6 @@ namespace UI_fily
         public portipclientwindow()
         {
             InitializeComponent();
-            if (gameclientwindow.errorPass)
-            {
-                MessageBox.Show("Pass Not Corecct !!", "Connection Error", MessageBoxButton.OK);
-            }
         }
         
         private void test2(object sender, RoutedEventArgs e)
