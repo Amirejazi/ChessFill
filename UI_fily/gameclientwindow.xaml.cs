@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -1037,6 +1038,187 @@ namespace UI_fily
             else
                 loc = shah_b;
             indexg = index;
+        }
+        void Sarbaz_firstTime(int index)
+        {
+            ResetBrush();
+            int brush = index + 8;
+            bool flagc = true;
+            if (brush < 65)
+            {
+                if (images[brush].Source == null)
+                    Brush(brush);
+                else
+                {
+                    if (ColorChecker(!flag, images[brush].Source.ToString()))
+                        Brushr(brush);
+                    else
+                        flagc = false;
+                }
+            }
+            brush = index + 16;
+            if (brush < 65 && flagc)
+            {
+                if (images[brush].Source == null)
+                    Brush(brush);
+                else
+                {
+                    if (ColorChecker(!flag, images[brush].Source.ToString()))
+                        Brushr(brush);
+                }
+            }
+            if (flag)
+                loc = sarbaz_w;
+            else
+                loc = sarbaz_b;
+            indexg = index;
+        }
+        void Sarbaz(int index)
+        {
+            ResetBrush();
+            int brush = index + 8;
+            if (brush < 65)
+            {
+                if (images[brush].Source == null)
+                    Brush(brush);
+                else
+                {
+                    if (ColorChecker(!flag, images[brush].Source.ToString()))
+                        Brushr(brush);
+                }
+            }
+            if (flag)
+                loc = sarbaz_w;
+            else
+                loc = sarbaz_b;
+            indexg = index;
+        }
+        bool RokhChecker(bool flagc, string img)
+        {
+            string pattern;
+            if (flagc)
+                pattern = @"^.{0,}rokh_w.{0,}$";
+            else
+                pattern = @"^.{0,}rokh_b.{0,}$";
+            Regex t = new Regex(pattern);
+            if (t.IsMatch(img))
+                return true;
+            else
+                return false;
+        }
+        bool AsbChecker(bool flagc, string img)
+        {
+            string pattern;
+            if (flagc)
+                pattern = @"^.{0,}asb_w.{0,}$";
+            else
+                pattern = @"^.{0,}asb_b.{0,}$";
+            Regex t = new Regex(pattern);
+            if (t.IsMatch(img))
+                return true;
+            else
+                return false;
+        }
+        bool FilChecker(bool flagc, string img)
+        {
+            string pattern;
+            if (flagc)
+                pattern = @"^.{0,}fil_w.{0,}$";
+            else
+                pattern = @"^.{0,}fil_b.{0,}$";
+            Regex t = new Regex(pattern);
+            if (t.IsMatch(img))
+                return true;
+            else
+                return false;
+        }
+        bool SarbazChecker(bool flagc, string img)
+        {
+            string pattern;
+            if (flagc)
+                pattern = @"^.{0,}sarbaz_w.{0,}$";
+            else
+                pattern = @"^.{0,}sarbaz_b.{0,}$";
+            Regex t = new Regex(pattern);
+            if (t.IsMatch(img))
+                return true;
+            else
+                return false;
+        }
+        bool VazirChecker(bool flagc, string img)
+        {
+            string pattern;
+            if (flagc)
+                pattern = @"^.{0,}vazir_w.{0,}$";
+            else
+                pattern = @"^.{0,}vazir_b.{0,}$";
+            Regex t = new Regex(pattern);
+            if (t.IsMatch(img))
+                return true;
+            else
+                return false;
+        }
+        bool ShahChecker(bool flagc, string img)
+        {
+            string pattern;
+            if (flagc)
+                pattern = @"^.{0,}shah_w.{0,}$";
+            else
+                pattern = @"^.{0,}shah_b.{0,}$";
+            Regex t = new Regex(pattern);
+            if (t.IsMatch(img))
+                return true;
+            else
+                return false;
+        }
+
+        bool ColorChecker(bool flag, string img)
+        {
+            string pattern;
+            if (flag)
+                pattern = @"^.{0,}white.{0,}$";
+            else
+                pattern = @"^.{0,}black.{0,}$";
+            Regex t = new Regex(pattern);
+            if (t.IsMatch(img))
+                return true;
+            else
+                return false;
+        }
+        void EventOfButtons(int index)
+        {
+            if (images[index].Source != null)
+            {
+                if (RokhChecker(flag, images[index].Source.ToString()))
+                    Rokh(index);
+                else if (AsbChecker(flag, images[index].Source.ToString()))
+                    Asb(index);
+                else if (FilChecker(flag, images[index].Source.ToString()))
+                    Fil(index);
+                else if (ShahChecker(flag, images[index].Source.ToString()))
+                    Shah(index);
+                else if (VazirChecker(flag, images[index].Source.ToString()))
+                    Vazir(index);
+                if (index > 8 && index < 17)
+                {
+                    if (SarbazChecker(flag, images[index].Source.ToString()))
+                        Sarbaz_firstTime(index);
+                }
+                else if (index > 16)
+                {
+                    if (SarbazChecker(flag, images[index].Source.ToString()))
+                        Sarbaz(index);
+                }
+            }
+            string colorback = Button[index].Background.ToString();
+            if (colorback == "#FF9ACD32" || colorback == "#FFFF4500")
+            {
+                images[index].Source = new BitmapImage(new Uri(loc));
+                images[indexg].Source = null;
+                ResetBrush();
+                //LocationSaver();
+                //_transmission.Send(locationSaver);
+            }
         }
 
     }
