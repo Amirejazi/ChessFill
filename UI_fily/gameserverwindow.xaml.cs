@@ -104,6 +104,8 @@ namespace UI_fily
             }
             servername.Content = optionwindow.servername;
             clientname.Content = optionwindow.clientname;
+            start_Server();
+            Send(portipserverwindow.pass);
             Button = new List<Button>();
             Button.Add(_1);
             Button.Add(_1);
@@ -1441,7 +1443,7 @@ namespace UI_fily
                 images[indexg].Source = null;
                 ResetBrush();
                 LocationSaver();
-                portipserverwindow.Send(locationSaver);
+                Send(locationSaver);
             }
         }
         private void _1b(object sender, RoutedEventArgs e)
@@ -1702,8 +1704,8 @@ namespace UI_fily
         }
         private void ChangeState(string state, SolidColorBrush color)
         {
-            //btnstart.Content = state;
-            //btnstart.Foreground = color;
+            State.Content = state;
+            State.Foreground = color;
         }
         private void StartState(bool state)
         {
@@ -1712,18 +1714,16 @@ namespace UI_fily
             //Port.IsEnabled = state;
         }
 
-        private async void btnstart_Click(object sender, RoutedEventArgs e)
+        private async void start_Server()
         {
             try
             {
                 ChangeState("Starting Server", new SolidColorBrush(Colors.Orange));
-                _serverstartup = new ServerStartup(int.Parse(Port.Text), Ip.Text, acceptedCallback, acceptedErrorcallback); ;
+                _serverstartup = new ServerStartup(int.Parse(portipserverwindow.port), portipserverwindow.ip, acceptedCallback, acceptedErrorcallback); ;
                 _serverstartup.InitServer();
                 StartState(false);
                 ChangeState("Accepting Client...", new SolidColorBrush(Colors.Blue));
                 await _serverstartup.AcceptAsync();
-                Send(Pass.Text);
-
             }
             catch (Exception ex)
             {
@@ -1731,7 +1731,6 @@ namespace UI_fily
                 ChangeState("Stop Server", new SolidColorBrush(Colors.Red));
                 StartState(true);
             }
-
         }
         private void acceptedErrorcallback(string error)
         {
@@ -1739,7 +1738,6 @@ namespace UI_fily
                 MessageBox.Show(error + "\n try again", "AcceptedError", MessageBoxButton.OK, MessageBoxImage.Error);
             });
         }
-
         private async void acceptedCallback(Socket acceptedsocket)
         {
             this.Dispatcher.Invoke(() => {
@@ -1754,7 +1752,6 @@ namespace UI_fily
             await _transmission.RecieveAsync();
 
         }
-
         private async void receiveErrorCallback(string error)
         {
 
@@ -1768,25 +1765,22 @@ namespace UI_fily
             _transmission = null;
             await _serverstartup.AcceptAsync();
         }
-
         private void recieveCallback(string recieveMessage)
         {
-            Recieve = "";
-            for (int i = 0; i < recieveMessage.Length; i++)
-            {
-                if (recieveMessage[i] != '\0')
-                {
-                    Recieve += recieveMessage[i];
-                }
-            }
             this.Dispatcher.Invoke(() => {
-                if (Recieve == "connected")
+                Recieve = "";
+                for (int i = 0; i < recieveMessage.Length; i++)
+                {
+                    if (recieveMessage[i] != '\0')
+                    {
+                        Recieve += recieveMessage[i];
+                    }
+                }
+                if(Recieve == "connected")
                 {
                     Send(propSend);
-                    gameserverwindow gameServerwindow = new gameserverwindow();
-                    gameServerwindow.ShowDialog();
                 }
-                gameserverwindow.RecieveLocation(recieveMessage);
+                RecieveLocation(recieveMessage);
             });
         }
         public static void Send(string send)

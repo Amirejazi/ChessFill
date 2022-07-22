@@ -23,6 +23,18 @@ namespace UI_fily
         public gameclientwindow()
         {
             InitializeComponent();
+            startclient();
+            if (Recieve == portipclientwindow.pass)
+            {
+                Send("connected");
+            }
+            else
+            {
+                errorPass = true;
+                portipclientwindow portipclientwindow = new portipclientwindow();
+                this.Close();
+                portipclientwindow.ShowDialog();
+            }
             ResetBrush();
             if (optionwindow.rbtnnut == "1")
             {
@@ -289,6 +301,8 @@ namespace UI_fily
             images.Add(_63img);
             images.Add(_64img);
         }
+
+        public static bool errorPass { get; set; } = false;
         public bool flag { get; set; }
         public string loc { get; set; }
         public string locationSaver { get; set; }
@@ -1491,7 +1505,7 @@ namespace UI_fily
                 ResetBrush();
                 clientname.Content = optionwindow.clientname;
                 LocationSaver();
-                portipclientwindow.Send(locationSaver);
+                Send(locationSaver);
             }
         }
         private void _1b(object sender, RoutedEventArgs e)
@@ -1751,25 +1765,25 @@ namespace UI_fily
             EventOfButtons(64);
         }
 
-        private void btnstartclient_Click(object sender, RoutedEventArgs e)
-        {
-            if (Recieve == Pass.Text)
-            {
-                Send("connected");
-            }
-            else
-            {
-                MessageBox.Show("hammalak");
-            }
-        }
+        //private void startclient(object sender, RoutedEventArgs e)
+        //{
+        //    if (Recieve == Pass.Text)
+        //    {
+        //        Send("connected");
+        //    }
+        //    else
+        //    {
+        //        MessageBox.Show("hammalak");
+        //    }
+        //}
 
-        private async void btnconnectclient_Click(object sender, RoutedEventArgs e)
+        private async void startclient()
         {
             try
             {
                 //ConnectBtnEnable(false);
                 //ChangeState("InitClient...", new SolidColorBrush(Colors.Orange));
-                _client = new ClientStartup(int.Parse(Port.Text), Ip.Text, connectcallbak1);
+                _client = new ClientStartup(int.Parse(portipclientwindow.port), portipclientwindow.ip, connectcallbak1);
                 _client.InitClient();
                 //ChangeState("Connecting to server...", new SolidColorBrush(Colors.Orange));
                 await _client.ConnectAsync();

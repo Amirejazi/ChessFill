@@ -21,136 +21,27 @@ namespace UI_fily
     /// </summary>
     public partial class portipserverwindow : Window
     {
-        public static ServerStartup _serverstartup;
-        public static ServerTransmission _transmission;
-        public string Recieve { get; set; }
-        public string propSend { get; set; } = $"i:{optionwindow.rbtnground},{optionwindow.rbtnnut},{optionwindow.rbtncolor},{optionwindow.servername},{optionwindow.clientname},{optionwindow.rbtn1}";
+        public static string port { get; set; }
+        public static string ip { get; set; }
+        public static string pass { get; set; }
         public portipserverwindow()
         {
             InitializeComponent();
         }
-        private void ChangeState(string state, SolidColorBrush color)
+        
+        private  void btnstart_Click(object sender, RoutedEventArgs e)
         {
-            btnstart.Content = state;
-            btnstart.Foreground = color;
-        }
-        private void StartState(bool state)
-        {
-            btnstart.IsEnabled = state;
-            //StopBtn.IsEnabled = !state;
-            Port.IsEnabled = state;
-        }
-        private async void btnstart_Click(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                ChangeState("Starting Server", new SolidColorBrush(Colors.Orange));
-                _serverstartup = new ServerStartup(int.Parse(Port.Text), Ip.Text, acceptedCallback, acceptedErrorcallback); ;
-                _serverstartup.InitServer();
-                StartState(false);
-                ChangeState("Accepting Client...", new SolidColorBrush(Colors.Blue));
-                await _serverstartup.AcceptAsync();
-                Send(Pass.Text);
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message + "\n try again", "Init server error", MessageBoxButton.OK, MessageBoxImage.Error);
-                ChangeState("Stop Server", new SolidColorBrush(Colors.Red));
-                StartState(true);
-            }
-            
-        }
-        private void acceptedErrorcallback(string error)
-        {
-            this.Dispatcher.Invoke(() => {
-                MessageBox.Show(error + "\n try again", "AcceptedError", MessageBoxButton.OK, MessageBoxImage.Error);
-            });
-        }
-
-        private async void acceptedCallback(Socket acceptedsocket)
-        {
-            this.Dispatcher.Invoke(() => {
-                ChangeState("Connect to Client...", new SolidColorBrush(Colors.Orange));
-            });
-            _transmission = new ServerTransmission(acceptedsocket, recieveCallback, receiveErrorCallback);
-
-            this.Dispatcher.Invoke(() =>
-            {
-                btnstart.IsEnabled = true;
-            });
-            await _transmission.RecieveAsync();
-            
-        }
-
-        private async void receiveErrorCallback(string error)
-        {
-
-            this.Dispatcher.Invoke(() =>
-            {
-                btnstart.IsEnabled = false;
-                ChangeState("Accepting Client...", new SolidColorBrush(Colors.Blue));
-                MessageBox.Show(error + "\n try again", "RecieveError", MessageBoxButton.OK, MessageBoxImage.Error);
-            });
-            _serverstartup.CloseClient(_transmission.Socket);
-            _transmission = null;
-            await _serverstartup.AcceptAsync();
-        }
-
-        private void recieveCallback(string recieveMessage)
-        {
-            Recieve = "";
-            for (int i = 0; i < recieveMessage.Length; i++)
-            {
-                if (recieveMessage[i] != '\0')
-                {
-                    Recieve += recieveMessage[i];
-                }
-            }
-            this.Dispatcher.Invoke(() => {
-                if(Recieve == "connected")
-                {
-                    Send(propSend);
-                    gameserverwindow gameServerwindow = new gameserverwindow();
-                    gameServerwindow.ShowDialog();
-                }
-                gameserverwindow.RecieveLocation(recieveMessage);
-            });
-        }
-        public static void Send(string send)
-        {
-            try
-            {
-                _transmission.Send(send);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message + "\n try again", "sending error", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
+            port = Port.Text;
+            ip = Ip.Text;
+            pass = Pass.Text;
+            gameserverwindow gameServerwindow = new gameserverwindow();
+            this.Close();
+            gameServerwindow.ShowDialog();
         }
         private void closee(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         private void btntest_Click(object sender, RoutedEventArgs e)
         {
             gameserverwindow gameserverwindow = new gameserverwindow();
