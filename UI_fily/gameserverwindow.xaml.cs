@@ -98,10 +98,77 @@ namespace UI_fily
                 _63img.Source = new BitmapImage(new Uri(asb_w));
                 _64img.Source = new BitmapImage(new Uri(rokh_w));
             }
-
-
             servername.Content = optionwindow.servername;
             clientname.Content = optionwindow.clientname;
+            Button = new List<Button>();
+            Button.Add(_1);
+            Button.Add(_1);
+            Button.Add(_2);
+            Button.Add(_3);
+            Button.Add(_4);
+            Button.Add(_5);
+            Button.Add(_6);
+            Button.Add(_7);
+            Button.Add(_8);
+            Button.Add(_9);
+            Button.Add(_10);
+            Button.Add(_11);
+            Button.Add(_12);
+            Button.Add(_13);
+            Button.Add(_14);
+            Button.Add(_15);
+            Button.Add(_16);
+            Button.Add(_17);
+            Button.Add(_18);
+            Button.Add(_19);
+            Button.Add(_20);
+            Button.Add(_21);
+            Button.Add(_22);
+            Button.Add(_23);
+            Button.Add(_24);
+            Button.Add(_25);
+            Button.Add(_26);
+            Button.Add(_27);
+            Button.Add(_28);
+            Button.Add(_29);
+            Button.Add(_30);
+            Button.Add(_31);
+            Button.Add(_32);
+            Button.Add(_33);
+            Button.Add(_34);
+            Button.Add(_35);
+            Button.Add(_36);
+            Button.Add(_37);
+            Button.Add(_38);
+            Button.Add(_39);
+            Button.Add(_40);
+            Button.Add(_41);
+            Button.Add(_42);
+            Button.Add(_43);
+            Button.Add(_44);
+            Button.Add(_45);
+            Button.Add(_46);
+            Button.Add(_47);
+            Button.Add(_48);
+            Button.Add(_49);
+            Button.Add(_50);
+            Button.Add(_51);
+            Button.Add(_52);
+            Button.Add(_53);
+            Button.Add(_54);
+            Button.Add(_55);
+            Button.Add(_56);
+            Button.Add(_57);
+            Button.Add(_58);
+            Button.Add(_59);
+            Button.Add(_60);
+            Button.Add(_61);
+            Button.Add(_62);
+            Button.Add(_63);
+            Button.Add(_64);
+
+
+
         }
         public static string rokh_b { get; set; }
         public static string asb_b { get; set; }
@@ -115,6 +182,7 @@ namespace UI_fily
         public static string vazir_w { get; set; }
         public static string shah_w { get; set; }
         public static string sarbaz_b { get; set; }
+        public List<Button> Button { get; set; }
         void ResetBrush()
         {
             if (optionwindow.rbtnground == "1")
