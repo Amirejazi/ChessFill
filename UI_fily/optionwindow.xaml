@@ -104,7 +104,7 @@
                         <Button Content="setting" Name="btnsetting" BorderThickness="0" Foreground="Black" Background="Transparent" FontSize="45" HorizontalContentAlignment="Left" Margin="12,0,10,0" Click="btnsetting_Click"></Button>
                     </Grid>
                     <Grid Grid.Row="5">
-                        <Button Content="about us" Name="btnsettingd" BorderThickness="0" Foreground="Black" Background="Transparent" FontSize="45" HorizontalContentAlignment="Left" Margin="12,0,10,0" Click="btnsettingd_Click" ></Button>
+                        <Button Content="about us" x:Name="aboutus" BorderThickness="0" Foreground="Black" Background="Transparent" FontSize="45" HorizontalContentAlignment="Left" Margin="12,0,10,0" Click="aboutus_Click" ></Button>
                     </Grid>
 
                 </Grid>
@@ -112,7 +112,7 @@
                     <Label Name="adresslabel" Content="Texture" FontSize="47" Foreground="Black" VerticalContentAlignment="Center" Margin="0,-12,0,0"></Label>
                 </Grid>
                 <Grid Grid.Row="2" Grid.Column="3">
-                    <Border x:Name="textureborder" Visibility="Collapsed">
+                    <Border x:Name="textureborder" Visibility="Visible">
                         <Grid>
                             <Grid Margin="0,0,0,210" >
                                 <Label Content="1" FontSize="60" ></Label>
@@ -200,7 +200,7 @@
                             </Grid>
                         </Grid>
                     </Border>
-                    <Border x:Name="aboutusborder" Visibility="Visible">
+                    <Border x:Name="aboutusborder" Visibility="Collapsed">
                         <Grid>
                             <Ellipse Fill="#3A0CA3"
                                  Height="150"

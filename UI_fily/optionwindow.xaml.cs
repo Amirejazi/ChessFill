@@ -36,6 +36,7 @@ namespace UI_fily
             timerborder.Visibility = Visibility.Collapsed;
             soundborder.Visibility = Visibility.Collapsed;
             settingborder.Visibility = Visibility.Collapsed;
+            aboutusborder.Visibility = Visibility.Collapsed;
         }
 
         private void btntexture_Click(object sender, RoutedEventArgs e)
@@ -72,10 +73,10 @@ namespace UI_fily
             settingborder.Visibility = Visibility.Visible;
             adresslabel.Content = "Setting";
         }
-        private void btnsettingd_Click(object sender, RoutedEventArgs e)
+        private void aboutus_Click(object sender, RoutedEventArgs e)
         {
             bordercollaps();
-            settingborder.Visibility = Visibility.Visible;
+            aboutusborder.Visibility = Visibility.Visible;
             adresslabel.Content = "about us";
         }
         private void btnnext_Click(object sender, RoutedEventArgs e)
@@ -236,6 +237,8 @@ namespace UI_fily
         {
             this.Close();
         }
+
+        
     }
     
     
