@@ -74,6 +74,9 @@
                     <Grid Grid.Row="4">
                         <Image Source="sorce/setting.png"></Image>
                     </Grid>
+                    <Grid Grid.Row="5">
+                        <Image Source="sorce/heart.png"></Image>
+                    </Grid>
                 </Grid>
                 <Grid Grid.Row="2"
                       Grid.Column="2">
@@ -99,6 +102,9 @@
                     </Grid>
                     <Grid Grid.Row="4">
                         <Button Content="setting" Name="btnsetting" BorderThickness="0" Foreground="Black" Background="Transparent" FontSize="45" HorizontalContentAlignment="Left" Margin="12,0,10,0" Click="btnsetting_Click"></Button>
+                    </Grid>
+                    <Grid Grid.Row="5">
+                        <Button Content="about us" Name="btnsettingd" BorderThickness="0" Foreground="Black" Background="Transparent" FontSize="45" HorizontalContentAlignment="Left" Margin="12,0,10,0" Click="btnsettingd_Click" ></Button>
                     </Grid>
 
                 </Grid>
@@ -134,7 +140,7 @@
                         </Grid>
 
                     </Border>
-                    <Border x:Name="informationborder" Visibility="Visible">
+                    <Border x:Name="informationborder" Visibility="Collapsed">
                         <Grid>
                             <Label Content="Choose a Color :" FontSize="40" Height="62" VerticalAlignment="Top" Margin="6,0,430,0" ></Label>
                             <Label Content="The Possibility of Ctrl + Z :" FontSize="40" Height="62" VerticalAlignment="Top" Margin="6,66,291,0" />
@@ -192,6 +198,11 @@
                                 <RadioButton x:Name="rbtn2yes" Content="Yes" FontSize="35" HorizontalAlignment="Left" Margin="10,64,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" Checked="rbtn2yes_Checked" />
                                 <RadioButton x:Name="rbtn2no" Content="No" FontSize="35" HorizontalAlignment="Left" Margin="121,64,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" Checked="rbtn2no_Checked" />
                             </Grid>
+                        </Grid>
+                    </Border>
+                    <Border x:Name="aboutusborder" Visibility="Visible">
+                        <Grid>
+                            <Label Content="6" FontSize="60" ></Label>
                         </Grid>
                     </Border>
                 </Grid>

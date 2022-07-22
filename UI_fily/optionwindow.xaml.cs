@@ -67,7 +67,12 @@ namespace UI_fily
             settingborder.Visibility = Visibility.Visible;
             adresslabel.Content = "Setting";
         }
-
+        private void btnsettingd_Click(object sender, RoutedEventArgs e)
+        {
+            bordercollaps();
+            settingborder.Visibility = Visibility.Visible;
+            adresslabel.Content = "about us";
+        }
         private void btnnext_Click(object sender, RoutedEventArgs e)
         {
             if (rbtnnut == "1")
@@ -227,6 +232,8 @@ namespace UI_fily
         {
             rbtn2 = "2";
         }
+
+        
     }
     
     
