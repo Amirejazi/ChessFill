@@ -98,6 +98,7 @@ namespace UI_fily
                 _63img.Source = new BitmapImage(new Uri(asb_w));
                 _64img.Source = new BitmapImage(new Uri(rokh_w));
             }
+
             servername.Content = optionwindow.servername;
             clientname.Content = optionwindow.clientname;
             Button = new List<Button>();
@@ -166,7 +167,72 @@ namespace UI_fily
             Button.Add(_62);
             Button.Add(_63);
             Button.Add(_64);
-
+            images = new List<Image>();
+            images.Add(_1img);
+            images.Add(_1img);
+            images.Add(_2img);
+            images.Add(_3img);
+            images.Add(_4img);
+            images.Add(_5img);
+            images.Add(_6img);
+            images.Add(_7img);
+            images.Add(_8img);
+            images.Add(_9img);
+            images.Add(_10img);
+            images.Add(_11img);
+            images.Add(_12img);
+            images.Add(_13img);
+            images.Add(_14img);
+            images.Add(_15img);
+            images.Add(_16img);
+            images.Add(_17img);
+            images.Add(_18img);
+            images.Add(_19img);
+            images.Add(_20img);
+            images.Add(_21img);
+            images.Add(_22img);
+            images.Add(_23img);
+            images.Add(_24img);
+            images.Add(_25img);
+            images.Add(_26img);
+            images.Add(_27img);
+            images.Add(_28img);
+            images.Add(_29img);
+            images.Add(_30img);
+            images.Add(_31img);
+            images.Add(_32img);
+            images.Add(_33img);
+            images.Add(_34img);
+            images.Add(_35img);
+            images.Add(_36img);
+            images.Add(_37img);
+            images.Add(_38img);
+            images.Add(_39img);
+            images.Add(_40img);
+            images.Add(_41img);
+            images.Add(_42img);
+            images.Add(_43img);
+            images.Add(_44img);
+            images.Add(_45img);
+            images.Add(_46img);
+            images.Add(_47img);
+            images.Add(_48img);
+            images.Add(_49img);
+            images.Add(_50img);
+            images.Add(_51img);
+            images.Add(_52img);
+            images.Add(_53img);
+            images.Add(_54img);
+            images.Add(_55img);
+            images.Add(_56img);
+            images.Add(_57img);
+            images.Add(_58img);
+            images.Add(_59img);
+            images.Add(_60img);
+            images.Add(_61img);
+            images.Add(_62img);
+            images.Add(_63img);
+            images.Add(_64img);
 
 
         }
@@ -183,6 +249,7 @@ namespace UI_fily
         public static string shah_w { get; set; }
         public static string sarbaz_b { get; set; }
         public List<Button> Button { get; set; }
+        public List<Image> images { get; set; }
         void ResetBrush()
         {
             if (optionwindow.rbtnground == "1")
