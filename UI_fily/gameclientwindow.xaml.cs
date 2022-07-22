@@ -246,6 +246,7 @@ namespace UI_fily
         public static string shah_w { get; set; }
         public static string sarbaz_b { get; set; }
         public List<Button> Button { get; set; }
+        public List<Image> images { get; set; }
 
         void ResetBrush()
         {
