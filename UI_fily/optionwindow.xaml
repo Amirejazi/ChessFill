@@ -74,6 +74,9 @@
                     <Grid Grid.Row="4">
                         <Image Source="sorce/setting.png"></Image>
                     </Grid>
+                    <!--<Grid Grid.Row="5">
+                        <Image Source="sorce/heart.png"></Image>
+                    </Grid>-->
                 </Grid>
                 <Grid Grid.Row="2"
                       Grid.Column="2">
@@ -100,6 +103,9 @@
                     <Grid Grid.Row="4">
                         <Button Content="setting" Name="btnsetting" BorderThickness="0" Foreground="Black" Background="Transparent" FontSize="45" HorizontalContentAlignment="Left" Margin="12,0,10,0" Click="btnsetting_Click"></Button>
                     </Grid>
+                    <!--<Grid Grid.Row="5">
+                        <Button Content="about us" Name="btnsettingd" BorderThickness="0" Foreground="Black" Background="Transparent" FontSize="45" HorizontalContentAlignment="Left" Margin="12,0,10,0" Click="btnsettingd_Click" ></Button>
+                    </Grid>-->
 
                 </Grid>
                 <Grid Grid.Row="1" Grid.Column="3">
@@ -134,7 +140,7 @@
                         </Grid>
 
                     </Border>
-                    <Border x:Name="informationborder" Visibility="Visible">
+                    <Border x:Name="informationborder" Visibility="Collapsed">
                         <Grid>
                             <Label Content="Choose a Color :" FontSize="40" Height="62" VerticalAlignment="Top" Margin="6,0,430,0" ></Label>
                             <Label Content="The Possibility of Ctrl + Z :" FontSize="40" Height="62" VerticalAlignment="Top" Margin="6,66,291,0" />
@@ -180,7 +186,7 @@
                             <Label Content="4" FontSize="60" ></Label>
                         </Grid>
                     </Border>
-                    <Border x:Name="settingborder" Visibility="Collapsed">
+                    <Border x:Name="settingborder" Visibility="Visible">
                         <Grid>
                             <Label Content="Show The Houses Where the Player Can Go?" FontSize="35" Margin="0,0,0,368" ></Label>
                             <Label Content="Show The Houses Where you can hit the opponent Player?" FontSize="30" Margin="0,111,-31,257" />
@@ -194,6 +200,17 @@
                             </Grid>
                         </Grid>
                     </Border>
+                    <Border x:Name="aboutusborder" Visibility="Collapsed">
+                        <Grid>
+                            <Label Content="6" FontSize="60" ></Label>
+                        </Grid>
+                    </Border>
+                </Grid>
+                <Grid Grid.ColumnSpan="2" Margin="676,0,690,28" Grid.Column="3">
+                    <Button Width="75" Height="75" HorizontalAlignment="Left" Background="Transparent" Margin="84,-7,0,-9">
+                        <Image Source="sorce/close.png" Height="47" Width="45"></Image>
+                    </Button>
+
                 </Grid>
             </Grid>
         </Grid>

@@ -26,15 +26,16 @@ namespace UI_fily
         {
             InitializeComponent();
         }
-        public  string Pas { get; set; }
+        public  string Recieve { get; set; }
 
         private void btnstartclient_Click(object sender, RoutedEventArgs e)
         {
-            if (Pas == Pass.Text)
+            if (Recieve == Pass.Text)
             {
+                Send("connected");
                 gameclientwindow gameclientwindow = new gameclientwindow();
-                this.Close();
                 gameclientwindow.ShowDialog();
+                
             }
             else
             {
@@ -93,12 +94,25 @@ namespace UI_fily
             {
                 this.Dispatcher.Invoke(() =>
                 {
-                    for(int i = 0; i < recieveMessage.Length; i++)
+                    Recieve = "";
+                    for (int i = 0; i < recieveMessage.Length; i++)
                     {
                         if (recieveMessage[i] != '\0')
                         {
-                            Pas += recieveMessage[i];
+                            Recieve += recieveMessage[i];
                         }
+                    }
+                    if (Recieve[0] == 'i')
+                    {
+                        Recieve = Recieve.Remove(0);
+                        Recieve = Recieve.Remove(0);
+                        string[] items = Recieve.Split(',');
+                        optionwindow.rbtnground = items[0];
+                        optionwindow.rbtnnut = items[1];
+                        optionwindow.rbtncolor = items[2];
+                        optionwindow.servername= items[3];
+                        optionwindow.clientname= items[4];
+                        optionwindow.rbtn1 = items[5];
                     }
                 });
             }
@@ -115,7 +129,18 @@ namespace UI_fily
                 });
             }
         }
-
+        public void Send(string send)
+        {
+            try
+            {
+                _transmission.Send(send);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + "\n try again", "sending error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+        
         private void test2(object sender, RoutedEventArgs e)
         {
             gameclientwindow gameclientwindow = new gameclientwindow();

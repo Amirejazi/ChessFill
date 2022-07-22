@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -525,6 +526,119 @@ namespace UI_fily
                 // button haye bala brown kam rang kamrang shodand ----------------
             }
         }
+        void Brush(int index)
+        {
+            try
+            {
+                Button[index].Background = new SolidColorBrush(Colors.YellowGreen);
+            }
+            catch
+            {
+            }
+        }
+        void Brushr(int index)
+        {
+            try
+            {
+                Button[index].Background = new SolidColorBrush(Colors.OrangeRed);
+            }
+            catch
+            {
+            }
+        }
+        void Asb(int index)
+        {
+            ResetBrush();
+            int brush = index + 10;
+            if (brush % 8 != 1 && brush % 8 != 2 && brush < 65)
+            {
+                if (images[brush].Source == null)
+                    Brush(brush);
+                else
+                {
+                    if (ColorChecker(!flag, images[brush].Source.ToString()))
+                        Brushr(brush);
+                }
+            }
+            brush = index + 6;
+            if (brush % 8 != 0 && brush % 8 != 7 && brush < 65)
+            {
+                if (images[brush].Source == null)
+                    Brush(brush);
+                else
+                {
+                    if (ColorChecker(!flag, images[brush].Source.ToString()))
+                        Brushr(brush);
+                }
+            }
+            brush = index + 15;
+            if (brush % 8 != 0 && brush < 65)
+            {
+                if (images[brush].Source == null)
+                    Brush(brush);
+                else
+                {
+                    if (ColorChecker(!flag, images[brush].Source.ToString()))
+                        Brushr(brush);
+                }
+            }
+            brush = index + 17;
+            if (brush % 8 != 1 && brush < 65)
+            {
+                if (images[brush].Source == null)
+                    Brush(brush);
+                else
+                {
+                    if (ColorChecker(!flag, images[brush].Source.ToString()))
+                        Brushr(brush);
+                }
+            }
+            brush = index - 15;
+            if (brush % 8 != 1 && brush > 0)
+                if (images[brush].Source == null)
+                    Brush(brush);
+                else
+                {
+                    if (ColorChecker(!flag, images[brush].Source.ToString()))
+                        Brushr(brush);
+                }
+            brush = index - 17;
+            if (brush % 8 != 0 && brush > 0)
+                if (images[brush].Source == null)
+                    Brush(brush);
+                else
+                {
+                    if (ColorChecker(!flag, images[brush].Source.ToString()))
+                        Brushr(brush);
+                }
+            brush = index - 6;
+            if (brush % 8 != 1 && brush % 8 != 2 && brush > 0)
+            {
+                if (images[brush].Source == null)
+                    Brush(brush);
+                else
+                {
+                    if (ColorChecker(!flag, images[brush].Source.ToString()))
+                        Brushr(brush);
+                }
+            }
+            brush = index - 10;
+            if (brush % 8 != 0 && brush % 8 != 7 && brush > 0)
+            {
+                if (images[brush].Source == null)
+                    Brush(brush);
+                else
+                {
+                    if (ColorChecker(!flag, images[brush].Source.ToString()))
+                        Brushr(brush);
+                }
+            }
+            if (flag)
+                loc = asb_w;
+            else
+                loc = asb_b;
+            indexg = index;
+        }
         void Fil(int index)
         {
             ResetBrush();
@@ -1037,6 +1151,442 @@ namespace UI_fily
             else
                 loc = shah_b;
             indexg = index;
+        }
+        void Sarbaz_firstTime(int index)
+        {
+            ResetBrush();
+            int brush = index + 8;
+            bool flagc = true;
+            if (brush < 65)
+            {
+                if (images[brush].Source == null)
+                    Brush(brush);
+                else
+                {
+                    if (ColorChecker(!flag, images[brush].Source.ToString()))
+                        Brushr(brush);
+                    else
+                        flagc = false;
+                }
+            }
+            brush = index + 16;
+            if (brush < 65 && flagc)
+            {
+                if (images[brush].Source == null)
+                    Brush(brush);
+                else
+                {
+                    if (ColorChecker(!flag, images[brush].Source.ToString()))
+                        Brushr(brush);
+                }
+            }
+            if (flag)
+                loc = sarbaz_w;
+            else
+                loc = sarbaz_b;
+            indexg = index;
+        }
+        void Sarbaz(int index)
+        {
+            ResetBrush();
+            int brush = index + 8;
+            if (brush < 65)
+            {
+                if (images[brush].Source == null)
+                    Brush(brush);
+                else
+                {
+                    if (ColorChecker(!flag, images[brush].Source.ToString()))
+                        Brushr(brush);
+                }
+            }
+            if (flag)
+                loc = sarbaz_w;
+            else
+                loc = sarbaz_b;
+            indexg = index;
+        }
+        bool RokhChecker(bool flagc, string img)
+        {
+            string pattern;
+            if (flagc)
+                pattern = @"^.{0,}rokh_w.{0,}$";
+            else
+                pattern = @"^.{0,}rokh_b.{0,}$";
+            Regex t = new Regex(pattern);
+            if (t.IsMatch(img))
+                return true;
+            else
+                return false;
+        }
+        bool AsbChecker(bool flagc, string img)
+        {
+            string pattern;
+            if (flagc)
+                pattern = @"^.{0,}asb_w.{0,}$";
+            else
+                pattern = @"^.{0,}asb_b.{0,}$";
+            Regex t = new Regex(pattern);
+            if (t.IsMatch(img))
+                return true;
+            else
+                return false;
+        }
+        bool FilChecker(bool flagc, string img)
+        {
+            string pattern;
+            if (flagc)
+                pattern = @"^.{0,}fil_w.{0,}$";
+            else
+                pattern = @"^.{0,}fil_b.{0,}$";
+            Regex t = new Regex(pattern);
+            if (t.IsMatch(img))
+                return true;
+            else
+                return false;
+        }
+        bool SarbazChecker(bool flagc, string img)
+        {
+            string pattern;
+            if (flagc)
+                pattern = @"^.{0,}sarbaz_w.{0,}$";
+            else
+                pattern = @"^.{0,}sarbaz_b.{0,}$";
+            Regex t = new Regex(pattern);
+            if (t.IsMatch(img))
+                return true;
+            else
+                return false;
+        }
+        bool VazirChecker(bool flagc, string img)
+        {
+            string pattern;
+            if (flagc)
+                pattern = @"^.{0,}vazir_w.{0,}$";
+            else
+                pattern = @"^.{0,}vazir_b.{0,}$";
+            Regex t = new Regex(pattern);
+            if (t.IsMatch(img))
+                return true;
+            else
+                return false;
+        }
+        bool ShahChecker(bool flagc, string img)
+        {
+            string pattern;
+            if (flagc)
+                pattern = @"^.{0,}shah_w.{0,}$";
+            else
+                pattern = @"^.{0,}shah_b.{0,}$";
+            Regex t = new Regex(pattern);
+            if (t.IsMatch(img))
+                return true;
+            else
+                return false;
+        }
+        bool ColorChecker(bool flag, string img)
+        {
+            string pattern;
+            if (flag)
+                pattern = @"^.{0,}white.{0,}$";
+            else
+                pattern = @"^.{0,}black.{0,}$";
+            Regex t = new Regex(pattern);
+            if (t.IsMatch(img))
+                return true;
+            else
+                return false;
+        }
+        void EventOfButtons(int index)
+        {
+            if (images[index].Source != null)
+            {
+                if (RokhChecker(flag, images[index].Source.ToString()))
+                    Rokh(index);
+                else if (AsbChecker(flag, images[index].Source.ToString()))
+                    Asb(index);
+                else if (FilChecker(flag, images[index].Source.ToString()))
+                    Fil(index);
+                else if (ShahChecker(flag, images[index].Source.ToString()))
+                    Shah(index);
+                else if (VazirChecker(flag, images[index].Source.ToString()))
+                    Vazir(index);
+                if (index > 8 && index < 17)
+                {
+                    if (SarbazChecker(flag, images[index].Source.ToString()))
+                        Sarbaz_firstTime(index);
+                }
+                else if (index > 16)
+                {
+                    if (SarbazChecker(flag, images[index].Source.ToString()))
+                        Sarbaz(index);
+                }
+            }
+            string colorback = Button[index].Background.ToString();
+            if (colorback == "#FF9ACD32" || colorback == "#FFFF4500")
+            {
+                images[index].Source = new BitmapImage(new Uri(loc));
+                images[indexg].Source = null;
+                ResetBrush();
+                //LocationSaver();
+                //_transmission.Send(locationSaver);
+            }
+        }
+        private void _1b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(1);
+        }
+        private void _2b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(2);
+        }
+        private void _3b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(3);
+        }
+        private void _4b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(4);
+        }
+        private void _5b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(5);
+        }
+        private void _6b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(6);
+        }
+        private void _7b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(7);
+        }
+        private void _8b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(8);
+        }
+        private void _9b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(9);
+        }
+        private void _10b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(10);
+        }
+        private void _11b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(11);
+        }
+        private void _12b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(12);
+        }
+        private void _13b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(13);
+        }
+        private void _14b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(14);
+        }
+        private void _15b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(15);
+        }
+        private void _16b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(16);
+        }
+        private void _17b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(17);
+        }
+        private void _18b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(18);
+        }
+        private void _19b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(19);
+        }
+        private void _20b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(20);
+        }
+        private void _21b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(21);
+        }
+        private void _22b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(22);
+        }
+        private void _23b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(23);
+        }
+        private void _24b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(24);
+        }
+        private void _25b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(25);
+        }
+        private void _26b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(26);
+        }
+        private void _27b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(27);
+        }
+        private void _28b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(28);
+        }
+        private void _29b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(29);
+        }
+        private void _30b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(30);
+        }
+        private void _31b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(31);
+        }
+        private void _32b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(32);
+        }
+        private void _33b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(33);
+        }
+        private void _34b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(34);
+        }
+        private void _35b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(35);
+        }
+        private void _36b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(36);
+        }
+        private void _37b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(37);
+        }
+        private void _38b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(38);
+        }
+        private void _39b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(39);
+        }
+        private void _40b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(40);
+        }
+        private void _41b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(41);
+        }
+        private void _42b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(42);
+        }
+        private void _43b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(43);
+        }
+        private void _44b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(44);
+        }
+        private void _45b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(45);
+        }
+        private void _46b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(46);
+        }
+        private void _47b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(47);
+        }
+        private void _48b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(48);
+        }
+        private void _49b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(49);
+        }
+        private void _50b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(50);
+        }
+        private void _51b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(51);
+        }
+        private void _52b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(52);
+        }
+        private void _53b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(53);
+        }
+        private void _54b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(54);
+        }
+        private void _55b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(55);
+        }
+        private void _56b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(56);
+        }
+        private void _57b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(57);
+        }
+        private void _58b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(58);
+        }
+        private void _59b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(59);
+        }
+        private void _60b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(60);
+        }
+        private void _61b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(61);
+        }
+        private void _62b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(62);
+        }
+        private void _63b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(63);
+        }
+        private void _64b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(64);
         }
 
     }
