@@ -1206,6 +1206,20 @@ namespace UI_fily
             else
                 return false;
         }
+        bool AsbChecker(bool flagc, string img)
+        {
+            string pattern;
+            if (flagc)
+                pattern = @"^.{0,}asb_w.{0,}$";
+            else
+                pattern = @"^.{0,}asb_b.{0,}$";
+            Regex t = new Regex(pattern);
+            if (t.IsMatch(img))
+                return true;
+            else
+                return false;
+        }
+
 
         bool ColorChecker(bool flag, string img)
         {
