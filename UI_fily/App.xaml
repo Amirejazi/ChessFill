@@ -4,6 +4,75 @@
              xmlns:local="clr-namespace:UI_fily"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <Style x:Key="TgBtnStyle"
+               TargetType="ToggleButton">
+
+            <Setter Property="Template">
+
+                <Setter.Value>
+
+                    <ControlTemplate TargetType="ToggleButton">
+
+                        <Border x:Name="border"
+                                Background="Transparent"
+                                CornerRadius="100">
+
+                            <Grid>
+
+                                <Image Source="sorce/heart.png"
+                                       Stretch="None"
+                                       Width="220"
+                                       Height="220"/>
+
+                            </Grid>
+
+                        </Border>
+
+                        <ControlTemplate.Triggers>
+
+                            <Trigger Property="IsMouseOver"
+                                     Value="True">
+
+                                <Setter Property="Background"
+                                        TargetName="border"
+                                        Value="#3A0CA3"/>
+
+                            </Trigger>
+
+                            <Trigger Property="IsChecked"
+                                     Value="True">
+
+                                <Setter Property="Background"
+                                        TargetName="border"
+                                        Value="#3A0CA3"/>
+
+                            </Trigger>
+
+                            <MultiTrigger>
+
+                                <MultiTrigger.Conditions>
+
+                                    <Condition Property="IsMouseOver"
+                                               Value="True"/>
+                                    <Condition Property="IsChecked"
+                                               Value="False"/>
+
+                                </MultiTrigger.Conditions>
+
+                                <Setter Property="Background"
+                                               TargetName="border"
+                                               Value="#4361EE"/>
+
+                            </MultiTrigger>
+
+                        </ControlTemplate.Triggers>
+
+                    </ControlTemplate>
+
+                </Setter.Value>
+
+            </Setter>
+
+        </Style>
     </Application.Resources>
 </Application>
