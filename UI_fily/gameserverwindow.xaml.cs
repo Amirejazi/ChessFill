@@ -99,7 +99,7 @@ namespace UI_fily
                 _63img.Source = new BitmapImage(new Uri(asb_w));
                 _64img.Source = new BitmapImage(new Uri(rokh_w));
             }
-
+            portipserverwindow.Send("la");
             servername.Content = optionwindow.servername;
             clientname.Content = optionwindow.clientname;
             Button = new List<Button>();
