@@ -1320,6 +1320,261 @@ namespace UI_fily
                 //_transmission.Send(locationSaver);
             }
         }
-
+        private void _1b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(1);
+        }
+        private void _2b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(2);
+        }
+        private void _3b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(3);
+        }
+        private void _4b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(4);
+        }
+        private void _5b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(5);
+        }
+        private void _6b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(6);
+        }
+        private void _7b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(7);
+        }
+        private void _8b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(8);
+        }
+        private void _9b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(9);
+        }
+        private void _10b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(10);
+        }
+        private void _11b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(11);
+        }
+        private void _12b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(12);
+        }
+        private void _13b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(13);
+        }
+        private void _14b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(14);
+        }
+        private void _15b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(15);
+        }
+        private void _16b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(16);
+        }
+        private void _17b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(17);
+        }
+        private void _18b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(18);
+        }
+        private void _19b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(19);
+        }
+        private void _20b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(20);
+        }
+        private void _21b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(21);
+        }
+        private void _22b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(22);
+        }
+        private void _23b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(23);
+        }
+        private void _24b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(24);
+        }
+        private void _25b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(25);
+        }
+        private void _26b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(26);
+        }
+        private void _27b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(27);
+        }
+        private void _28b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(28);
+        }
+        private void _29b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(29);
+        }
+        private void _30b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(30);
+        }
+        private void _31b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(31);
+        }
+        private void _32b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(32);
+        }
+        private void _33b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(33);
+        }
+        private void _34b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(34);
+        }
+        private void _35b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(35);
+        }
+        private void _36b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(36);
+        }
+        private void _37b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(37);
+        }
+        private void _38b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(38);
+        }
+        private void _39b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(39);
+        }
+        private void _40b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(40);
+        }
+        private void _41b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(41);
+        }
+        private void _42b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(42);
+        }
+        private void _43b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(43);
+        }
+        private void _44b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(44);
+        }
+        private void _45b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(45);
+        }
+        private void _46b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(46);
+        }
+        private void _47b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(47);
+        }
+        private void _48b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(48);
+        }
+        private void _49b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(49);
+        }
+        private void _50b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(50);
+        }
+        private void _51b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(51);
+        }
+        private void _52b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(52);
+        }
+        private void _53b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(53);
+        }
+        private void _54b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(54);
+        }
+        private void _55b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(55);
+        }
+        private void _56b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(56);
+        }
+        private void _57b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(57);
+        }
+        private void _58b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(58);
+        }
+        private void _59b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(59);
+        }
+        private void _60b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(60);
+        }
+        private void _61b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(61);
+        }
+        private void _62b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(62);
+        }
+        private void _63b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(63);
+        }
+        private void _64b(object sender, RoutedEventArgs e)
+        {
+            EventOfButtons(64);
+        }
     }
 }
