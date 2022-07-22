@@ -21,8 +21,8 @@ namespace UI_fily
     /// </summary>
     public partial class portipserverwindow : Window
     {
-        ServerStartup _serverstartup;
-        ServerTransmission _transmission;
+        public static ServerStartup _serverstartup;
+        public static ServerTransmission _transmission;
         public string Recieve { get; set; }
         public string propSend { get; set; } = $"i:{optionwindow.rbtnground},{optionwindow.rbtnnut},{optionwindow.rbtncolor},{optionwindow.servername},{optionwindow.clientname},{optionwindow.rbtn1}";
         public portipserverwindow()
@@ -108,15 +108,16 @@ namespace UI_fily
                 }
             }
             this.Dispatcher.Invoke(() => {
-                if(recieveMessage == "connected")
+                if(Recieve == "connected")
                 {
                     Send(propSend);
-                    gameserverwindow gameserverwindow = new gameserverwindow();
-                    gameserverwindow.ShowDialog();
+                    gameserverwindow gameServerwindow = new gameserverwindow();
+                    gameServerwindow.ShowDialog();
                 }
+                //gameserverwindow.RecieveLocation(recieveMessage);
             });
         }
-        private void Send(string send)
+        public static void Send(string send)
         {
             try
             {

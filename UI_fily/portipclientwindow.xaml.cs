@@ -20,8 +20,8 @@ namespace UI_fily
     /// </summary>
     public partial class portipclientwindow : Window
     {
-        ClientStartup _client;
-        TransmissionClient _transmission;
+         public static ClientStartup _client;
+        public static TransmissionClient _transmission;
         public portipclientwindow()
         {
             InitializeComponent();
@@ -33,9 +33,6 @@ namespace UI_fily
             if (Recieve == Pass.Text)
             {
                 Send("connected");
-                gameclientwindow gameclientwindow = new gameclientwindow();
-                gameclientwindow.ShowDialog();
-                
             }
             else
             {
@@ -104,8 +101,7 @@ namespace UI_fily
                     }
                     if (Recieve[0] == 'i')
                     {
-                        Recieve = Recieve.Remove(0);
-                        Recieve = Recieve.Remove(0);
+                        Recieve = Recieve.Remove(0, 2);
                         string[] items = Recieve.Split(',');
                         optionwindow.rbtnground = items[0];
                         optionwindow.rbtnnut = items[1];
@@ -113,7 +109,10 @@ namespace UI_fily
                         optionwindow.servername= items[3];
                         optionwindow.clientname= items[4];
                         optionwindow.rbtn1 = items[5];
+                        gameclientwindow gameClientwindow = new gameclientwindow();
+                        gameClientwindow.ShowDialog();
                     }
+                    //gameClientwindow.RecieveLocation(recieveMessage);
                 });
             }
             else
@@ -129,7 +128,7 @@ namespace UI_fily
                 });
             }
         }
-        public void Send(string send)
+        public static void Send(string send)
         {
             try
             {
