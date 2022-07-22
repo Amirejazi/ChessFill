@@ -24,6 +24,8 @@ namespace UI_fily
         {
             InitializeComponent();
             ResetBrush();
+            servername.Content = optionwindow.servername;
+            clientname.Content = optionwindow.clientname;
             if (optionwindow.rbtncolor == "1")
             {
 
@@ -461,10 +463,27 @@ namespace UI_fily
                 _63img.Source = new BitmapImage(new Uri(asb_w));
                 _64img.Source = new BitmapImage(new Uri(rokh_w));
             }
+        }
+        void Brush(int index)
+        {
+            try
+            {
+                Button[index].Background = new SolidColorBrush(Colors.YellowGreen);
+            }
+            catch
+            {
+            }
+        }
+        void Brushr(int index)
+        {
+            try
+            {
 
-
-            servername.Content = optionwindow.servername;
-            //clientname.Content = optionwindow.clientname;
+                Button[index].Background = new SolidColorBrush(Colors.OrangeRed);
+            }
+            catch
+            {
+            }
         }
     }
 }
