@@ -1219,6 +1219,32 @@ namespace UI_fily
             else
                 return false;
         }
+        bool FilChecker(bool flagc, string img)
+        {
+            string pattern;
+            if (flagc)
+                pattern = @"^.{0,}fil_w.{0,}$";
+            else
+                pattern = @"^.{0,}fil_b.{0,}$";
+            Regex t = new Regex(pattern);
+            if (t.IsMatch(img))
+                return true;
+            else
+                return false;
+        }
+        bool SarbazChecker(bool flagc, string img)
+        {
+            string pattern;
+            if (flagc)
+                pattern = @"^.{0,}sarbaz_w.{0,}$";
+            else
+                pattern = @"^.{0,}sarbaz_b.{0,}$";
+            Regex t = new Regex(pattern);
+            if (t.IsMatch(img))
+                return true;
+            else
+                return false;
+        }
 
 
         bool ColorChecker(bool flag, string img)
