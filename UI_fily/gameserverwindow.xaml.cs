@@ -1272,7 +1272,6 @@ namespace UI_fily
                 return false;
         }
 
-
         bool ColorChecker(bool flag, string img)
         {
             string pattern;
@@ -1285,6 +1284,41 @@ namespace UI_fily
                 return true;
             else
                 return false;
+        }
+        void EventOfButtons(int index)
+        {
+            if (images[index].Source != null)
+            {
+                if (RokhChecker(flag, images[index].Source.ToString()))
+                    Rokh(index);
+                else if (AsbChecker(flag, images[index].Source.ToString()))
+                    Asb(index);
+                else if (FilChecker(flag, images[index].Source.ToString()))
+                    Fil(index);
+                else if (ShahChecker(flag, images[index].Source.ToString()))
+                    Shah(index);
+                else if (VazirChecker(flag, images[index].Source.ToString()))
+                    Vazir(index);
+                if (index > 8 && index < 17)
+                {
+                    if (SarbazChecker(flag, images[index].Source.ToString()))
+                        Sarbaz_firstTime(index);
+                }
+                else if (index > 16)
+                {
+                    if (SarbazChecker(flag, images[index].Source.ToString()))
+                        Sarbaz(index);
+                }
+            }
+            string colorback = Button[index].Background.ToString();
+            if (colorback == "#FF9ACD32" || colorback == "#FFFF4500")
+            {
+                images[index].Source = new BitmapImage(new Uri(loc));
+                images[indexg].Source = null;
+                ResetBrush();
+                //LocationSaver();
+                //_transmission.Send(locationSaver);
+            }
         }
     }
 }
