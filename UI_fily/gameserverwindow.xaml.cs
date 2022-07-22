@@ -1145,8 +1145,67 @@ namespace UI_fily
             loc = shah_b;
             indexg = index;
         }
-
-
+        void Sarbaz_firstTime(int index)
+        {
+            ResetBrush();
+            int brush = index + 8;
+            bool flagc = true;
+            if (brush < 65)
+            {
+                if (images[brush].Source == null)
+                    Brush(brush);
+                else
+                {
+                    if (ColorChecker(!flag, images[brush].Source.ToString()))
+                        Brushr(brush);
+                    else
+                        flagc = false;
+                }
+            }
+            brush = index + 16;
+            if (brush < 65 && flagc)
+            {
+                if (images[brush].Source == null)
+                    Brush(brush);
+                else
+                {
+                    if (ColorChecker(!flag, images[brush].Source.ToString()))
+                        Brushr(brush);
+                }
+            }
+            loc = sarbaz_b;
+            indexg = index;
+        }
+        void Sarbaz(int index)
+        {
+            ResetBrush();
+            int brush = index + 8;
+            if (brush < 65)
+            {
+                if (images[brush].Source == null)
+                    Brush(brush);
+                else
+                {
+                    if (ColorChecker(!flag, images[brush].Source.ToString()))
+                        Brushr(brush);
+                }
+            }
+            loc = sarbaz_b;
+            indexg = index;
+        }
+        bool RokhChecker(bool flagc, string img)
+        {
+            string pattern;
+            if (flagc)
+                pattern = @"^.{0,}rokh_w.{0,}$";
+            else
+                pattern = @"^.{0,}rokh_b.{0,}$";
+            Regex t = new Regex(pattern);
+            if (t.IsMatch(img))
+                return true;
+            else
+                return false;
+        }
 
         bool ColorChecker(bool flag, string img)
         {
