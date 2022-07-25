@@ -646,9 +646,6 @@ namespace UI_fily
             try
             {
                 Button[index].Background = new SolidColorBrush(Colors.YellowGreen);
-                entkhabsoundq.Open(new Uri(String.Format(@"{0}..\..\sorce\entekhab.mp3", AppDomain.CurrentDomain.BaseDirectory)));
-                entkhabsoundq.Position = TimeSpan.Zero;
-                entkhabsoundq.Play();
             }
             catch
             {
@@ -659,9 +656,6 @@ namespace UI_fily
             try
             {
                 Button[index].Background = new SolidColorBrush(Colors.OrangeRed);
-                entkhabsoundq.Open(new Uri(String.Format(@"{0}..\..\sorce\entekhab.mp3", AppDomain.CurrentDomain.BaseDirectory)));
-                entkhabsoundq.Position = TimeSpan.Zero;
-                entkhabsoundq.Play();
             }
             catch
             {
@@ -670,6 +664,9 @@ namespace UI_fily
         void Asb(int index)
         {
             ResetBrush();
+            entkhabsoundq.Open(new Uri(String.Format(@"{0}..\..\sorce\entekhab.mp3", AppDomain.CurrentDomain.BaseDirectory)));
+            entkhabsoundq.Position = TimeSpan.Zero;
+            entkhabsoundq.Play();
             int brush = index + 10;
             if (brush % 8 != 1 && brush % 8 != 2 && brush < 65)
             {
@@ -763,6 +760,9 @@ namespace UI_fily
         void Fil(int index)
         {
             ResetBrush();
+            entkhabsoundq.Open(new Uri(String.Format(@"{0}..\..\sorce\entekhab.mp3", AppDomain.CurrentDomain.BaseDirectory)));
+            entkhabsoundq.Position = TimeSpan.Zero;
+            entkhabsoundq.Play();
             int brush = index;
             while (true)
             {
@@ -876,6 +876,9 @@ namespace UI_fily
         void Rokh(int index)
         {
             ResetBrush();
+            entkhabsoundq.Open(new Uri(String.Format(@"{0}..\..\sorce\entekhab.mp3", AppDomain.CurrentDomain.BaseDirectory)));
+            entkhabsoundq.Position = TimeSpan.Zero;
+            entkhabsoundq.Play();
             int brush = index;
             while (true)
             {
@@ -981,6 +984,9 @@ namespace UI_fily
         void Vazir(int index)
         {
             ResetBrush();
+            entkhabsoundq.Open(new Uri(String.Format(@"{0}..\..\sorce\entekhab.mp3", AppDomain.CurrentDomain.BaseDirectory)));
+            entkhabsoundq.Position = TimeSpan.Zero;
+            entkhabsoundq.Play();
             int brush = index;
             while (true)
             {
@@ -1191,6 +1197,9 @@ namespace UI_fily
         {
 
             ResetBrush();
+            entkhabsoundq.Open(new Uri(String.Format(@"{0}..\..\sorce\entekhab.mp3", AppDomain.CurrentDomain.BaseDirectory)));
+            entkhabsoundq.Position = TimeSpan.Zero;
+            entkhabsoundq.Play();
             int brush = index + 8;
             if (brush < 65)
                 if (images[brush].Source == null)
@@ -1276,6 +1285,9 @@ namespace UI_fily
         void Sarbaz_firstTime(int index)
         {
             ResetBrush();
+            entkhabsoundq.Open(new Uri(String.Format(@"{0}..\..\sorce\entekhab.mp3", AppDomain.CurrentDomain.BaseDirectory)));
+            entkhabsoundq.Position = TimeSpan.Zero;
+            entkhabsoundq.Play();
             int brush = index + 8;
             bool flagc = true;
             if (brush < 65)
@@ -1310,6 +1322,9 @@ namespace UI_fily
         void Sarbaz(int index)
         {
             ResetBrush();
+            entkhabsoundq.Open(new Uri(String.Format(@"{0}..\..\sorce\entekhab.mp3", AppDomain.CurrentDomain.BaseDirectory)));
+            entkhabsoundq.Position = TimeSpan.Zero;
+            entkhabsoundq.Play();
             int brush = index + 8;
             if (brush < 65)
             {
