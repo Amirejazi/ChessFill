@@ -240,7 +240,7 @@ namespace UI_fily
 
         }
         public bool flag { get; set; }
-        public bool enable { get; set; } = true;
+        public bool enable { get; set; } = false;
         public string loc { get; set; }
         public string locationSaver { get; set; }
         public int indexg { get; set; }
@@ -1749,8 +1749,10 @@ namespace UI_fily
                 _serverstartup = new ServerStartup(int.Parse(portipserverwindow.port), portipserverwindow.ip, acceptedCallback, acceptedErrorcallback); ;
                 _serverstartup.InitServer();
                 StartState(false);
-                ChangeState("Accepting Client...", new SolidColorBrush(Colors.Blue));
+                ChangeState("Connecting to Client...", new SolidColorBrush(Colors.Blue));
                 await _serverstartup.AcceptAsync();
+                if (optionwindow.rbtncolor == "1")
+                    enable=true;
                 _transmission.Send(propSend);
             }
             catch (Exception ex)
@@ -1769,7 +1771,7 @@ namespace UI_fily
         private async void acceptedCallback(Socket acceptedsocket)
         {
             this.Dispatcher.Invoke(() => {
-                ChangeState("Connect to Client...", new SolidColorBrush(Colors.Orange));
+                ChangeState("Connected to Client...", new SolidColorBrush(Colors.Green));
             });
             _transmission = new ServerTransmission(acceptedsocket, recieveCallback, receiveErrorCallback);
 
