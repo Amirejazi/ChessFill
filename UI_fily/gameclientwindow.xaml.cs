@@ -305,7 +305,7 @@ namespace UI_fily
         }
 
         public bool flag { get; set; }
-        public bool enable { get; set; }=true;
+        public bool enable { get; set; }=false;
         public string loc { get; set; }
         public string locationSaver { get; set; }
         public int indexg { get; set; }
@@ -1800,6 +1800,8 @@ namespace UI_fily
                 _client.InitClient();
                 //ChangeState("Connecting to server...", new SolidColorBrush(Colors.Orange));
                 await _client.ConnectAsync();
+                if (optionwindow.rbtncolor == "2")
+                    enable = true;
             }
             catch (Exception ex)
             {
