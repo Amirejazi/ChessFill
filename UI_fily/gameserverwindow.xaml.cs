@@ -1736,7 +1736,7 @@ namespace UI_fily
                 StartState(false);
                 ChangeState("Accepting Client...", new SolidColorBrush(Colors.Blue));
                 await _serverstartup.AcceptAsync();
-                Send(propSend);
+                _transmission.Send(propSend);
             }
             catch (Exception ex)
             {
