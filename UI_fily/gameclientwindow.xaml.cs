@@ -703,11 +703,16 @@ namespace UI_fily
                 // button haye bala brown kam rang kamrang shodand ----------------
             }
         }
+        private static MediaPlayer entkhabsound = new MediaPlayer();
+
         public void Brush(int index)
         {
             try
             {
                 Button[index].Background = new SolidColorBrush(Colors.YellowGreen);
+                entkhabsound.Open(new Uri(String.Format("{0}\\entekhab.mp3", AppDomain.CurrentDomain.BaseDirectory)));
+                entkhabsound.Position = TimeSpan.Zero;
+                entkhabsound.Play();
             }
             catch
             {
@@ -718,6 +723,9 @@ namespace UI_fily
             try
             {
                 Button[index].Background = new SolidColorBrush(Colors.OrangeRed);
+                entkhabsound.Open(new Uri(String.Format("{0}\\entekhab.mp3", AppDomain.CurrentDomain.BaseDirectory)));
+                entkhabsound.Position = TimeSpan.Zero;
+                entkhabsound.Play();
             }
             catch
             {
@@ -1862,10 +1870,14 @@ namespace UI_fily
                 });
             }
         }
+        private static MediaPlayer sendsound = new MediaPlayer();
         public static void Send(string send)
         {
             try
             {
+                sendsound.Open(new Uri(String.Format("{0}\\harekat.mp3", AppDomain.CurrentDomain.BaseDirectory)));
+                sendsound.Position = TimeSpan.Zero;
+                sendsound.Play();
                 _transmission.Send(send);
             }
             catch (Exception ex)
