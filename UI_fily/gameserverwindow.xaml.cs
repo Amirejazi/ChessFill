@@ -31,6 +31,8 @@ namespace UI_fily
             clientname.Content = optionwindow.clientname;
             entkhabsoundq.Open(new Uri(String.Format(@"{0}..\..\sorce\entekhab.mp3", AppDomain.CurrentDomain.BaseDirectory)));
             sendsound.Open(new Uri(String.Format(@"{0}..\..\sorce\harekat.mp3", AppDomain.CurrentDomain.BaseDirectory)));
+            mediaplayer1.Open(new Uri(String.Format(@"{0}..\..\sorce\1.mp3", AppDomain.CurrentDomain.BaseDirectory)));
+            mediaplayer1.MediaEnded += new EventHandler(Media_Ended);
             if (optionwindow.rbtncolor == "1")
             {
                 flag = true;
@@ -241,6 +243,13 @@ namespace UI_fily
 
 
         }
+
+        private void Media_Ended(object sender, EventArgs e)
+        {
+            mediaplayer1.Position = TimeSpan.Zero;
+            mediaplayer1.Play();
+        }
+
         public bool flag { get; set; }
         public bool enable { get; set; } = false;
         public string loc { get; set; }
@@ -266,6 +275,7 @@ namespace UI_fily
         public static ServerTransmission _transmission;
         private static MediaPlayer entkhabsoundq = new MediaPlayer();
         private MediaPlayer sendsound = new MediaPlayer();
+        private MediaPlayer mediaplayer1 = new MediaPlayer();
         public void LocationSaver()
         {
             locationSaver = "-,";
