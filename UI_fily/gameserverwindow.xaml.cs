@@ -1756,7 +1756,7 @@ namespace UI_fily
         private async void acceptedCallback(Socket acceptedsocket)
         {
             this.Dispatcher.Invoke(() => {
-                ChangeState("Connected to Client...", new SolidColorBrush(Colors.Green));
+                ChangeState("Connected to Client :)", new SolidColorBrush(Colors.Green));
             });
             _transmission = new ServerTransmission(acceptedsocket, recieveCallback, receiveErrorCallback);
 
@@ -1773,7 +1773,7 @@ namespace UI_fily
             this.Dispatcher.Invoke(() =>
             {
                 //btnstart.IsEnabled = false;
-                ChangeState("Accepting Client...", new SolidColorBrush(Colors.Blue));
+                ChangeState("Connecting to Client...", new SolidColorBrush(Colors.Blue));
                 MessageBox.Show(error + "\n try again", "RecieveError", MessageBoxButton.OK, MessageBoxImage.Error);
             });
             _serverstartup.CloseClient(_transmission.Socket);
