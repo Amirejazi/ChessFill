@@ -31,8 +31,9 @@ namespace UI_fily
             clientname.Content = optionwindow.clientname;
             entkhabsoundq.Open(new Uri(String.Format(@"{0}..\..\sorce\entekhab.mp3", AppDomain.CurrentDomain.BaseDirectory)));
             sendsound.Open(new Uri(String.Format(@"{0}..\..\sorce\harekat.mp3", AppDomain.CurrentDomain.BaseDirectory)));
-            mediaplayer1.Open(new Uri(String.Format(@"{0}..\..\sorce\1.mp3", AppDomain.CurrentDomain.BaseDirectory)));
+            mediaplayer1.Open(new Uri(String.Format(@"{0}..\..\Sound\1.mp3", AppDomain.CurrentDomain.BaseDirectory)));
             mediaplayer1.MediaEnded += new EventHandler(Media_Ended);
+            mediaplayer1.Play();
             if (optionwindow.rbtncolor == "1")
             {
                 flag = true;
