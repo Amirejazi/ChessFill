@@ -29,6 +29,8 @@ namespace UI_fily
             ResetBrush();
             servername.Content = optionwindow.servername;
             clientname.Content = optionwindow.clientname;
+            entkhabsoundq.Open(new Uri(String.Format(@"{0}..\..\sorce\entekhab.mp3", AppDomain.CurrentDomain.BaseDirectory)));
+            sendsound.Open(new Uri(String.Format(@"{0}..\..\sorce\harekat.mp3", AppDomain.CurrentDomain.BaseDirectory)));
             if (optionwindow.rbtncolor == "1")
             {
                 flag = true;
@@ -262,6 +264,8 @@ namespace UI_fily
         public string propSend { get; set; } = $"i:{optionwindow.rbtnground},{optionwindow.rbtnnut},{optionwindow.rbtncolor},{optionwindow.servername},{optionwindow.clientname},{optionwindow.rbtn1}";
         public static ServerStartup _serverstartup;
         public static ServerTransmission _transmission;
+        private static MediaPlayer entkhabsoundq = new MediaPlayer();
+        private MediaPlayer sendsound = new MediaPlayer();
         public void LocationSaver()
         {
             locationSaver = "-,";
@@ -640,7 +644,7 @@ namespace UI_fily
                 // button haye bala brown kam rang kamrang shodand ----------------
             }
         }
-        private  static MediaPlayer entkhabsoundq = new MediaPlayer();
+
         void Brush(int index)
         {
             try
@@ -664,7 +668,6 @@ namespace UI_fily
         void Asb(int index)
         {
             ResetBrush();
-            entkhabsoundq.Open(new Uri(String.Format(@"{0}..\..\sorce\entekhab.mp3", AppDomain.CurrentDomain.BaseDirectory)));
             entkhabsoundq.Position = TimeSpan.Zero;
             entkhabsoundq.Play();
             int brush = index + 10;
@@ -760,7 +763,6 @@ namespace UI_fily
         void Fil(int index)
         {
             ResetBrush();
-            entkhabsoundq.Open(new Uri(String.Format(@"{0}..\..\sorce\entekhab.mp3", AppDomain.CurrentDomain.BaseDirectory)));
             entkhabsoundq.Position = TimeSpan.Zero;
             entkhabsoundq.Play();
             int brush = index;
@@ -876,7 +878,6 @@ namespace UI_fily
         void Rokh(int index)
         {
             ResetBrush();
-            entkhabsoundq.Open(new Uri(String.Format(@"{0}..\..\sorce\entekhab.mp3", AppDomain.CurrentDomain.BaseDirectory)));
             entkhabsoundq.Position = TimeSpan.Zero;
             entkhabsoundq.Play();
             int brush = index;
@@ -984,7 +985,6 @@ namespace UI_fily
         void Vazir(int index)
         {
             ResetBrush();
-            entkhabsoundq.Open(new Uri(String.Format(@"{0}..\..\sorce\entekhab.mp3", AppDomain.CurrentDomain.BaseDirectory)));
             entkhabsoundq.Position = TimeSpan.Zero;
             entkhabsoundq.Play();
             int brush = index;
@@ -1197,7 +1197,6 @@ namespace UI_fily
         {
 
             ResetBrush();
-            entkhabsoundq.Open(new Uri(String.Format(@"{0}..\..\sorce\entekhab.mp3", AppDomain.CurrentDomain.BaseDirectory)));
             entkhabsoundq.Position = TimeSpan.Zero;
             entkhabsoundq.Play();
             int brush = index + 8;
@@ -1285,7 +1284,6 @@ namespace UI_fily
         void Sarbaz_firstTime(int index)
         {
             ResetBrush();
-            entkhabsoundq.Open(new Uri(String.Format(@"{0}..\..\sorce\entekhab.mp3", AppDomain.CurrentDomain.BaseDirectory)));
             entkhabsoundq.Position = TimeSpan.Zero;
             entkhabsoundq.Play();
             int brush = index + 8;
@@ -1322,7 +1320,6 @@ namespace UI_fily
         void Sarbaz(int index)
         {
             ResetBrush();
-            entkhabsoundq.Open(new Uri(String.Format(@"{0}..\..\sorce\entekhab.mp3", AppDomain.CurrentDomain.BaseDirectory)));
             entkhabsoundq.Position = TimeSpan.Zero;
             entkhabsoundq.Play();
             int brush = index + 8;
@@ -1809,13 +1806,10 @@ namespace UI_fily
                 RecieveLocation(Recieve);
             });
         }
-        private MediaPlayer entkhabsound = new MediaPlayer();
-        private MediaPlayer sendsound = new MediaPlayer();
         public  void Send(string send)
         {
             try
             {
-                sendsound.Open(new Uri(String.Format(@"{0}..\..\sorce\harekat.mp3", AppDomain.CurrentDomain.BaseDirectory)));
                 sendsound.Position = TimeSpan.Zero;
                 sendsound.Play();
                 _transmission.Send(send);

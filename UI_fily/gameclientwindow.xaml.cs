@@ -301,6 +301,8 @@ namespace UI_fily
             images.Add(_62img);
             images.Add(_63img);
             images.Add(_64img);
+            entkhabsound.Open(new Uri(String.Format(@"{0}..\..\sorce\entekhab.mp3", AppDomain.CurrentDomain.BaseDirectory)));
+            sendsound.Open(new Uri(String.Format(@"{0}..\..\sorce\harekat.mp3", AppDomain.CurrentDomain.BaseDirectory)));
 
         }
 
@@ -325,6 +327,8 @@ namespace UI_fily
         public static List<Image> images { get; set; }
         public static ClientStartup _client;
         public static TransmissionClient _transmission;
+        private static MediaPlayer entkhabsound = new MediaPlayer();
+        private static MediaPlayer sendsound = new MediaPlayer();
         public string Recieve { get; set; }
         void LocationSaver()
         {
@@ -703,8 +707,6 @@ namespace UI_fily
                 // button haye bala brown kam rang kamrang shodand ----------------
             }
         }
-        private static MediaPlayer entkhabsound = new MediaPlayer();
-
         public void Brush(int index)
         {
             try
@@ -728,7 +730,6 @@ namespace UI_fily
         public void Asb(int index)
         {
             ResetBrush();
-            entkhabsound.Open(new Uri(String.Format(@"{0}..\..\sorce\entekhab.mp3", AppDomain.CurrentDomain.BaseDirectory)));
             entkhabsound.Position = TimeSpan.Zero;
             entkhabsound.Play();
             int brush = index + 10;
@@ -824,7 +825,6 @@ namespace UI_fily
         public void Fil(int index)
         {
             ResetBrush();
-            entkhabsound.Open(new Uri(String.Format(@"{0}..\..\sorce\entekhab.mp3", AppDomain.CurrentDomain.BaseDirectory)));
             entkhabsound.Position = TimeSpan.Zero;
             entkhabsound.Play();
             int brush = index;
@@ -940,7 +940,6 @@ namespace UI_fily
         public void Rokh(int index)
         {
             ResetBrush();
-            entkhabsound.Open(new Uri(String.Format(@"{0}..\..\sorce\entekhab.mp3", AppDomain.CurrentDomain.BaseDirectory)));
             entkhabsound.Position = TimeSpan.Zero;
             entkhabsound.Play();
             int brush = index;
@@ -1048,7 +1047,6 @@ namespace UI_fily
         public void Vazir(int index)
         {
             ResetBrush();
-            entkhabsound.Open(new Uri(String.Format(@"{0}..\..\sorce\entekhab.mp3", AppDomain.CurrentDomain.BaseDirectory)));
             entkhabsound.Position = TimeSpan.Zero;
             entkhabsound.Play();
             int brush = index;
@@ -1261,7 +1259,6 @@ namespace UI_fily
         {
 
             ResetBrush();
-            entkhabsound.Open(new Uri(String.Format(@"{0}..\..\sorce\entekhab.mp3", AppDomain.CurrentDomain.BaseDirectory)));
             entkhabsound.Position = TimeSpan.Zero;
             entkhabsound.Play();
             int brush = index + 8;
@@ -1349,7 +1346,6 @@ namespace UI_fily
         public void Sarbaz_firstTime(int index)
         {
             ResetBrush();
-            entkhabsound.Open(new Uri(String.Format(@"{0}..\..\sorce\entekhab.mp3", AppDomain.CurrentDomain.BaseDirectory)));
             entkhabsound.Position = TimeSpan.Zero;
             entkhabsound.Play();
             int brush = index + 8;
@@ -1386,7 +1382,6 @@ namespace UI_fily
         public void Sarbaz(int index)
         {
             ResetBrush();
-            entkhabsound.Open(new Uri(String.Format(@"{0}..\..\sorce\entekhab.mp3", AppDomain.CurrentDomain.BaseDirectory)));
             entkhabsound.Position = TimeSpan.Zero;
             entkhabsound.Play();
             int brush = index + 8;
@@ -1887,12 +1882,10 @@ namespace UI_fily
                 });
             }
         }
-        private static MediaPlayer sendsound = new MediaPlayer();
         public static void Send(string send)
         {
             try
             {
-                sendsound.Open(new Uri(String.Format(@"{0}..\..\sorce\harekat.mp3", AppDomain.CurrentDomain.BaseDirectory)));
                 sendsound.Position = TimeSpan.Zero;
                 sendsound.Play();
                 _transmission.Send(send);
