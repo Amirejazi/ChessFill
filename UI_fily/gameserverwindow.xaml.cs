@@ -32,8 +32,14 @@ namespace UI_fily
             entkhabsoundq.Open(new Uri(String.Format(@"{0}..\..\sorce\entekhab.mp3", AppDomain.CurrentDomain.BaseDirectory)));
             sendsound.Open(new Uri(String.Format(@"{0}..\..\sorce\harekat.mp3", AppDomain.CurrentDomain.BaseDirectory)));
             mediaplayer1.Open(new Uri(String.Format(@"{0}..\..\Sound\1.mp3", AppDomain.CurrentDomain.BaseDirectory)));
+            mediaplayer2.Open(new Uri(String.Format(@"{0}..\..\Sound\2.mp3", AppDomain.CurrentDomain.BaseDirectory)));
+            mediaplayer3.Open(optionwindow.Rbtnsound);
             mediaplayer1.MediaEnded += new EventHandler(Media_Ended);
-            mediaplayer1.Play();
+            mediaplayer2.MediaEnded += new EventHandler(Media_Ended);
+            mediaplayer3.MediaEnded += new EventHandler(Media_Ended);
+            if (optionwindow.Rbtnsound1 == true) { mediaplayer1.Play(); }
+            if (optionwindow.Rbtnsound2== true) { mediaplayer2.Play(); }
+            if (optionwindow.Rbtnsound3== true) { mediaplayer3.Play(); }
             if (optionwindow.rbtncolor == "1")
             {
                 flag = true;
@@ -247,8 +253,9 @@ namespace UI_fily
 
         private void Media_Ended(object sender, EventArgs e)
         {
-            mediaplayer1.Position = TimeSpan.Zero;
-            mediaplayer1.Play();
+            if (optionwindow.Rbtnsound1 == true) { mediaplayer1.Position = TimeSpan.Zero; mediaplayer1.Play(); }
+            if (optionwindow.Rbtnsound2== true) { mediaplayer2.Position = TimeSpan.Zero; mediaplayer2.Play(); }
+            if (optionwindow.Rbtnsound3== true) { mediaplayer3.Position = TimeSpan.Zero; mediaplayer3.Play(); }
         }
 
         public bool flag { get; set; }
@@ -277,6 +284,8 @@ namespace UI_fily
         private static MediaPlayer entkhabsoundq = new MediaPlayer();
         private MediaPlayer sendsound = new MediaPlayer();
         private MediaPlayer mediaplayer1 = new MediaPlayer();
+        private MediaPlayer mediaplayer2 = new MediaPlayer();
+        private MediaPlayer mediaplayer3 = new MediaPlayer();
         public void LocationSaver()
         {
             locationSaver = "-,";
@@ -1834,7 +1843,25 @@ namespace UI_fily
         {
             this.Close();
         }
+        private static bool sound = true;
+        private void soundchecker_click(object sender, RoutedEventArgs e)
+        {
+            if (sound)
+            {
+                if (optionwindow.Rbtnsound1 == true) { mediaplayer1.Position = TimeSpan.Zero; mediaplayer1.Stop(); }
+                if (optionwindow.Rbtnsound2 == true) { mediaplayer2.Position = TimeSpan.Zero; mediaplayer2.Stop(); }
+                if (optionwindow.Rbtnsound3 == true) { mediaplayer3.Position = TimeSpan.Zero; mediaplayer3.Stop(); }
+                sound = false;
 
+            }
+            else
+            {
+                if (optionwindow.Rbtnsound1 == true) { mediaplayer1.Position = TimeSpan.Zero; mediaplayer1.Play(); }
+                if (optionwindow.Rbtnsound2 == true) { mediaplayer2.Position = TimeSpan.Zero; mediaplayer2.Play(); }
+                if (optionwindow.Rbtnsound3 == true) { mediaplayer3.Position = TimeSpan.Zero; mediaplayer3.Play(); }
+                sound = true;
+            }
+        }
     }
 
 }
