@@ -112,7 +112,7 @@
                     <Label Name="adresslabel" Content="Texture" FontSize="47" Foreground="Black" VerticalContentAlignment="Center" Margin="0,-12,0,0"></Label>
                 </Grid>
                 <Grid Grid.Row="2" Grid.Column="3">
-                    <Border x:Name="textureborder" Visibility="Collapsed">
+                    <Border x:Name="textureborder" Visibility="Visible">
                         <Grid>
                             <Grid Margin="0,0,0,210" >
                                 <Label Content="1" FontSize="60" ></Label>
@@ -181,7 +181,7 @@
                             </Grid>
                         </Grid>
                     </Border>
-                    <Border x:Name="soundborder" Visibility="Visible">
+                    <Border x:Name="soundborder" Visibility="Collapsed">
                         <Grid>
                             <Grid>
                                 <Label Content="Choose a sound :" FontSize="40" Height="62" VerticalAlignment="Top" Margin="6,0,430,0" ></Label>
