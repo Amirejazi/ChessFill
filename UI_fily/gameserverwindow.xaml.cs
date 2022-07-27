@@ -2042,7 +2042,7 @@ namespace UI_fily
                 StartState(false);
                 ChangeState("Connecting to Client...", new SolidColorBrush(Colors.Blue));
                 await _serverstartup.AcceptAsync();
-                if (optionwindow.rbtnplaywithtime == true)
+                if (optionwindow.rbtnplaywithtime == "1")
                 {
                     System.Windows.Threading.DispatcherTimer timer = new System.Windows.Threading.DispatcherTimer();
                     minute.Content = optionwindow.timer;
@@ -2050,13 +2050,13 @@ namespace UI_fily
                     timer.Interval = new TimeSpan(0, 0, 1);
                     timer.Start();
                 }
-                else if (optionwindow.rbtnplaywithtime == false)
+                else if (optionwindow.rbtnplaywithtime == "2")
                 {
                     minute.Content = "";
                     second.Content = "";
                     donoghte.Content = "";
                 }
-                if (optionwindow.rbtnshowtime == false)
+                if (optionwindow.rbtnshowtime == "2")
                 {
                     minute.Visibility = Visibility.Collapsed;
                     second.Visibility = Visibility.Collapsed;
