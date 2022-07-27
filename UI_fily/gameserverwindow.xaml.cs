@@ -247,10 +247,16 @@ namespace UI_fily
             images.Add(_62img);
             images.Add(_63img);
             images.Add(_64img);
-            System.Windows.Threading.DispatcherTimer timer = new System.Windows.Threading.DispatcherTimer();
-            timer.Tick += Timer_tick;
-            timer.Interval = new TimeSpan(0, 0, 1);
-            timer.Start();
+            if(optionwindow.rbtnplaywithtime == true)
+            {
+                System.Windows.Threading.DispatcherTimer timer = new System.Windows.Threading.DispatcherTimer();
+                minute.Content = optionwindow.timer;
+                timer.Tick += Timer_tick;
+                timer.Interval = new TimeSpan(0, 0, 1);
+                timer.Start();
+            }
+            
+
         }
         string sanie = "";
         int saniee = 0;

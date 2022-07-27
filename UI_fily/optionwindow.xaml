@@ -159,7 +159,7 @@
 
                         </Grid>
                     </Border>
-                    <Border x:Name="timerborder" Visibility="Collapsed">
+                    <Border x:Name="timerborder" Visibility="Visible">
                         <Grid>
                             <Label Content="Playing with Time :" FontSize="40" Margin="0,0,414,349" ></Label>
                             <Label Content="Enter the game time (min) :" FontSize="40" Margin="0,57,256,292" />
@@ -169,19 +169,20 @@
                                 <RadioButton x:Name="rbtntimerno" IsChecked="True" Content="No" FontSize="35" HorizontalAlignment="Left" Margin="683,13,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" Checked="rbtntimerno_Checked"/>
 
                             </Grid>
-                            <TextBox x:Name="textboxgametime" IsEnabled="False" HorizontalAlignment="Left" FontSize="30" Margin="533,77,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="220" Height="40"/>
+                            <TextBox x:Name="textboxgametime" Text="5" IsEnabled="False" HorizontalAlignment="Left" FontSize="30" Margin="533,77,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" Height="40"/>
                             <Grid Margin="0,114,0,0">
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="697*"/>
+                                    <ColumnDefinition Width="612*"/>
+                                    <ColumnDefinition Width="85*"/>
                                     <ColumnDefinition Width="75*"/>
                                 </Grid.ColumnDefinitions>
-                                <RadioButton Content="Yes" FontSize="35" HorizontalAlignment="Left" Margin="539,13,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center"/>
-                                <RadioButton Content="No" FontSize="35" HorizontalAlignment="Left" Margin="683,13,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" Grid.ColumnSpan="2"/>
+                                <RadioButton x:Name="rbtnshowtimeyes" Content="Yes" IsChecked="True" FontSize="35" HorizontalAlignment="Left" Margin="539,13,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" Checked="rbtnshowtimeyes_Checked"/>
+                                <RadioButton x:Name="rbtnshowtimeno" Content="No" FontSize="35" HorizontalAlignment="Left" Margin="71,13,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" Grid.ColumnSpan="2" Checked="rbtnshowtimeno_Checked" Grid.Column="1"/>
 
                             </Grid>
                         </Grid>
                     </Border>
-                    <Border x:Name="soundborder" Visibility="Visible">
+                    <Border x:Name="soundborder" Visibility="Collapsed">
                         <Grid>
                             <Grid>
                                 <Label Content="Choose a sound :" FontSize="40" Height="62" VerticalAlignment="Top" Margin="6,0,430,0" ></Label>

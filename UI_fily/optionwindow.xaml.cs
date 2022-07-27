@@ -33,6 +33,9 @@ namespace UI_fily
         public static bool Rbtnsound2 { get; set; }
         public static bool Rbtnsound3 { get; set; }
         public static Uri Rbtnsound { get; set; }
+        public static bool rbtnplaywithtime { get; set; }
+        public static bool rbtnshowtime { get; set; }
+        public static string timer { get; set; }
 
         public void bordercollaps()
         {
@@ -148,6 +151,7 @@ namespace UI_fily
             }
             servername = textboxservername.Text;
             clientname = textboxclientname.Text;
+            timer = textboxgametime.Text;
             portipserverwindow portipserverwindow = new portipserverwindow();
             this.Close();
             portipserverwindow.ShowDialog();
@@ -207,12 +211,15 @@ namespace UI_fily
 
         private void rbtntimeryes_Checked(object sender, RoutedEventArgs e)
         {
+            rbtnplaywithtime = true;
             textboxgametime.IsEnabled = true;
         }
 
         private void rbtntimerno_Checked(object sender, RoutedEventArgs e)
         {
+            //textboxgametime.Text = "";
             //textboxgametime.IsEnabled = false;
+            rbtnplaywithtime = false;
         }
 
         public static string rbtn1 { get; set; }
@@ -270,6 +277,17 @@ namespace UI_fily
             Rbtnsound3 = false;
             Rbtnsound1 = true;
         }
+
+        private void rbtnshowtimeyes_Checked(object sender, RoutedEventArgs e)
+        {
+            rbtnshowtime = true;
+        }
+
+        private void rbtnshowtimeno_Checked(object sender, RoutedEventArgs e)
+        {
+            rbtnshowtime = false;
+        }
+        
     }
     
     
