@@ -33,8 +33,8 @@ namespace UI_fily
         public static bool Rbtnsound2 { get; set; }
         public static bool Rbtnsound3 { get; set; }
         public static Uri Rbtnsound { get; set; }
-        public static bool rbtnplaywithtime { get; set; }
-        public static bool rbtnshowtime { get; set; }
+        public static string rbtnplaywithtime { get; set; }
+        public static string rbtnshowtime { get; set; }
         public static string timer { get; set; }
         public static string RbtnSound { get; set; }
         public static Uri Urisound { get; set; }
@@ -213,7 +213,7 @@ namespace UI_fily
 
         private void rbtntimeryes_Checked(object sender, RoutedEventArgs e)
         {
-            rbtnplaywithtime = true;
+            rbtnplaywithtime = "1";
             textboxgametime.IsEnabled = true;
         }
 
@@ -221,7 +221,7 @@ namespace UI_fily
         {
             //textboxgametime.Text = "";
             //textboxgametime.IsEnabled = false;
-            rbtnplaywithtime = false;
+            rbtnplaywithtime = "2";
         }
 
         public static string rbtn1 { get; set; }
@@ -276,12 +276,12 @@ namespace UI_fily
 
         private void rbtnshowtimeyes_Checked(object sender, RoutedEventArgs e)
         {
-            rbtnshowtime = true;
+            rbtnshowtime = "1";
         }
 
         private void rbtnshowtimeno_Checked(object sender, RoutedEventArgs e)
         {
-            rbtnshowtime = false;
+            rbtnshowtime = "2";
         }
         
     }
