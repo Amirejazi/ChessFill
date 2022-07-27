@@ -233,14 +233,14 @@
             <Image x:Name="imgz_6"  Height="74" Width="75" Margin="1039,496,86,0" VerticalAlignment="Top"/>
             <Image x:Name="imgz_7"  Height="75" Width="75" Margin="1068,495,57,0" VerticalAlignment="Top"/>
             <Image x:Name="imgz_8"  Height="75" Width="75" Margin="1098,495,27,0" VerticalAlignment="Top"/>
-            <Image x:Name="imgz_9"  Height="75" Width="75" Margin="877,400,248,0" VerticalAlignment="Top"/>
-            <Image x:Name="imgz_10"  Height="75" Width="75" Margin="920,400,205,0" VerticalAlignment="Top"/>
-            <Image x:Name="imgz_11"  Height="75" Width="75" Margin="957,400,168,0" VerticalAlignment="Top"/>
-            <Image x:Name="imgz_12"  Height="75" Width="75" Margin="990,400,135,0" VerticalAlignment="Top"/>
-            <Image x:Name="imgz_13"  Height="75" Width="75" Margin="1024,400,101,0" VerticalAlignment="Top"/>
-            <Image x:Name="imgz_14"  Height="74" Width="75" Margin="1060,401,65,0" VerticalAlignment="Top"/>
-            <Image x:Name="imgz_15" Height="75" Width="75" Margin="1099,400,26,0" VerticalAlignment="Top"/>
-            <Image x:Name="imgz_16" Height="75" Width="75" Margin="1139,402,-14,0" VerticalAlignment="Top"/>
+            <Image x:Name="imgz_9"  Height="75" Width="75" Margin="899,400,226,0" VerticalAlignment="Top"/>
+            <Image x:Name="imgz_10"  Height="75" Width="75" Margin="938,400,187,0" VerticalAlignment="Top"/>
+            <Image x:Name="imgz_11"  Height="75" Width="75" Margin="977,400,148,0" VerticalAlignment="Top"/>
+            <Image x:Name="imgz_12"  Height="75" Width="75" Margin="1014,400,111,0" VerticalAlignment="Top"/>
+            <Image x:Name="imgz_13"  Height="75" Width="75" Margin="1050,400,75,0" VerticalAlignment="Top"/>
+            <Image x:Name="imgz_14" Height="74" Width="75" Margin="1086,401,39,0" VerticalAlignment="Top"/>
+            <Image x:Name="imgz_15"  Height="75" Width="75" Margin="1123,400,2,0" VerticalAlignment="Top"/>
+            <Image x:Name="imgz_16" Height="75" Width="75" Margin="1195,402,-70,0" VerticalAlignment="Top"/>
             <Image x:Name="imgzw_1" Height="75" Width="75" Margin="15,185,1110,0" VerticalAlignment="Top"/>
             <Image x:Name="imgzw_2" Height="75" Width="75" Margin="40,185,1085,0" VerticalAlignment="Top"/>
             <Image x:Name="imgzw_3" Height="75" Width="75" Margin="66,185,1059,0" VerticalAlignment="Top"/>
@@ -249,14 +249,14 @@
             <Image x:Name="imgzw_6" Height="74" Width="75" Margin="149,185,976,0" VerticalAlignment="Top"/>
             <Image x:Name="imgzw_7"  Height="75" Width="75" Margin="178,185,947,0" VerticalAlignment="Top"/>
             <Image x:Name="imgzw_8" Height="75" Width="75" Margin="208,185,917,0" VerticalAlignment="Top"/>
-            <Image x:Name="imgzw_9" Height="75" Width="75" Margin="-19,95,1144,0" VerticalAlignment="Top"/>
-            <Image x:Name="imgzw_10" Height="75" Width="75" Margin="24,95,1101,0" VerticalAlignment="Top"/>
-            <Image x:Name="imgzw_11" Height="75" Width="75" Margin="60,95,1065,0" VerticalAlignment="Top"/>
-            <Image x:Name="imgzw_12" Height="75" Width="75" Margin="92,95,1033,0" VerticalAlignment="Top"/>
-            <Image x:Name="imgzw_13" Height="75" Width="75" Margin="125,95,1000,0" VerticalAlignment="Top"/>
-            <Image x:Name="imgzw_14"  Height="74" Width="75" Margin="160,95,965,0" VerticalAlignment="Top"/>
-            <Image x:Name="imgzw_15"  Height="75" Width="75" Margin="200,95,925,0" VerticalAlignment="Top"/>
-            <Image x:Name="imgzw_16" Height="75" Width="75" Margin="240,95,885,0" VerticalAlignment="Top"/>
+            <Image x:Name="imgzw_9"  Height="75" Width="75" Margin="1,95,1124,0" VerticalAlignment="Top"/>
+            <Image x:Name="imgzw_10"  Height="75" Width="75" Margin="38,95,1087,0" VerticalAlignment="Top"/>
+            <Image x:Name="imgzw_11"  Height="75" Width="75" Margin="76,95,1049,0" VerticalAlignment="Top"/>
+            <Image x:Name="imgzw_12"  Height="75" Width="75" Margin="112,95,1013,0" VerticalAlignment="Top"/>
+            <Image x:Name="imgzw_13"  Height="75" Width="75" Margin="149,95,976,0" VerticalAlignment="Top"/>
+            <Image x:Name="imgzw_14"  Height="74" Width="75" Margin="188,95,937,0" VerticalAlignment="Top"/>
+            <Image x:Name="imgzw_15"  Height="75" Width="75" Margin="226,95,899,0" VerticalAlignment="Top"/>
+            <Image x:Name="imgzw_16" Height="75" Width="75" Margin="300,95,825,0" VerticalAlignment="Top"/>
             <Label x:Name="soundstate" Content="sound on" Foreground="White" FontSize="35" HorizontalAlignment="Left" Margin="911,-7,0,0" VerticalAlignment="Top" Height="70" Width="183"/>
         </Grid>
     </Border>
