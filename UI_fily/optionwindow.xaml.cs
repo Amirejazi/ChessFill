@@ -29,9 +29,7 @@ namespace UI_fily
         public static string rbtncolor { get; set; }
         public static string servername { get; set; }
         public static string clientname { get; set; }
-        public static bool Rbtnsound1 { get; set; }
-        public static bool Rbtnsound2 { get; set; }
-        public static bool Rbtnsound3 { get; set; }
+        public static string Rbtnsound1 { get; set; }
         public static Uri Rbtnsound { get; set; }
 
         public void bordercollaps()
@@ -250,25 +248,19 @@ namespace UI_fily
             if (openFileDialog.ShowDialog() == true)
             {
                 Rbtnsound = new Uri(openFileDialog.FileName);
-                Rbtnsound1 = false;
-                Rbtnsound2 = false;
-                Rbtnsound3 = true;
+                Rbtnsound1 = "3";
             }
 
         }
 
         private void rbtnsound2_Checked(object sender, RoutedEventArgs e)
         {
-            Rbtnsound1 = false;
-            Rbtnsound3 = false;
-            Rbtnsound2 = true;
+            Rbtnsound1 = "2";
         }
 
         private void rbtnsound1_Checked(object sender, RoutedEventArgs e)
         {
-            Rbtnsound2 = false;
-            Rbtnsound3 = false;
-            Rbtnsound1 = true;
+            Rbtnsound1 = "1";
         }
     }
     

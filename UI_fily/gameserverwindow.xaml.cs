@@ -37,9 +37,9 @@ namespace UI_fily
             mediaplayer1.MediaEnded += new EventHandler(Media_Ended);
             mediaplayer2.MediaEnded += new EventHandler(Media_Ended);
             mediaplayer3.MediaEnded += new EventHandler(Media_Ended);
-            if (optionwindow.Rbtnsound1 == true) { mediaplayer1.Play(); }
-            if (optionwindow.Rbtnsound2== true) { mediaplayer2.Play(); }
-            if (optionwindow.Rbtnsound3== true) { mediaplayer3.Play(); }
+            if (optionwindow.Rbtnsound1 == "1") { mediaplayer1.Play(); }
+            if (optionwindow.Rbtnsound1 == "2") { mediaplayer2.Play(); }
+            if (optionwindow.Rbtnsound1 == "3") { mediaplayer3.Play(); }
             if (optionwindow.rbtncolor == "1")
             {
                 flag = true;
@@ -253,9 +253,9 @@ namespace UI_fily
 
         private void Media_Ended(object sender, EventArgs e)
         {
-            if (optionwindow.Rbtnsound1 == true) { mediaplayer1.Position = TimeSpan.Zero; mediaplayer1.Play(); }
-            if (optionwindow.Rbtnsound2== true) { mediaplayer2.Position = TimeSpan.Zero; mediaplayer2.Play(); }
-            if (optionwindow.Rbtnsound3== true) { mediaplayer3.Position = TimeSpan.Zero; mediaplayer3.Play(); }
+            if (optionwindow.Rbtnsound1 == "1") { mediaplayer1.Position = TimeSpan.Zero; mediaplayer1.Play(); }
+            if (optionwindow.Rbtnsound1 == "2") { mediaplayer2.Position = TimeSpan.Zero; mediaplayer2.Play(); }
+            if (optionwindow.Rbtnsound1 == "3") { mediaplayer3.Position = TimeSpan.Zero; mediaplayer3.Play(); }
         }
 
         public bool flag { get; set; }
@@ -1848,17 +1848,17 @@ namespace UI_fily
         {
             if (sound)
             {
-                if (optionwindow.Rbtnsound1 == true) { mediaplayer1.Position = TimeSpan.Zero; mediaplayer1.Stop(); }
-                if (optionwindow.Rbtnsound2 == true) { mediaplayer2.Position = TimeSpan.Zero; mediaplayer2.Stop(); }
-                if (optionwindow.Rbtnsound3 == true) { mediaplayer3.Position = TimeSpan.Zero; mediaplayer3.Stop(); }
+                if (optionwindow.Rbtnsound1 == "1") { mediaplayer1.Position = TimeSpan.Zero; mediaplayer1.Stop(); }
+                if (optionwindow.Rbtnsound1 == "2") { mediaplayer2.Position = TimeSpan.Zero; mediaplayer2.Stop(); }
+                if (optionwindow.Rbtnsound1 == "3") { mediaplayer3.Position = TimeSpan.Zero; mediaplayer3.Stop(); }
                 sound = false;
 
             }
             else
             {
-                if (optionwindow.Rbtnsound1 == true) { mediaplayer1.Position = TimeSpan.Zero; mediaplayer1.Play(); }
-                if (optionwindow.Rbtnsound2 == true) { mediaplayer2.Position = TimeSpan.Zero; mediaplayer2.Play(); }
-                if (optionwindow.Rbtnsound3 == true) { mediaplayer3.Position = TimeSpan.Zero; mediaplayer3.Play(); }
+                if (optionwindow.Rbtnsound1 == "1") { mediaplayer1.Position = TimeSpan.Zero; mediaplayer1.Play(); }
+                if (optionwindow.Rbtnsound1 == "2") { mediaplayer2.Position = TimeSpan.Zero; mediaplayer2.Play(); }
+                if (optionwindow.Rbtnsound1 == "3") { mediaplayer3.Position = TimeSpan.Zero; mediaplayer3.Play(); }
                 sound = true;
             }
         }

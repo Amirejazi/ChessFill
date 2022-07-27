@@ -192,7 +192,7 @@
                                 </Grid>
 
                                 <Grid/>
-                                <Button Content="Upload" x:Name="btnupload" FontSize="30"  HorizontalAlignment="Left" Margin="516,82,0,0" VerticalAlignment="Top" Height="46" Width="246" Click="btnupload_Click"/>
+                                <Button Content="Upload" x:Name="btnupload" FontSize="30"  HorizontalAlignment="Left" Margin="516,0,0,292" VerticalAlignment="Bottom" Height="46" Width="246" Click="btnupload_Click"/>
 
                             </Grid>
                         </Grid>
