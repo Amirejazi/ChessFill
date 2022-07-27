@@ -288,12 +288,6 @@ namespace UI_fily
             ZadanOtherenemy.Add(imgzw_15);
             ZadanOtherenemy.Add(imgzw_16);
             
-            if(optionwindow.rbtnshowtime == false)
-            {
-                minute.Visibility = Visibility.Collapsed;
-                second.Visibility = Visibility.Collapsed;
-                donoghte.Visibility = Visibility.Collapsed;
-            }
         }
         string sanie = "";
         int saniee = 0;
@@ -321,9 +315,6 @@ namespace UI_fily
                 daghighee = Convert.ToInt32(daghighe)-1;
                 daghighe = daghighee.ToString();
                 minute.Content = daghighe;
-                
-                    
-                
             }
 
 
@@ -359,6 +350,8 @@ namespace UI_fily
         public List<Image> ZadanOtherimages { get; set; }
         public List<Image> Zadansarbazenemy { get; set; }
         public List<Image> ZadanOtherenemy { get; set; }
+        
+
         public string Recieve { get; set; }
         public string propSend { get; set; } = $"i:{optionwindow.rbtnground},{optionwindow.rbtnnut},{optionwindow.rbtncolor},{optionwindow.servername},{optionwindow.clientname},{optionwindow.rbtn1},{portipserverwindow.pass}";
         public static ServerStartup _serverstartup;
@@ -2063,6 +2056,12 @@ namespace UI_fily
                     minute.Content = "";
                     second.Content = "";
                     donoghte.Content = "";
+                }
+                if (optionwindow.rbtnshowtime == false)
+                {
+                    minute.Visibility = Visibility.Collapsed;
+                    second.Visibility = Visibility.Collapsed;
+                    donoghte.Visibility = Visibility.Collapsed;
                 }
                 if (optionwindow.rbtncolor == "1")
                     enable=true;
