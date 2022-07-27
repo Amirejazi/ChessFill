@@ -259,11 +259,15 @@ namespace UI_fily
 
         private void rbtnsound2_Checked(object sender, RoutedEventArgs e)
         {
+            Rbtnsound1 = false;
+            Rbtnsound3 = false;
             Rbtnsound2 = true;
         }
 
         private void rbtnsound1_Checked(object sender, RoutedEventArgs e)
         {
+            Rbtnsound2 = false;
+            Rbtnsound3 = false;
             Rbtnsound1 = true;
         }
     }
