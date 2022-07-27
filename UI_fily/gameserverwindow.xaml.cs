@@ -287,7 +287,6 @@ namespace UI_fily
             ZadanOtherenemy.Add(imgzw_14);
             ZadanOtherenemy.Add(imgzw_15);
             ZadanOtherenemy.Add(imgzw_16);
-            
         }
         string sanie = "";
         int saniee = 0;
@@ -351,7 +350,7 @@ namespace UI_fily
         
 
         public string Recieve { get; set; }
-        public string propSend { get; set; } = $"i:{optionwindow.rbtnground},{optionwindow.rbtnnut},{optionwindow.rbtncolor},{optionwindow.servername},{optionwindow.clientname},{optionwindow.rbtn1},{portipserverwindow.pass}";
+        public string propSend { get; set; } = $"i:{optionwindow.rbtnground},{optionwindow.rbtnnut},{optionwindow.rbtncolor},{optionwindow.servername},{optionwindow.clientname},{optionwindow.rbtn1},{portipserverwindow.pass},{optionwindow.RbtnSound},{}";
         public static ServerStartup _serverstartup;
         public static ServerTransmission _transmission;
         private static MediaPlayer entkhabsoundq = new MediaPlayer();
