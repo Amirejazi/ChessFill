@@ -303,7 +303,6 @@ namespace UI_fily
             images.Add(_64img);
             entkhabsound.Open(new Uri(String.Format(@"{0}..\..\sorce\entekhab.mp3", AppDomain.CurrentDomain.BaseDirectory)));
             sendsound.Open(new Uri(String.Format(@"{0}..\..\sorce\harekat.mp3", AppDomain.CurrentDomain.BaseDirectory)));
-
         }
 
         public bool flag { get; set; }
