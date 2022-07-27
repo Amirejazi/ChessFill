@@ -189,12 +189,6 @@ namespace UI_fily
                     second.Visibility = Visibility.Collapsed;
                     donoghte.Visibility = Visibility.Collapsed;
                 }
-
-
-
-
-
-
             }
             else
             {
