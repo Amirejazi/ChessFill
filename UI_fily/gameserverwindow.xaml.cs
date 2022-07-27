@@ -241,8 +241,46 @@ namespace UI_fily
             images.Add(_62img);
             images.Add(_63img);
             images.Add(_64img);
-
-
+            Zadansarbazimages = new List<Image>();
+            Zadansarbazimages.Add(imgz_1);
+            Zadansarbazimages.Add(imgz_1);
+            Zadansarbazimages.Add(imgz_2);
+            Zadansarbazimages.Add(imgz_3);
+            Zadansarbazimages.Add(imgz_4);
+            Zadansarbazimages.Add(imgz_5);
+            Zadansarbazimages.Add(imgz_6);
+            Zadansarbazimages.Add(imgz_7);
+            Zadansarbazimages.Add(imgz_8);
+            ZadanOtherimages = new List<Image>();
+            ZadanOtherimages.Add(imgz_9);
+            ZadanOtherimages.Add(imgz_9);
+            ZadanOtherimages.Add(imgz_10);
+            ZadanOtherimages.Add(imgz_11);
+            ZadanOtherimages.Add(imgz_12);
+            ZadanOtherimages.Add(imgz_13);
+            ZadanOtherimages.Add(imgz_14);
+            ZadanOtherimages.Add(imgz_15);
+            ZadanOtherimages.Add(imgz_16);
+            Zadansarbazenemy = new List<Image>();
+            Zadansarbazenemy.Add(imgzw_1);
+            Zadansarbazenemy.Add(imgzw_1);
+            Zadansarbazenemy.Add(imgzw_2);
+            Zadansarbazenemy.Add(imgzw_3);
+            Zadansarbazenemy.Add(imgzw_4);
+            Zadansarbazenemy.Add(imgzw_5);
+            Zadansarbazenemy.Add(imgzw_6);
+            Zadansarbazenemy.Add(imgzw_7);
+            Zadansarbazenemy.Add(imgzw_8);
+            ZadanOtherenemy = new List<Image>();
+            ZadanOtherenemy.Add(imgzw_9);
+            ZadanOtherenemy.Add(imgzw_9);
+            ZadanOtherenemy.Add(imgzw_10);
+            ZadanOtherenemy.Add(imgzw_11);
+            ZadanOtherenemy.Add(imgzw_12);
+            ZadanOtherenemy.Add(imgzw_13);
+            ZadanOtherenemy.Add(imgzw_14);
+            ZadanOtherenemy.Add(imgzw_15);
+            ZadanOtherenemy.Add(imgzw_16);
         }
 
         private void Media_Ended(object sender, EventArgs e)
@@ -270,8 +308,13 @@ namespace UI_fily
         public static string sarbaz_b { get; set; }
         public List<Button> Button { get; set; }
         public List<Image> images { get; set; }
+        public List<Image> Zadansarbazimages { get; set; }
+        public List<Image> ZadanOtherimages { get; set; }
+        public List<Image> Zadansarbazenemy { get; set; }
+        public List<Image> ZadanOtherenemy { get; set; }
+
         public string Recieve { get; set; }
-        public string propSend { get; set; } = $"i:{optionwindow.rbtnground},{optionwindow.rbtnnut},{optionwindow.rbtncolor},{optionwindow.servername},{optionwindow.clientname},{optionwindow.rbtn1}";
+        public string propSend { get; set; } = $"i:{optionwindow.rbtnground},{optionwindow.rbtnnut},{optionwindow.rbtncolor},{optionwindow.servername},{optionwindow.clientname},{optionwindow.rbtn1},{portipserverwindow.pass}";
         public static ServerStartup _serverstartup;
         public static ServerTransmission _transmission;
         private static MediaPlayer entkhabsoundq = new MediaPlayer();
@@ -375,7 +418,195 @@ namespace UI_fily
             }
             enable=true;
         }
-        
+        void Zadan()
+        {
+            string[] locations = locationSaver.Split(',');
+            int sarbaz_bCounter = 0, rokh_bCounter = 0, fil_bCounter = 0, shah_bCounter = 0, vazir_bCounter = 0, asb_bCounter = 0;
+            int sarbaz_wCounter = 0, rokh_wCounter = 0, fil_wCounter = 0, shah_wCounter = 0, vazir_wCounter = 0, asb_wCounter = 0;
+
+            for (int i = 1; i < locations.Length; i++)
+            {
+                if(locations[i] == "sb")
+                {
+                    sarbaz_bCounter ++;
+                }
+                if (locations[i] == "rb")
+                {
+                    rokh_bCounter ++;
+                }
+                if (locations[i] == "fb")
+                {
+                    fil_bCounter ++;
+                }
+                if (locations[i] == "kb")
+                {
+                    shah_bCounter ++;
+                }
+                if (locations[i] == "vb")
+                {
+                    vazir_bCounter ++;
+                }
+                if (locations[i] == "ab")
+                {
+                    asb_bCounter ++;
+                }
+                if (locations[i] == "sw")
+                {
+                    sarbaz_wCounter++;
+                }
+                if (locations[i] == "rw")
+                {
+                    rokh_wCounter++;
+                }
+                if (locations[i] == "fw")
+                {
+                    fil_wCounter++;
+                }
+                if (locations[i] == "kw")
+                {
+                    shah_wCounter++;
+                }
+                if (locations[i] == "vw")
+                {
+                    vazir_wCounter++;
+                }
+                if (locations[i] == "aw")
+                {
+                    asb_wCounter++;
+                }
+                
+            }
+            if (flag)
+            {
+                for (int i = 1; i <= (8 - sarbaz_wCounter); i++)
+                {
+                    Zadansarbazimages[i].Source = new BitmapImage(new Uri(sarbaz_w));
+                }
+                for (int i = 1; i <= (2 - rokh_wCounter); i++)
+                {
+                    ZadanOtherimages[i].Source = new BitmapImage(new Uri(rokh_w));
+                }
+                for (int i = 2 - rokh_wCounter + 1; i <= 2 - rokh_wCounter + (2 - asb_wCounter); i++)
+                {
+                    ZadanOtherimages[i].Source = new BitmapImage(new Uri(asb_w));
+                }
+                for (int i = 2 - rokh_wCounter + (2 - asb_wCounter) + 1; i <= 2 - rokh_wCounter + (2 - asb_wCounter) + (2 - fil_wCounter); i++)
+                {
+                    ZadanOtherimages[i].Source = new BitmapImage(new Uri(fil_w));
+                }
+                if (vazir_wCounter != 1)
+                {
+                    ZadanOtherimages[2 - rokh_wCounter + (2 - asb_wCounter) + (2 - fil_wCounter)+1].Source = new BitmapImage(new Uri(vazir_w));
+                }
+                for (int i = 1; i <= (8 - sarbaz_bCounter); i++)
+                {
+                    Zadansarbazenemy[i].Source = new BitmapImage(new Uri(sarbaz_b));
+                }
+                for (int i = 1; i <= (2 - rokh_bCounter); i++)
+                {
+                    ZadanOtherenemy[i].Source = new BitmapImage(new Uri(rokh_b));
+                }
+                for (int i = 2 - rokh_bCounter + 1; i <= 2 - rokh_bCounter + (2 - asb_bCounter); i++)
+                {
+                    ZadanOtherenemy[i].Source = new BitmapImage(new Uri(asb_b));
+                }
+                for (int i = 2 - rokh_bCounter + (2 - asb_bCounter) + 1; i <= 2 - rokh_bCounter + (2 - asb_bCounter) + (2 - fil_bCounter); i++)
+                {
+                    ZadanOtherenemy[i].Source = new BitmapImage(new Uri(fil_b));
+                }
+                if (vazir_bCounter == 0)
+                {
+                    ZadanOtherenemy[2 - rokh_bCounter + (2 - asb_bCounter) + (2 - fil_bCounter) + 1].Source = new BitmapImage(new Uri(vazir_b));
+                }
+            }
+            else
+            {
+                for (int i = 1; i <= (8 - sarbaz_wCounter); i++)
+                {
+                    Zadansarbazenemy[i].Source = new BitmapImage(new Uri(sarbaz_w));
+                }
+                for (int i = 1; i <= (2 - rokh_wCounter); i++)
+                {
+                    ZadanOtherenemy[i].Source = new BitmapImage(new Uri(rokh_w));
+                }
+                for (int i = 2 - rokh_wCounter + 1; i <= 2 - rokh_wCounter + (2 - asb_wCounter); i++)
+                {
+                    ZadanOtherenemy[i].Source = new BitmapImage(new Uri(asb_w));
+                }
+                for (int i = 2 - rokh_wCounter + (2 - asb_wCounter) + 1; i <= 2 - rokh_wCounter + (2 - asb_wCounter) + (2 - fil_wCounter); i++)
+                {
+                    ZadanOtherenemy[i].Source = new BitmapImage(new Uri(fil_w));
+                }
+                if (vazir_wCounter != 1)
+                {
+                    ZadanOtherenemy[2 - rokh_wCounter + (2 - asb_wCounter) + (2 - fil_wCounter) + 1].Source = new BitmapImage(new Uri(vazir_w));
+                }
+                for (int i = 1; i <= (8 - sarbaz_bCounter); i++)
+                {
+                    Zadansarbazimages[i].Source = new BitmapImage(new Uri(sarbaz_b));
+                }
+                for (int i = 1; i <= (2 - rokh_bCounter); i++)
+                {
+                    ZadanOtherimages[i].Source = new BitmapImage(new Uri(rokh_b));
+                }
+                for (int i = 2 - rokh_bCounter + 1; i <= 2 - rokh_bCounter + (2 - asb_bCounter); i++)
+                {
+                    ZadanOtherimages[i].Source = new BitmapImage(new Uri(asb_b));
+                }
+                for (int i = 2 - rokh_bCounter + (2 - asb_bCounter) + 1; i <= 2 - rokh_bCounter + (2 - asb_bCounter) + (2 - fil_bCounter); i++)
+                {
+                    ZadanOtherimages[i].Source = new BitmapImage(new Uri(fil_b));
+                }
+                if (vazir_wCounter == 0)
+                {
+                    ZadanOtherimages[2 - rokh_bCounter + (2 - asb_bCounter) + (2 - fil_bCounter) + 1].Source = new BitmapImage(new Uri(vazir_b));
+                }
+            }
+        }
+        void finalsbz()
+        {
+            for(int i = 56; i < 65; i++)
+            {
+                if (images[i].Source != null)
+                {
+                    if (SarbazChecker(flag, images[i].Source.ToString()))
+                    {
+                        MessageBoxResult res;
+                        res = MessageBox.Show("choose vazir or rokh !", "?!", MessageBoxButton.YesNo);
+                        if (res == MessageBoxResult.Yes)
+                        {
+                            if (flag)
+                            {
+                                images[i].Source = new BitmapImage(new Uri(vazir_w));
+                                LocationSaver();
+                                Zadan();
+                            }
+                            else
+                            {
+                                images[i].Source = new BitmapImage(new Uri(vazir_b));
+                                LocationSaver();
+                                Zadan();
+                            }
+                        }
+                        else
+                        {
+                            if (flag)
+                            {
+                                images[i].Source = new BitmapImage(new Uri(rokh_w));
+                                LocationSaver();
+                                Zadan();
+                            }
+                            else
+                            {
+                                images[i].Source = new BitmapImage(new Uri(rokh_b));
+                                LocationSaver();
+                                Zadan();
+                            }
+                        }
+                    }
+                }
+            }
+        }
         public void ResetBrush()
         {
             if (optionwindow.rbtnground == "1")
@@ -1305,10 +1536,7 @@ namespace UI_fily
                     Brush(brush);
                 else
                 {
-                    if (ColorChecker(!flag, images[brush].Source.ToString()))
-                        Brushr(brush);
-                    else
-                        flagc = false;
+                    flagc = false;
                 }
             }
             brush = index + 16;
@@ -1316,11 +1544,18 @@ namespace UI_fily
             {
                 if (images[brush].Source == null)
                     Brush(brush);
-                else
-                {
-                    if (ColorChecker(!flag, images[brush].Source.ToString()))
-                        Brushr(brush);
-                }
+            }
+            brush = index + 9;
+            if (brush % 8 != 1 && brush < 65 && images[brush].Source != null)
+            {
+                if (ColorChecker(!flag, images[brush].Source.ToString()))
+                   Brushr(brush);
+            }
+            brush = index + 7;
+            if (brush % 8 != 0 && brush < 65 && images[brush].Source != null)
+            {
+                if (ColorChecker(!flag, images[brush].Source.ToString()))
+                   Brushr(brush);
             }
             if (flag)
                 loc = sarbaz_w;
@@ -1338,11 +1573,18 @@ namespace UI_fily
             {
                 if (images[brush].Source == null)
                     Brush(brush);
-                else
-                {
-                    if (ColorChecker(!flag, images[brush].Source.ToString()))
-                        Brushr(brush);
-                }
+            }
+            brush = index + 9;
+            if (brush % 8 != 1 && brush < 65 && images[brush].Source != null)
+            {
+                if (ColorChecker(!flag, images[brush].Source.ToString()))
+                    Brushr(brush);
+            }
+            brush = index + 7;
+            if (brush % 8 != 0 && brush < 65 && images[brush].Source != null)
+            {
+                if (ColorChecker(!flag, images[brush].Source.ToString()))
+                    Brushr(brush);
             }
             if (flag)
                 loc = sarbaz_w;
@@ -1476,6 +1718,8 @@ namespace UI_fily
                     images[indexg].Source = null;
                     ResetBrush();
                     LocationSaver();
+                    Zadan();
+                    finalsbz();
                     Send(locationSaver);
                     enable = false;
                 }
@@ -1806,6 +2050,7 @@ namespace UI_fily
         private void recieveCallback(string recieveMessage)
         {
             this.Dispatcher.Invoke(() => {
+                
                 Recieve = "";
                 for (int i = 0; i < recieveMessage.Length; i++)
                 {
@@ -1815,6 +2060,8 @@ namespace UI_fily
                     }
                 }
                 RecieveLocation(Recieve);
+                LocationSaver();
+                Zadan();
             });
         }
         public  void Send(string send)

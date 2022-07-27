@@ -169,6 +169,13 @@ namespace UI_fily
                 this.Close();
                 portipclientwindow.ShowDialog();
             }
+            if(password!= portipclientwindow.pass)
+            {
+                portipclientwindow portipclientwindow = new portipclientwindow();
+                MessageBox.Show("password Not Corecct!!");
+                this.Close();
+                portipclientwindow.ShowDialog();
+            }
             Button = new List<Button>();
             Button.Add(_1);
             Button.Add(_1);
@@ -310,6 +317,7 @@ namespace UI_fily
         public string loc { get; set; }
         public string locationSaver { get; set; }
         public int indexg { get; set; }
+        public string password { get; set; }
         public static string rokh_b { get; set; }
         public static string asb_b { get; set; }
         public static string fil_b { get; set; }
@@ -1852,17 +1860,25 @@ namespace UI_fily
             {
                 this.Dispatcher.Invoke(() =>
                 {
-                    Recieve=recieveMessage;
-                    if (Recieve[0] == 'i')
+                    Recieve = "";
+                    for (int i = 0; i < recieveMessage.Length; i++)
+                    {
+                        if (recieveMessage[i] != '\0')
+                        {
+                            Recieve += recieveMessage[i];
+                        }
+                    }
+                    if (Recieve[0] == 'i'&& Recieve[1] == ':')
                     {
                         Recieve = Recieve.Remove(0, 2);
                         string[] items = Recieve.Split(',');
                         optionwindow.rbtnground = items[0];
                         optionwindow.rbtnnut = items[1];
                         optionwindow.rbtncolor = items[2];
-                        optionwindow.servername = items[3];
-                        optionwindow.clientname = items[4];
+                        servername.Content = items[3];
+                        clientname.Content = items[4];
                         optionwindow.rbtn1 = items[5];
+                        password = items[6];
                     }
                     else
                         RecieveLocation(Recieve);
