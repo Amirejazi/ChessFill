@@ -255,8 +255,18 @@ namespace UI_fily
                 timer.Interval = new TimeSpan(0, 0, 1);
                 timer.Start();
             }
-            
-
+            else if(optionwindow.rbtnplaywithtime == false)
+            {
+                minute.Content = "";
+                second.Content = "";
+                donoghte.Content = "";
+            }
+            if(optionwindow.rbtnshowtime == false)
+            {
+                minute.Visibility = Visibility.Collapsed;
+                second.Visibility = Visibility.Collapsed;
+                donoghte.Visibility = Visibility.Collapsed;
+            }
         }
         string sanie = "";
         int saniee = 0;
