@@ -1894,6 +1894,9 @@ namespace UI_fily
         {
             this.Close();
         }
+
+
+
         private static bool sound = true;
         private void soundchecker_click(object sender, RoutedEventArgs e)
         {

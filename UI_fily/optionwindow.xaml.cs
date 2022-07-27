@@ -36,6 +36,8 @@ namespace UI_fily
         public static bool rbtnplaywithtime { get; set; }
         public static bool rbtnshowtime { get; set; }
         public static string timer { get; set; }
+        public static string RbtnSound { get; set; }
+        public static Uri Urisound { get; set; }
 
         public void bordercollaps()
         {
