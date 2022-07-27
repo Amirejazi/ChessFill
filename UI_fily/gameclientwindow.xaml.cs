@@ -2010,5 +2010,12 @@ namespace UI_fily
 
             }
         }
+
+        private void back_Click(object sender, RoutedEventArgs e)
+        {
+            portipclientwindow portipclientwindow = new portipclientwindow();
+            this.Close();
+            portipclientwindow.ShowDialog();
+        }
     }
 }

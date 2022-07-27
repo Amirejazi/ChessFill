@@ -2169,6 +2169,13 @@ namespace UI_fily
                 soundstate.Content = "sound on";
             }
         }
+
+        private void back_Click(object sender, RoutedEventArgs e)
+        {
+            portipserverwindow portipserverwindow = new portipserverwindow();
+            this.Close();
+            portipserverwindow.ShowDialog();
+        }
     }
 
 }

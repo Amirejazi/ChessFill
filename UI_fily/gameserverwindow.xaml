@@ -222,7 +222,10 @@
             <Button x:Name="close" BorderThickness="0" Height="53" Width="54" Background="Transparent" Margin="1146,0,0,0" Click="closee" VerticalAlignment="Top">
                 <Image Source="sorce/close.png" Height="47" Width="45"></Image>
             </Button>
-            <Button x:Name="soundcheker" BorderThickness="0" Height="53" Width="54" Background="Transparent" Margin="1091,0,55,0" Click="soundchecker_click" VerticalAlignment="Top">
+            <Button x:Name="back" BorderThickness="0" Height="53" Width="54" Background="Transparent" Margin="1096,0,50,0"  VerticalAlignment="Top" Click="back_Click">
+                <Image Source="sorce/back.png" Height="47" Width="45"></Image>
+            </Button>
+            <Button x:Name="soundcheker" BorderThickness="0" Height="53" Width="54" Background="Transparent" Margin="1047,0,99,0" Click="soundchecker_click" VerticalAlignment="Top">
                 <Image x:Name="soundimg" Source="sorce/sound.png" Height="47" Width="45" RenderTransformOrigin="0.5,0.521"></Image>
             </Button>
             <Image x:Name="imgz_1"  Height="75" Width="75" Margin="905,495,220,0" VerticalAlignment="Top"/>
@@ -257,7 +260,7 @@
             <Image x:Name="imgzw_14"  Height="74" Width="75" Margin="188,95,937,0" VerticalAlignment="Top"/>
             <Image x:Name="imgzw_15"  Height="75" Width="75" Margin="226,95,899,0" VerticalAlignment="Top"/>
             <Image x:Name="imgzw_16" Height="75" Width="75" Margin="300,95,825,0" VerticalAlignment="Top"/>
-            <Label x:Name="soundstate" Content="sound on" Foreground="White" FontSize="35" HorizontalAlignment="Left" Margin="911,-7,0,0" VerticalAlignment="Top" Height="70" Width="183"/>
+            <Label x:Name="soundstate" Content="sound on" Foreground="White" FontSize="35" HorizontalAlignment="Left" Margin="893,-7,0,0" VerticalAlignment="Top" Height="70" Width="183"/>
         </Grid>
     </Border>
 </Window>
