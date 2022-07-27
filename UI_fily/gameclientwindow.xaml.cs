@@ -169,7 +169,26 @@ namespace UI_fily
                 if (optionwindow.RbtnSound == "1") { mediaplayer1.Play(); }
                 if (optionwindow.RbtnSound == "2") { mediaplayer2.Play(); }
                 if (optionwindow.RbtnSound == "3") { mediaplayer1.Play(); }
-
+                if (optionwindow.rbtnplaywithtime == "1")
+                {
+                    System.Windows.Threading.DispatcherTimer timer = new System.Windows.Threading.DispatcherTimer();
+                    minute.Content = optionwindow.timer;
+                    timer.Tick += Timer_tick;
+                    timer.Interval = new TimeSpan(0, 0, 1);
+                    timer.Start();
+                }
+                else if (optionwindow.rbtnplaywithtime == "2")
+                {
+                    minute.Content = "";
+                    second.Content = "";
+                    donoghte.Content = "";
+                }
+                if (optionwindow.rbtnshowtime == "2")
+                {
+                    minute.Visibility = Visibility.Collapsed;
+                    second.Visibility = Visibility.Collapsed;
+                    donoghte.Visibility = Visibility.Collapsed;
+                }
 
 
 
@@ -324,6 +343,34 @@ namespace UI_fily
             images.Add(_64img);
             entkhabsound.Open(new Uri(String.Format(@"{0}..\..\sorce\entekhab.mp3", AppDomain.CurrentDomain.BaseDirectory)));
             sendsound.Open(new Uri(String.Format(@"{0}..\..\sorce\harekat.mp3", AppDomain.CurrentDomain.BaseDirectory)));
+        }
+        string sanie = "";
+        int saniee = 0;
+        string daghighe = "";
+        int daghighee = 0;
+        private void Timer_tick(object sender, EventArgs e)
+        {
+            sanie = second.Content.ToString();
+            saniee = Convert.ToInt32(sanie) - 1;
+            sanie = saniee.ToString();
+            second.Content = sanie;
+            if (second.Content.ToString() == "0")
+            {
+                if (minute.Content.ToString() == "0")
+                {
+                    MessageBoxResult result;
+                    result = MessageBox.Show("the game is over", ":)", MessageBoxButton.OK);
+                    if (result == MessageBoxResult.OK)
+                    {
+                        this.Close();
+                    }
+                }
+                second.Content = "59";
+                daghighe = minute.Content.ToString();
+                daghighee = Convert.ToInt32(daghighe) - 1;
+                daghighe = daghighee.ToString();
+                minute.Content = daghighe;
+            }
         }
         private void Media_Ended(object sender, EventArgs e)
         {
