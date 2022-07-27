@@ -162,8 +162,33 @@ namespace UI_fily
                     _63img.Source = new BitmapImage(new Uri(asb_w));
                     _64img.Source = new BitmapImage(new Uri(rokh_w));
                 }
-                
-
+                mediaplayer1.Open(new Uri(String.Format(@"{0}..\..\Sound\1.mp3", AppDomain.CurrentDomain.BaseDirectory)));
+                mediaplayer2.Open(new Uri(String.Format(@"{0}..\..\Sound\2.mp3", AppDomain.CurrentDomain.BaseDirectory)));
+                mediaplayer1.MediaEnded += new EventHandler(Media_Ended);
+                mediaplayer2.MediaEnded += new EventHandler(Media_Ended);
+                if (optionwindow.RbtnSound == "1") { mediaplayer1.Play(); }
+                if (optionwindow.RbtnSound == "2") { mediaplayer2.Play(); }
+                if (optionwindow.RbtnSound == "3") { mediaplayer1.Play(); }
+                if (optionwindow.rbtnplaywithtime == "1")
+                {
+                    System.Windows.Threading.DispatcherTimer timer = new System.Windows.Threading.DispatcherTimer();
+                    minute.Content = optionwindow.timer;
+                    timer.Tick += Timer_tick;
+                    timer.Interval = new TimeSpan(0, 0, 1);
+                    timer.Start();
+                }
+                else if (optionwindow.rbtnplaywithtime == "2")
+                {
+                    minute.Content = "";
+                    second.Content = "";
+                    donoghte.Content = "";
+                }
+                if (optionwindow.rbtnshowtime == "2")
+                {
+                    minute.Visibility = Visibility.Collapsed;
+                    second.Visibility = Visibility.Collapsed;
+                    donoghte.Visibility = Visibility.Collapsed;
+                }
 
 
 
@@ -319,7 +344,40 @@ namespace UI_fily
             entkhabsound.Open(new Uri(String.Format(@"{0}..\..\sorce\entekhab.mp3", AppDomain.CurrentDomain.BaseDirectory)));
             sendsound.Open(new Uri(String.Format(@"{0}..\..\sorce\harekat.mp3", AppDomain.CurrentDomain.BaseDirectory)));
         }
-
+        string sanie = "";
+        int saniee = 0;
+        string daghighe = "";
+        int daghighee = 0;
+        private void Timer_tick(object sender, EventArgs e)
+        {
+            sanie = second.Content.ToString();
+            saniee = Convert.ToInt32(sanie) - 1;
+            sanie = saniee.ToString();
+            second.Content = sanie;
+            if (second.Content.ToString() == "0")
+            {
+                if (minute.Content.ToString() == "0")
+                {
+                    MessageBoxResult result;
+                    result = MessageBox.Show("the game is over", ":)", MessageBoxButton.OK);
+                    if (result == MessageBoxResult.OK)
+                    {
+                        this.Close();
+                    }
+                }
+                second.Content = "59";
+                daghighe = minute.Content.ToString();
+                daghighee = Convert.ToInt32(daghighe) - 1;
+                daghighe = daghighee.ToString();
+                minute.Content = daghighe;
+            }
+        }
+        private void Media_Ended(object sender, EventArgs e)
+        {
+            if (optionwindow.RbtnSound == "1") { mediaplayer1.Position = TimeSpan.Zero; mediaplayer1.Play(); }
+            if (optionwindow.RbtnSound == "2") { mediaplayer2.Position = TimeSpan.Zero; mediaplayer2.Play(); }
+            if (optionwindow.RbtnSound == "3") { mediaplayer1.Position = TimeSpan.Zero; mediaplayer1.Play(); }
+        }
         public bool flag { get; set; }
         public bool enable { get; set; }=false;
         public string loc { get; set; }
@@ -344,6 +402,8 @@ namespace UI_fily
         public static TransmissionClient _transmission;
         private static MediaPlayer entkhabsound = new MediaPlayer();
         private static MediaPlayer sendsound = new MediaPlayer();
+        private MediaPlayer mediaplayer1 = new MediaPlayer();
+        private MediaPlayer mediaplayer2 = new MediaPlayer();
         public string Recieve { get; set; }
         void LocationSaver()
         {
@@ -1933,9 +1993,24 @@ namespace UI_fily
         {
             this.Close();
         }
+        private static bool sound = true;
         private void soundchecker_click(object sender, RoutedEventArgs e)
         {
-            optionwindow.clientname = "dkjfjd";
+            if (sound)
+            {
+                if (optionwindow.RbtnSound == "1") { mediaplayer1.Position = TimeSpan.Zero; mediaplayer1.Stop(); }
+                if (optionwindow.RbtnSound == "2") { mediaplayer2.Position = TimeSpan.Zero; mediaplayer2.Stop(); }
+                if (optionwindow.RbtnSound == "3") { mediaplayer1.Position = TimeSpan.Zero; mediaplayer1.Stop(); }
+                sound = false;
+
+            }
+            else
+            {
+                if (optionwindow.RbtnSound == "1") { mediaplayer1.Position = TimeSpan.Zero; mediaplayer1.Play(); }
+                if (optionwindow.RbtnSound == "2") { mediaplayer2.Position = TimeSpan.Zero; mediaplayer2.Play(); }
+                if (optionwindow.RbtnSound == "3") { mediaplayer1.Position = TimeSpan.Zero; mediaplayer1.Play(); }
+                sound = true;
+            }
         }
     }
 }
