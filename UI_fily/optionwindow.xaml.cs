@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -28,6 +29,15 @@ namespace UI_fily
         public static string rbtncolor { get; set; }
         public static string servername { get; set; }
         public static string clientname { get; set; }
+        public static bool Rbtnsound1 { get; set; }
+        public static bool Rbtnsound2 { get; set; }
+        public static bool Rbtnsound3 { get; set; }
+        public static Uri Rbtnsound { get; set; }
+        public static bool rbtnplaywithtime { get; set; }
+        public static bool rbtnshowtime { get; set; }
+        public static string timer { get; set; }
+        public static string RbtnSound { get; set; }
+        public static Uri Urisound { get; set; }
 
         public void bordercollaps()
         {
@@ -143,6 +153,7 @@ namespace UI_fily
             }
             servername = textboxservername.Text;
             clientname = textboxclientname.Text;
+            timer = textboxgametime.Text;
             portipserverwindow portipserverwindow = new portipserverwindow();
             this.Close();
             portipserverwindow.ShowDialog();
@@ -202,12 +213,15 @@ namespace UI_fily
 
         private void rbtntimeryes_Checked(object sender, RoutedEventArgs e)
         {
+            rbtnplaywithtime = true;
             textboxgametime.IsEnabled = true;
         }
 
         private void rbtntimerno_Checked(object sender, RoutedEventArgs e)
         {
+            //textboxgametime.Text = "";
             //textboxgametime.IsEnabled = false;
+            rbtnplaywithtime = false;
         }
 
         public static string rbtn1 { get; set; }
@@ -238,6 +252,37 @@ namespace UI_fily
             this.Close();
         }
 
+        private void btnupload_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "MP3 files (*.mp3)|*.mp3|All files (*.*)|*.*";
+            if (openFileDialog.ShowDialog() == true)
+            {
+                Urisound = new Uri(openFileDialog.FileName);
+                RbtnSound = "3";
+            }
+
+        }
+
+        private void rbtnsound2_Checked(object sender, RoutedEventArgs e)
+        {
+            RbtnSound = "2";
+        }
+
+        private void rbtnsound1_Checked(object sender, RoutedEventArgs e)
+        {
+            RbtnSound = "1";
+        }
+
+        private void rbtnshowtimeyes_Checked(object sender, RoutedEventArgs e)
+        {
+            rbtnshowtime = true;
+        }
+
+        private void rbtnshowtimeno_Checked(object sender, RoutedEventArgs e)
+        {
+            rbtnshowtime = false;
+        }
         
     }
     

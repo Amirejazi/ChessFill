@@ -207,15 +207,18 @@
             <Button x:Name="_64" Background="#171717" Height="75" Width="74" HorizontalAlignment="Left" Margin="816,46,0,0" VerticalAlignment="Top" Click="_64b">
                 <Image x:Name="_64img"  ></Image>
             </Button>
-            <Label x:Name="servername" Content="server name" Foreground="White" FontSize="50" HorizontalAlignment="Left" Margin="919,574,0,0" VerticalAlignment="Top" Height="103" Width="341"/>
-            <Label x:Name="clientname" Content="client name" Foreground="White" FontSize="50" HorizontalAlignment="Left" Margin="10,31,0,0" VerticalAlignment="Top" Height="90" Width="300"/>
-            <Label Content="00:00" Foreground="White" FontSize="50" HorizontalAlignment="Left" Margin="64,270,0,0" VerticalAlignment="Top" Height="90" Width="138"/>
+            <Label x:Name="servername" Content="server name" Foreground="White" FontSize="50" HorizontalAlignment="Left" Margin="916,574,0,0" VerticalAlignment="Top" Height="103" Width="341"/>
+            <Label x:Name="clientname" Content="client name" Foreground="White" FontSize="50" HorizontalAlignment="Left" Margin="919,137,0,0" VerticalAlignment="Top" Height="90" Width="300"/>
+            <Label x:Name="minute" Content="05" Foreground="White" FontSize="50" HorizontalAlignment="Left" Margin="64,270,0,0" VerticalAlignment="Top" Height="90" Width="81"/>
+            <Label x:Name="donoghte" Content=":" Foreground="White" FontSize="50" HorizontalAlignment="Left" Margin="134,268,0,0" VerticalAlignment="Top" Height="90" Width="82"/>
+            <Label x:Name="second" Content="01" Foreground="White" FontSize="50" HorizontalAlignment="Left" Margin="160,270,0,0" VerticalAlignment="Top" Height="90" Width="81"/>
+
             <Label x:Name="State" Content="" Foreground="White" FontSize="18" HorizontalAlignment="Left" Margin="40,46,0,0" VerticalAlignment="Top" Height="59" Width="210"/>
             <Button x:Name="close" BorderThickness="0" Height="53" Width="54" Background="Transparent" Margin="1146,0,0,0" Click="closee" VerticalAlignment="Top">
                 <Image Source="sorce/close.png" Height="47" Width="45"></Image>
             </Button>
-            <Button x:Name="soundcheker" BorderThickness="0" Height="53" Width="54" Background="Transparent" Margin="1091,0,55,0" Click="closee" VerticalAlignment="Top">
-                <Image Source="sorce/sound.png" Height="47" Width="45"></Image>
+            <Button x:Name="soundcheker" BorderThickness="0" Height="53" Width="54" Background="Transparent" Margin="1091,0,55,0" Click="soundchecker_click" VerticalAlignment="Top">
+                <Image Source="sorce/sound.png" Height="47" Width="45" RenderTransformOrigin="0.5,0.521"></Image>
             </Button>
             <Image x:Name="imgz_1"  Height="75" Width="75" Margin="905,495,220,0" VerticalAlignment="Top"/>
             <Image x:Name="imgz_2"  Height="75" Width="75" Margin="930,495,195,0" VerticalAlignment="Top"/>

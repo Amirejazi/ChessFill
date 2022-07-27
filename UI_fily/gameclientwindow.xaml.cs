@@ -1921,6 +1921,9 @@ namespace UI_fily
         {
             this.Close();
         }
-
+        private void soundchecker_click(object sender, RoutedEventArgs e)
+        {
+            optionwindow.clientname = "dkjfjd";
+        }
     }
 }

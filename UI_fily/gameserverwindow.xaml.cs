@@ -32,8 +32,14 @@ namespace UI_fily
             entkhabsoundq.Open(new Uri(String.Format(@"{0}..\..\sorce\entekhab.mp3", AppDomain.CurrentDomain.BaseDirectory)));
             sendsound.Open(new Uri(String.Format(@"{0}..\..\sorce\harekat.mp3", AppDomain.CurrentDomain.BaseDirectory)));
             mediaplayer1.Open(new Uri(String.Format(@"{0}..\..\Sound\1.mp3", AppDomain.CurrentDomain.BaseDirectory)));
+            mediaplayer2.Open(new Uri(String.Format(@"{0}..\..\Sound\2.mp3", AppDomain.CurrentDomain.BaseDirectory)));
+            mediaplayer3.Open(optionwindow.Urisound);
             mediaplayer1.MediaEnded += new EventHandler(Media_Ended);
-            mediaplayer1.Play();
+            mediaplayer2.MediaEnded += new EventHandler(Media_Ended);
+            mediaplayer3.MediaEnded += new EventHandler(Media_Ended);
+            if (optionwindow.RbtnSound == "1") { mediaplayer1.Play(); }
+            if (optionwindow.RbtnSound == "2") { mediaplayer2.Play(); }
+            if (optionwindow.RbtnSound == "3") { mediaplayer3.Play(); }
             if (optionwindow.rbtncolor == "1")
             {
                 flag = true;
@@ -241,52 +247,66 @@ namespace UI_fily
             images.Add(_62img);
             images.Add(_63img);
             images.Add(_64img);
-            Zadansarbazimages = new List<Image>();
-            Zadansarbazimages.Add(imgz_1);
-            Zadansarbazimages.Add(imgz_1);
-            Zadansarbazimages.Add(imgz_2);
-            Zadansarbazimages.Add(imgz_3);
-            Zadansarbazimages.Add(imgz_4);
-            Zadansarbazimages.Add(imgz_5);
-            Zadansarbazimages.Add(imgz_6);
-            Zadansarbazimages.Add(imgz_7);
-            Zadansarbazimages.Add(imgz_8);
-            ZadanOtherimages = new List<Image>();
-            ZadanOtherimages.Add(imgz_9);
-            ZadanOtherimages.Add(imgz_9);
-            ZadanOtherimages.Add(imgz_10);
-            ZadanOtherimages.Add(imgz_11);
-            ZadanOtherimages.Add(imgz_12);
-            ZadanOtherimages.Add(imgz_13);
-            ZadanOtherimages.Add(imgz_14);
-            ZadanOtherimages.Add(imgz_15);
-            ZadanOtherimages.Add(imgz_16);
-            Zadansarbazenemy = new List<Image>();
-            Zadansarbazenemy.Add(imgzw_1);
-            Zadansarbazenemy.Add(imgzw_1);
-            Zadansarbazenemy.Add(imgzw_2);
-            Zadansarbazenemy.Add(imgzw_3);
-            Zadansarbazenemy.Add(imgzw_4);
-            Zadansarbazenemy.Add(imgzw_5);
-            Zadansarbazenemy.Add(imgzw_6);
-            Zadansarbazenemy.Add(imgzw_7);
-            Zadansarbazenemy.Add(imgzw_8);
-            ZadanOtherenemy = new List<Image>();
-            ZadanOtherenemy.Add(imgzw_9);
-            ZadanOtherenemy.Add(imgzw_9);
-            ZadanOtherenemy.Add(imgzw_10);
-            ZadanOtherenemy.Add(imgzw_11);
-            ZadanOtherenemy.Add(imgzw_12);
-            ZadanOtherenemy.Add(imgzw_13);
-            ZadanOtherenemy.Add(imgzw_14);
-            ZadanOtherenemy.Add(imgzw_15);
-            ZadanOtherenemy.Add(imgzw_16);
+            if(optionwindow.rbtnplaywithtime == true)
+            {
+                System.Windows.Threading.DispatcherTimer timer = new System.Windows.Threading.DispatcherTimer();
+                minute.Content = optionwindow.timer;
+                timer.Tick += Timer_tick;
+                timer.Interval = new TimeSpan(0, 0, 1);
+                timer.Start();
+            }
+            else if(optionwindow.rbtnplaywithtime == false)
+            {
+                minute.Content = "";
+                second.Content = "";
+                donoghte.Content = "";
+            }
+            if(optionwindow.rbtnshowtime == false)
+            {
+                minute.Visibility = Visibility.Collapsed;
+                second.Visibility = Visibility.Collapsed;
+                donoghte.Visibility = Visibility.Collapsed;
+            }
+        }
+        string sanie = "";
+        int saniee = 0;
+        string daghighe = "";
+        int daghighee = 0;
+        private void Timer_tick(object sender, EventArgs e)
+        {
+            sanie = second.Content.ToString();
+            saniee = Convert.ToInt32(sanie) - 1;
+            sanie = saniee.ToString();
+            second.Content = sanie;
+            if(second.Content.ToString() == "0")
+            {
+                if (minute.Content.ToString() == "0")
+                {
+                    MessageBoxResult result;
+                    result = MessageBox.Show("the game is over", ":)", MessageBoxButton.OK);
+                    if (result == MessageBoxResult.OK)
+                    {
+                        this.Close();
+                    }
+                }
+                second.Content = "59";
+                daghighe = minute.Content.ToString();
+                daghighee = Convert.ToInt32(daghighe)-1;
+                daghighe = daghighee.ToString();
+                minute.Content = daghighe;
+                
+                    
+                
+            }
+
+
         }
 
         private void Media_Ended(object sender, EventArgs e)
         {
-            mediaplayer1.Position = TimeSpan.Zero;
-            mediaplayer1.Play();
+            if (optionwindow.RbtnSound == "1") { mediaplayer1.Position = TimeSpan.Zero; mediaplayer1.Play(); }
+            if (optionwindow.RbtnSound == "2") { mediaplayer2.Position = TimeSpan.Zero; mediaplayer2.Play(); }
+            if (optionwindow.RbtnSound == "3") { mediaplayer3.Position = TimeSpan.Zero; mediaplayer3.Play(); }
         }
 
         public bool flag { get; set; }
@@ -320,6 +340,8 @@ namespace UI_fily
         private static MediaPlayer entkhabsoundq = new MediaPlayer();
         private MediaPlayer sendsound = new MediaPlayer();
         private MediaPlayer mediaplayer1 = new MediaPlayer();
+        private MediaPlayer mediaplayer2 = new MediaPlayer();
+        private MediaPlayer mediaplayer3 = new MediaPlayer();
         public void LocationSaver()
         {
             locationSaver = "-,";
@@ -2082,6 +2104,27 @@ namespace UI_fily
             this.Close();
         }
 
+
+
+        private static bool sound = true;
+        private void soundchecker_click(object sender, RoutedEventArgs e)
+        {
+            if (sound)
+            {
+                if (optionwindow.RbtnSound == "1") { mediaplayer1.Position = TimeSpan.Zero; mediaplayer1.Stop(); }
+                if (optionwindow.RbtnSound == "2") { mediaplayer2.Position = TimeSpan.Zero; mediaplayer2.Stop(); }
+                if (optionwindow.RbtnSound == "3") { mediaplayer3.Position = TimeSpan.Zero; mediaplayer3.Stop(); }
+                sound = false;
+
+            }
+            else
+            {
+                if (optionwindow.RbtnSound == "1") { mediaplayer1.Position = TimeSpan.Zero; mediaplayer1.Play(); }
+                if (optionwindow.RbtnSound == "2") { mediaplayer2.Position = TimeSpan.Zero; mediaplayer2.Play(); }
+                if (optionwindow.RbtnSound == "3") { mediaplayer3.Position = TimeSpan.Zero; mediaplayer3.Play(); }
+                sound = true;
+            }
+        }
     }
 
 }
