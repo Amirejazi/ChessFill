@@ -424,7 +424,9 @@
                     <Button x:Name="close" BorderThickness="0" Width="53" Height="53" HorizontalAlignment="Left" Background="Transparent" Margin="98,0,0,6" Click="closee">
                         <Image Source="sorce/close.png" Height="47" Width="45"></Image>
                     </Button>
-
+                    <Button x:Name="back" BorderThickness="0" Width="54" Height="53" HorizontalAlignment="Left" Background="Transparent" Margin="48,0,0,6" Click="back_Click">
+                        <Image Source="sorce/back.png" Height="47" Width="45"></Image>
+                    </Button>
                 </Grid>
             </Grid>
         </Grid>

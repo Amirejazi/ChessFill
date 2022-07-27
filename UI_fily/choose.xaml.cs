@@ -41,5 +41,12 @@ namespace UI_fily
         {
             this.Close();
         }
+
+        private void back_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow Mainwindow = new MainWindow();
+            this.Close();
+            Mainwindow.ShowDialog();
+        }
     }
 }

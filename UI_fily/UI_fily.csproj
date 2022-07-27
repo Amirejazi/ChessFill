@@ -254,6 +254,8 @@
     <Resource Include="sorce\close2.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="sorce\back.png" />
+    <Resource Include="sorce\back2.png" />
     <Content Include="sorce\entekhab.mp3" />
     <Content Include="sorce\harekat.mp3" />
     <Resource Include="sorce\preview11.png" />

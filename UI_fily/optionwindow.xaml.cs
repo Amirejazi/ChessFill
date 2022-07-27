@@ -283,7 +283,13 @@ namespace UI_fily
         {
             rbtnshowtime = "2";
         }
-        
+
+        private void back_Click(object sender, RoutedEventArgs e)
+        {
+            choose choose = new choose();
+            this.Close();
+            choose.ShowDialog();
+        }
     }
     
     

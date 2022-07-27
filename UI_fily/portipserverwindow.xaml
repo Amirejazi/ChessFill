@@ -28,6 +28,10 @@
             <Button x:Name="close" BorderThickness="0" Height="53" Width="54" Background="Transparent" Margin="1146,0,0,0" Click="closee" VerticalAlignment="Top">
                 <Image Source="sorce/close2.png" Height="47" Width="45"></Image>
             </Button>
+            <Button x:Name="back" BorderThickness="0" Height="53" Width="54" Background="Transparent" Margin="1097,0,49,0" VerticalAlignment="Top" Click="back_Click">
+                <Image Source="sorce/back2.png" Height="47" Width="45"></Image>
+            </Button>
+
         </Grid>
     </Border>
 </Window>
