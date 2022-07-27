@@ -256,26 +256,20 @@ namespace UI_fily
             openFileDialog.Filter = "MP3 files (*.mp3)|*.mp3|All files (*.*)|*.*";
             if (openFileDialog.ShowDialog() == true)
             {
-                Rbtnsound = new Uri(openFileDialog.FileName);
-                Rbtnsound1 = false;
-                Rbtnsound2 = false;
-                Rbtnsound3 = true;
+                Urisound = new Uri(openFileDialog.FileName);
+                RbtnSound = "3";
             }
 
         }
 
         private void rbtnsound2_Checked(object sender, RoutedEventArgs e)
         {
-            Rbtnsound1 = false;
-            Rbtnsound3 = false;
-            Rbtnsound2 = true;
+            RbtnSound = "2";
         }
 
         private void rbtnsound1_Checked(object sender, RoutedEventArgs e)
         {
-            Rbtnsound2 = false;
-            Rbtnsound3 = false;
-            Rbtnsound1 = true;
+            RbtnSound = "1";
         }
 
         private void rbtnshowtimeyes_Checked(object sender, RoutedEventArgs e)

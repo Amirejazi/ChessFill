@@ -112,7 +112,7 @@
                     <Label Name="adresslabel" Content="Texture" FontSize="47" Foreground="Black" VerticalContentAlignment="Center" Margin="0,-12,0,0"></Label>
                 </Grid>
                 <Grid Grid.Row="2" Grid.Column="3">
-                    <Border x:Name="textureborder" Visibility="Collapsed">
+                    <Border x:Name="textureborder" Visibility="Visible">
                         <Grid>
                             <Grid Margin="0,0,0,210" >
                                 <Label Content="1" FontSize="60" ></Label>
@@ -193,7 +193,7 @@
                                 </Grid>
 
                                 <Grid/>
-                                <Button Content="Upload" x:Name="btnupload" FontSize="30"  HorizontalAlignment="Left" Margin="516,82,0,0" VerticalAlignment="Top" Height="46" Width="246" Click="btnupload_Click"/>
+                                <Button Content="Upload" x:Name="btnupload" FontSize="30"  HorizontalAlignment="Left" Margin="516,0,0,292" VerticalAlignment="Bottom" Height="46" Width="246" Click="btnupload_Click"/>
 
                             </Grid>
                         </Grid>

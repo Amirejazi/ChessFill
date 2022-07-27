@@ -213,7 +213,7 @@
             <Button x:Name="close" BorderThickness="0" Height="53" Width="54" Background="Transparent" Margin="1146,0,0,0" Click="closee" VerticalAlignment="Top">
                 <Image Source="sorce/close.png" Height="47" Width="45"></Image>
             </Button>
-            <Button x:Name="soundcheker" BorderThickness="0" Height="53" Width="54" Background="Transparent" Margin="1091,0,55,0" Click="closee" VerticalAlignment="Top">
+            <Button x:Name="soundcheker" BorderThickness="0" Height="53" Width="54" Background="Transparent" Margin="1091,0,55,0" Click="soundchecker_click" VerticalAlignment="Top">
                 <Image Source="sorce/sound.png" Height="47" Width="45"></Image>
             </Button>
             <Image x:Name="imgz_1"  Height="75" Width="75" Margin="905,495,220,0" VerticalAlignment="Top"/>
