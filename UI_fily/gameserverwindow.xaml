@@ -223,7 +223,7 @@
                 <Image Source="sorce/close.png" Height="47" Width="45"></Image>
             </Button>
             <Button x:Name="soundcheker" BorderThickness="0" Height="53" Width="54" Background="Transparent" Margin="1091,0,55,0" Click="soundchecker_click" VerticalAlignment="Top">
-                <Image Source="sorce/sound.png" Height="47" Width="45" RenderTransformOrigin="0.5,0.521"></Image>
+                <Image x:Name="soundimg" Source="sorce/sound.png" Height="47" Width="45" RenderTransformOrigin="0.5,0.521"></Image>
             </Button>
             <Image x:Name="imgz_1"  Height="75" Width="75" Margin="905,495,220,0" VerticalAlignment="Top"/>
             <Image x:Name="imgz_2"  Height="75" Width="75" Margin="930,495,195,0" VerticalAlignment="Top"/>
@@ -257,6 +257,7 @@
             <Image x:Name="imgzw_14"  Height="74" Width="75" Margin="160,95,965,0" VerticalAlignment="Top"/>
             <Image x:Name="imgzw_15"  Height="75" Width="75" Margin="200,95,925,0" VerticalAlignment="Top"/>
             <Image x:Name="imgzw_16" Height="75" Width="75" Margin="240,95,885,0" VerticalAlignment="Top"/>
+            <Label x:Name="soundstate" Content="sound on" Foreground="White" FontSize="35" HorizontalAlignment="Left" Margin="911,-7,0,0" VerticalAlignment="Top" Height="70" Width="183"/>
         </Grid>
     </Border>
 </Window>

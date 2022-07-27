@@ -258,6 +258,7 @@
     <Content Include="sorce\harekat.mp3" />
     <Resource Include="sorce\preview11.png" />
     <Resource Include="sorce\header.png" />
+    <Resource Include="sorce\sound2.png" />
     <Content Include="Sound\1.mp3" />
     <Content Include="Sound\2.mp3" />
   </ItemGroup>

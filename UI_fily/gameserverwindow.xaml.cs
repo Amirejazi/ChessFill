@@ -347,7 +347,8 @@ namespace UI_fily
         public List<Image> ZadanOtherimages { get; set; }
         public List<Image> Zadansarbazenemy { get; set; }
         public List<Image> ZadanOtherenemy { get; set; }
-        
+        public static string soundimage2 { get; set; }
+        public static string soundimage1 { get; set; }
 
         public string Recieve { get; set; }
         public string propSend { get; set; } = $"i:{optionwindow.rbtnground},{optionwindow.rbtnnut},{optionwindow.rbtncolor},{optionwindow.servername},{optionwindow.clientname},{optionwindow.rbtn1},{portipserverwindow.pass},{optionwindow.RbtnSound},{optionwindow.rbtnplaywithtime},{optionwindow.rbtnshowtime},{optionwindow.timer}";
@@ -2141,24 +2142,31 @@ namespace UI_fily
         }
 
 
-
+        
+        
         private static bool sound = true;
+        public static int soundcounter = 0;
         private void soundchecker_click(object sender, RoutedEventArgs e)
         {
+            
+            
             if (sound)
             {
+                
                 if (optionwindow.RbtnSound == "1") { mediaplayer1.Position = TimeSpan.Zero; mediaplayer1.Stop(); }
                 if (optionwindow.RbtnSound == "2") { mediaplayer2.Position = TimeSpan.Zero; mediaplayer2.Stop(); }
                 if (optionwindow.RbtnSound == "3") { mediaplayer3.Position = TimeSpan.Zero; mediaplayer3.Stop(); }
                 sound = false;
-
+                soundstate.Content = "sound off";
             }
             else
             {
+                
                 if (optionwindow.RbtnSound == "1") { mediaplayer1.Position = TimeSpan.Zero; mediaplayer1.Play(); }
                 if (optionwindow.RbtnSound == "2") { mediaplayer2.Position = TimeSpan.Zero; mediaplayer2.Play(); }
                 if (optionwindow.RbtnSound == "3") { mediaplayer3.Position = TimeSpan.Zero; mediaplayer3.Play(); }
                 sound = true;
+                soundstate.Content = "sound on";
             }
         }
     }
