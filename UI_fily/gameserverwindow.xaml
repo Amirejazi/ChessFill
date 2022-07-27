@@ -218,7 +218,7 @@
             <Label x:Name="second" Content="01" Foreground="White" FontSize="50" HorizontalAlignment="Left" Margin="160,560,0,0" VerticalAlignment="Top" Height="90" Width="81"/>
 
 
-            <Label x:Name="State" Content="" Foreground="White" FontSize="18" HorizontalAlignment="Left" Margin="944,84,0,0" VerticalAlignment="Top" Height="58" Width="210"/>
+            <Label x:Name="State" Content="" Foreground="White" FontSize="18" HorizontalAlignment="Left" Margin="31,502,0,0" VerticalAlignment="Top" Height="58" Width="210"/>
             <Button x:Name="close" BorderThickness="0" Height="53" Width="54" Background="Transparent" Margin="1146,0,0,0" Click="closee" VerticalAlignment="Top">
                 <Image Source="sorce/close.png" Height="47" Width="45"></Image>
             </Button>
