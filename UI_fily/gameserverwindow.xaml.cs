@@ -1,7 +1,9 @@
-﻿using System;
+﻿using Socket_Fily;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net.Sockets;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -27,6 +29,11 @@ namespace UI_fily
             ResetBrush();
             servername.Content = optionwindow.servername;
             clientname.Content = optionwindow.clientname;
+            entkhabsoundq.Open(new Uri(String.Format(@"{0}..\..\sorce\entekhab.mp3", AppDomain.CurrentDomain.BaseDirectory)));
+            sendsound.Open(new Uri(String.Format(@"{0}..\..\sorce\harekat.mp3", AppDomain.CurrentDomain.BaseDirectory)));
+            mediaplayer1.Open(new Uri(String.Format(@"{0}..\..\Sound\1.mp3", AppDomain.CurrentDomain.BaseDirectory)));
+            mediaplayer1.MediaEnded += new EventHandler(Media_Ended);
+            mediaplayer1.Play();
             if (optionwindow.rbtncolor == "1")
             {
                 flag = true;
@@ -101,6 +108,7 @@ namespace UI_fily
             }
             servername.Content = optionwindow.servername;
             clientname.Content = optionwindow.clientname;
+            start_Server();
             Button = new List<Button>();
             Button.Add(_1);
             Button.Add(_1);
@@ -236,7 +244,15 @@ namespace UI_fily
 
 
         }
+
+        private void Media_Ended(object sender, EventArgs e)
+        {
+            mediaplayer1.Position = TimeSpan.Zero;
+            mediaplayer1.Play();
+        }
+
         public bool flag { get; set; }
+        public bool enable { get; set; } = false;
         public string loc { get; set; }
         public string locationSaver { get; set; }
         public int indexg { get; set; }
@@ -254,6 +270,13 @@ namespace UI_fily
         public static string sarbaz_b { get; set; }
         public List<Button> Button { get; set; }
         public List<Image> images { get; set; }
+        public string Recieve { get; set; }
+        public string propSend { get; set; } = $"i:{optionwindow.rbtnground},{optionwindow.rbtnnut},{optionwindow.rbtncolor},{optionwindow.servername},{optionwindow.clientname},{optionwindow.rbtn1}";
+        public static ServerStartup _serverstartup;
+        public static ServerTransmission _transmission;
+        private static MediaPlayer entkhabsoundq = new MediaPlayer();
+        private MediaPlayer sendsound = new MediaPlayer();
+        private MediaPlayer mediaplayer1 = new MediaPlayer();
         public void LocationSaver()
         {
             locationSaver = "-,";
@@ -350,7 +373,9 @@ namespace UI_fily
                     images[65 - i].Source = new BitmapImage(new Uri(shah_w));
                 }
             }
+            enable=true;
         }
+        
         public void ResetBrush()
         {
             if (optionwindow.rbtnground == "1")
@@ -630,6 +655,7 @@ namespace UI_fily
                 // button haye bala brown kam rang kamrang shodand ----------------
             }
         }
+
         void Brush(int index)
         {
             try
@@ -653,6 +679,8 @@ namespace UI_fily
         void Asb(int index)
         {
             ResetBrush();
+            entkhabsoundq.Position = TimeSpan.Zero;
+            entkhabsoundq.Play();
             int brush = index + 10;
             if (brush % 8 != 1 && brush % 8 != 2 && brush < 65)
             {
@@ -746,6 +774,8 @@ namespace UI_fily
         void Fil(int index)
         {
             ResetBrush();
+            entkhabsoundq.Position = TimeSpan.Zero;
+            entkhabsoundq.Play();
             int brush = index;
             while (true)
             {
@@ -859,6 +889,8 @@ namespace UI_fily
         void Rokh(int index)
         {
             ResetBrush();
+            entkhabsoundq.Position = TimeSpan.Zero;
+            entkhabsoundq.Play();
             int brush = index;
             while (true)
             {
@@ -964,6 +996,8 @@ namespace UI_fily
         void Vazir(int index)
         {
             ResetBrush();
+            entkhabsoundq.Position = TimeSpan.Zero;
+            entkhabsoundq.Play();
             int brush = index;
             while (true)
             {
@@ -1174,6 +1208,8 @@ namespace UI_fily
         {
 
             ResetBrush();
+            entkhabsoundq.Position = TimeSpan.Zero;
+            entkhabsoundq.Play();
             int brush = index + 8;
             if (brush < 65)
                 if (images[brush].Source == null)
@@ -1259,6 +1295,8 @@ namespace UI_fily
         void Sarbaz_firstTime(int index)
         {
             ResetBrush();
+            entkhabsoundq.Position = TimeSpan.Zero;
+            entkhabsoundq.Play();
             int brush = index + 8;
             bool flagc = true;
             if (brush < 65)
@@ -1293,6 +1331,8 @@ namespace UI_fily
         void Sarbaz(int index)
         {
             ResetBrush();
+            entkhabsoundq.Position = TimeSpan.Zero;
+            entkhabsoundq.Play();
             int brush = index + 8;
             if (brush < 65)
             {
@@ -1404,37 +1444,41 @@ namespace UI_fily
         }
         void EventOfButtons(int index)
         {
-            if (images[index].Source != null)
+            if (enable)
             {
-                if (RokhChecker(flag, images[index].Source.ToString()))
-                    Rokh(index);
-                else if (AsbChecker(flag, images[index].Source.ToString()))
-                    Asb(index);
-                else if (FilChecker(flag, images[index].Source.ToString()))
-                    Fil(index);
-                else if (ShahChecker(flag, images[index].Source.ToString()))
-                    Shah(index);
-                else if (VazirChecker(flag, images[index].Source.ToString()))
-                    Vazir(index);
-                if (index > 8 && index < 17)
+                if (images[index].Source != null)
                 {
-                    if (SarbazChecker(flag, images[index].Source.ToString()))
-                        Sarbaz_firstTime(index);
+                    if (RokhChecker(flag, images[index].Source.ToString()))
+                        Rokh(index);
+                    else if (AsbChecker(flag, images[index].Source.ToString()))
+                        Asb(index);
+                    else if (FilChecker(flag, images[index].Source.ToString()))
+                        Fil(index);
+                    else if (ShahChecker(flag, images[index].Source.ToString()))
+                        Shah(index);
+                    else if (VazirChecker(flag, images[index].Source.ToString()))
+                        Vazir(index);
+                    if (index > 8 && index < 17)
+                    {
+                        if (SarbazChecker(flag, images[index].Source.ToString()))
+                            Sarbaz_firstTime(index);
+                    }
+                    else if (index > 16)
+                    {
+                        if (SarbazChecker(flag, images[index].Source.ToString()))
+                            Sarbaz(index);
+                    }
                 }
-                else if (index > 16)
+                string colorback = Button[index].Background.ToString();
+                if (colorback == "#FF9ACD32" || colorback == "#FFFF4500")
                 {
-                    if (SarbazChecker(flag, images[index].Source.ToString()))
-                        Sarbaz(index);
+                    images[index].Source = new BitmapImage(new Uri(loc));
+                    images[indexg].Source = null;
+                    ResetBrush();
+                    LocationSaver();
+                    Send(locationSaver);
+                    enable = false;
                 }
-            }
-            string colorback = Button[index].Background.ToString();
-            if (colorback == "#FF9ACD32" || colorback == "#FFFF4500")
-            {
-                images[index].Source = new BitmapImage(new Uri(loc));
-                images[indexg].Source = null;
-                ResetBrush();
-                LocationSaver();
-                portipserverwindow.Send(locationSaver);
             }
         }
         private void _1b(object sender, RoutedEventArgs e)
@@ -1693,9 +1737,104 @@ namespace UI_fily
         {
             EventOfButtons(64);
         }
+        private void ChangeState(string state, SolidColorBrush color)
+        {
+            State.Content = state;
+            State.Foreground = color;
+        }
+        private void StartState(bool state)
+        {
+            //btnstart.IsEnabled = state;
+            //StopBtn.IsEnabled = !state;
+            //Port.IsEnabled = state;
+        }
+
+        private async void start_Server()
+        {
+            try
+            {
+                ChangeState("Starting Server", new SolidColorBrush(Colors.Orange));
+                _serverstartup = new ServerStartup(int.Parse(portipserverwindow.port), portipserverwindow.ip, acceptedCallback, acceptedErrorcallback); ;
+                _serverstartup.InitServer();
+                StartState(false);
+                ChangeState("Connecting to Client...", new SolidColorBrush(Colors.Blue));
+                await _serverstartup.AcceptAsync();
+                if (optionwindow.rbtncolor == "1")
+                    enable=true;
+                _transmission.Send(propSend);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + "\n try again", "Init server error", MessageBoxButton.OK, MessageBoxImage.Error);
+                ChangeState("Stop Server", new SolidColorBrush(Colors.Red));
+                StartState(true);
+            }
+        }
+        private void acceptedErrorcallback(string error)
+        {
+            this.Dispatcher.Invoke(() => {
+                MessageBox.Show(error + "\n try again", "AcceptedError", MessageBoxButton.OK, MessageBoxImage.Error);
+            });
+        }
+        private async void acceptedCallback(Socket acceptedsocket)
+        {
+            this.Dispatcher.Invoke(() => {
+                ChangeState("Connected to Client :)", new SolidColorBrush(Colors.Green));
+            });
+            _transmission = new ServerTransmission(acceptedsocket, recieveCallback, receiveErrorCallback);
+
+            this.Dispatcher.Invoke(() =>
+            {
+                //btnstart.IsEnabled = true;
+            });
+            await _transmission.RecieveAsync();
+
+        }
+        private async void receiveErrorCallback(string error)
+        {
+
+            this.Dispatcher.Invoke(() =>
+            {
+                //btnstart.IsEnabled = false;
+                ChangeState("Connecting to Client...", new SolidColorBrush(Colors.Blue));
+                MessageBox.Show(error + "\n try again", "RecieveError", MessageBoxButton.OK, MessageBoxImage.Error);
+            });
+            _serverstartup.CloseClient(_transmission.Socket);
+            _transmission = null;
+            await _serverstartup.AcceptAsync();
+        }
+        private void recieveCallback(string recieveMessage)
+        {
+            this.Dispatcher.Invoke(() => {
+                Recieve = "";
+                for (int i = 0; i < recieveMessage.Length; i++)
+                {
+                    if (recieveMessage[i] != '\0')
+                    {
+                        Recieve += recieveMessage[i];
+                    }
+                }
+                RecieveLocation(Recieve);
+            });
+        }
+        public  void Send(string send)
+        {
+            try
+            {
+                sendsound.Position = TimeSpan.Zero;
+                sendsound.Play();
+                _transmission.Send(send);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + "\n try again", "sending error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
         private void closee(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
+
     }
+
 }

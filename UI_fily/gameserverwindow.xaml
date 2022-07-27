@@ -209,7 +209,8 @@
             </Button>
             <Label x:Name="servername" Content="server name" Foreground="White" FontSize="50" HorizontalAlignment="Left" Margin="916,574,0,0" VerticalAlignment="Top" Height="103" Width="341"/>
             <Label x:Name="clientname" Content="client name" Foreground="White" FontSize="50" HorizontalAlignment="Left" Margin="919,137,0,0" VerticalAlignment="Top" Height="90" Width="300"/>
-            <Label Content="00:00" Foreground="White" FontSize="50" HorizontalAlignment="Left" Margin="117,19,0,0" VerticalAlignment="Top" Height="90" Width="138"/>
+            <Label Content="00:00" Foreground="White" FontSize="50" HorizontalAlignment="Left" Margin="64,270,0,0" VerticalAlignment="Top" Height="90" Width="138"/>
+            <Label x:Name="State" Content="" Foreground="White" FontSize="18" HorizontalAlignment="Left" Margin="40,46,0,0" VerticalAlignment="Top" Height="59" Width="210"/>
             <Button x:Name="close" BorderThickness="0" Height="53" Width="54" Background="Transparent" Margin="1146,0,0,0" Click="closee" VerticalAlignment="Top">
                 <Image Source="sorce/close.png" Height="47" Width="45"></Image>
             </Button>
