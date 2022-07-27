@@ -162,6 +162,14 @@ namespace UI_fily
                     _63img.Source = new BitmapImage(new Uri(asb_w));
                     _64img.Source = new BitmapImage(new Uri(rokh_w));
                 }
+                \
+
+
+
+
+
+
+
             }
             else
             {
@@ -1879,6 +1887,10 @@ namespace UI_fily
                         clientname.Content = items[4];
                         optionwindow.rbtn1 = items[5];
                         password = items[6];
+                        optionwindow.RbtnSound= items[7];
+                        optionwindow.rbtnplaywithtime = items[8];
+                        optionwindow.rbtnshowtime=items[9];
+                        optionwindow.timer= items[10];
                     }
                     else
                         RecieveLocation(Recieve);

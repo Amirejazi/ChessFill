@@ -350,7 +350,7 @@ namespace UI_fily
         
 
         public string Recieve { get; set; }
-        public string propSend { get; set; } = $"i:{optionwindow.rbtnground},{optionwindow.rbtnnut},{optionwindow.rbtncolor},{optionwindow.servername},{optionwindow.clientname},{optionwindow.rbtn1},{portipserverwindow.pass},{optionwindow.RbtnSound},{}";
+        public string propSend { get; set; } = $"i:{optionwindow.rbtnground},{optionwindow.rbtnnut},{optionwindow.rbtncolor},{optionwindow.servername},{optionwindow.clientname},{optionwindow.rbtn1},{portipserverwindow.pass},{optionwindow.RbtnSound},{optionwindow.rbtnplaywithtime},{optionwindow.rbtnshowtime},{optionwindow.timer}";
         public static ServerStartup _serverstartup;
         public static ServerTransmission _transmission;
         private static MediaPlayer entkhabsoundq = new MediaPlayer();
