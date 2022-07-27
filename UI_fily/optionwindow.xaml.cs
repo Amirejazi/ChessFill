@@ -29,8 +29,8 @@ namespace UI_fily
         public static string rbtncolor { get; set; }
         public static string servername { get; set; }
         public static string clientname { get; set; }
-        public static string Rbtnsound1 { get; set; }
-        public static Uri Rbtnsound { get; set; }
+        public static string RbtnSound { get; set; }
+        public static Uri Urisound { get; set; }
 
         public void bordercollaps()
         {
@@ -247,20 +247,20 @@ namespace UI_fily
             openFileDialog.Filter = "MP3 files (*.mp3)|*.mp3|All files (*.*)|*.*";
             if (openFileDialog.ShowDialog() == true)
             {
-                Rbtnsound = new Uri(openFileDialog.FileName);
-                Rbtnsound1 = "3";
+                Urisound = new Uri(openFileDialog.FileName);
+                RbtnSound = "3";
             }
 
         }
 
         private void rbtnsound2_Checked(object sender, RoutedEventArgs e)
         {
-            Rbtnsound1 = "2";
+            RbtnSound = "2";
         }
 
         private void rbtnsound1_Checked(object sender, RoutedEventArgs e)
         {
-            Rbtnsound1 = "1";
+            RbtnSound = "1";
         }
     }
     
