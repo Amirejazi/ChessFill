@@ -189,6 +189,9 @@ namespace UI_fily
                     second.Visibility = Visibility.Collapsed;
                     donoghte.Visibility = Visibility.Collapsed;
                 }
+                if (optionwindow.rbtncolor == "2")
+                    enable = true;
+
             }
             else
             {
@@ -1879,8 +1882,6 @@ namespace UI_fily
                 _client.InitClient();
                 //ChangeState("Connecting to server...", new SolidColorBrush(Colors.Orange));
                 await _client.ConnectAsync();
-                if (optionwindow.rbtncolor == "2")
-                    enable = true;
             }
             catch (Exception ex)
             {
