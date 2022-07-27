@@ -316,8 +316,6 @@ namespace UI_fily
                 daghighe = daghighee.ToString();
                 minute.Content = daghighe;
             }
-
-
         }
 
         private void Media_Ended(object sender, EventArgs e)
@@ -2050,6 +2048,7 @@ namespace UI_fily
                     minute.Content = optionwindow.timer;
                     timer.Tick += Timer_tick;
                     timer.Interval = new TimeSpan(0, 0, 1);
+                    timer.Start();
                 }
                 else if (optionwindow.rbtnplaywithtime == false)
                 {
