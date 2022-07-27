@@ -18,8 +18,8 @@
             <ImageBrush ImageSource="\sorce\background.jpg" Stretch="UniformToFill"/>
         </Border.Background>
         <Grid>
-            <Image x:Name="img1" Height="500" Source="\sorce\2.png" VerticalAlignment="Top" RenderTransformOrigin="0.49,0.497" Margin="348,35,348,0"/>
-            <Label Content="welcome" Foreground="White" FontSize="50" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" Margin="0,369,0,0" VerticalAlignment="Top" Height="65" Width="404"/>
+            <Image x:Name="img1" Height="770" Source="\sorce\header.png" VerticalAlignment="Top" RenderTransformOrigin="0.49,0.497" Margin="211,-31,211,0"/>
+            <Label Content="welcome" Foreground="White" FontSize="50" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" Margin="0,469,0,0" VerticalAlignment="Top" Height="65" Width="404"/>
             <Button x:Name="btnnewgame" Content="New Game"
                 Height="70"
                 Width="400"
@@ -28,8 +28,8 @@
                 FontSize="40"
                 FontWeight="Bold"
                 FontFamily="Arial"
-                BorderThickness="2" Margin="375,458,375,152" Click="btnnewgame_Click"/>
-            <Button x:Name="btnloadgame" Content="Load Game"
+                BorderThickness="2" Margin="400,548,400,62" Click="btnnewgame_Click"/>
+            <!--<Button x:Name="btnloadgame" Content="Load Game"
                 Height="70"
                 Width="400"
                 Background="#4CC9F0"
@@ -37,7 +37,7 @@
                 FontSize="40"
                 FontWeight="Bold"
                 FontFamily="Arial"
-                BorderThickness="2" Margin="400,545,400,65" Click="btnloadgame_Click"/>
+                BorderThickness="2" Margin="400,545,400,65" Click="btnloadgame_Click"/>-->
             <Button x:Name="close" BorderThickness="0" Height="53" Width="54" Background="Transparent" Margin="1146,0,0,0" Click="closee" VerticalAlignment="Top">
                 <Image Source="sorce/close.png" Height="47" Width="45"></Image>
             </Button>
