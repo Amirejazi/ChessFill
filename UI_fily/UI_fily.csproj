@@ -256,6 +256,7 @@
   <ItemGroup>
     <Content Include="sorce\entekhab.mp3" />
     <Content Include="sorce\harekat.mp3" />
+    <Resource Include="sorce\preview11.png" />
     <Content Include="Sound\1.mp3" />
     <Content Include="Sound\2.mp3" />
   </ItemGroup>
