@@ -247,13 +247,52 @@ namespace UI_fily
             images.Add(_62img);
             images.Add(_63img);
             images.Add(_64img);
-            if(optionwindow.rbtnplaywithtime == true)
+            Zadansarbazimages = new List<Image>();
+            Zadansarbazimages.Add(imgz_1);
+            Zadansarbazimages.Add(imgz_1);
+            Zadansarbazimages.Add(imgz_2);
+            Zadansarbazimages.Add(imgz_3);
+            Zadansarbazimages.Add(imgz_4);
+            Zadansarbazimages.Add(imgz_5);
+            Zadansarbazimages.Add(imgz_6);
+            Zadansarbazimages.Add(imgz_7);
+            Zadansarbazimages.Add(imgz_8);
+            ZadanOtherimages = new List<Image>();
+            ZadanOtherimages.Add(imgz_9);
+            ZadanOtherimages.Add(imgz_9);
+            ZadanOtherimages.Add(imgz_10);
+            ZadanOtherimages.Add(imgz_11);
+            ZadanOtherimages.Add(imgz_12);
+            ZadanOtherimages.Add(imgz_13);
+            ZadanOtherimages.Add(imgz_14);
+            ZadanOtherimages.Add(imgz_15);
+            ZadanOtherimages.Add(imgz_16);
+            Zadansarbazenemy = new List<Image>();
+            Zadansarbazenemy.Add(imgzw_1);
+            Zadansarbazenemy.Add(imgzw_1);
+            Zadansarbazenemy.Add(imgzw_2);
+            Zadansarbazenemy.Add(imgzw_3);
+            Zadansarbazenemy.Add(imgzw_4);
+            Zadansarbazenemy.Add(imgzw_5);
+            Zadansarbazenemy.Add(imgzw_6);
+            Zadansarbazenemy.Add(imgzw_7);
+            Zadansarbazenemy.Add(imgzw_8);
+            ZadanOtherenemy = new List<Image>();
+            ZadanOtherenemy.Add(imgzw_9);
+            ZadanOtherenemy.Add(imgzw_9);
+            ZadanOtherenemy.Add(imgzw_10);
+            ZadanOtherenemy.Add(imgzw_11);
+            ZadanOtherenemy.Add(imgzw_12);
+            ZadanOtherenemy.Add(imgzw_13);
+            ZadanOtherenemy.Add(imgzw_14);
+            ZadanOtherenemy.Add(imgzw_15);
+            ZadanOtherenemy.Add(imgzw_16);
+            if (optionwindow.rbtnplaywithtime == true)
             {
                 System.Windows.Threading.DispatcherTimer timer = new System.Windows.Threading.DispatcherTimer();
                 minute.Content = optionwindow.timer;
                 timer.Tick += Timer_tick;
                 timer.Interval = new TimeSpan(0, 0, 1);
-                timer.Start();
             }
             else if(optionwindow.rbtnplaywithtime == false)
             {
@@ -2025,6 +2064,7 @@ namespace UI_fily
                 StartState(false);
                 ChangeState("Connecting to Client...", new SolidColorBrush(Colors.Blue));
                 await _serverstartup.AcceptAsync();
+                timer.Start();
                 if (optionwindow.rbtncolor == "1")
                     enable=true;
                 _transmission.Send(propSend);
