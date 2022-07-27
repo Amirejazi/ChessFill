@@ -250,6 +250,7 @@
             <Label x:Name="minute" Content="05" Foreground="White" FontSize="50" HorizontalAlignment="Left" Margin="64,560,0,0" VerticalAlignment="Top" Height="90" Width="81"/>
             <Label x:Name="donoghte" Content=":" Foreground="White" FontSize="50" HorizontalAlignment="Left" Margin="134,560,0,0" VerticalAlignment="Top" Height="90" Width="82"/>
             <Label x:Name="second" Content="01" Foreground="White" FontSize="50" HorizontalAlignment="Left" Margin="160,560,0,0" VerticalAlignment="Top" Height="90" Width="81"/>
+            <Label x:Name="soundstate" Content="sound on" Foreground="White" FontSize="35" HorizontalAlignment="Left" Margin="911,-7,0,0" VerticalAlignment="Top" Height="70" Width="183"/>
 
         </Grid>
     </Border>

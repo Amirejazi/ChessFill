@@ -1996,6 +1996,7 @@ namespace UI_fily
                 if (optionwindow.RbtnSound == "2") { mediaplayer2.Position = TimeSpan.Zero; mediaplayer2.Stop(); }
                 if (optionwindow.RbtnSound == "3") { mediaplayer1.Position = TimeSpan.Zero; mediaplayer1.Stop(); }
                 sound = false;
+                soundstate.Content = "sound off";
 
             }
             else
@@ -2004,6 +2005,8 @@ namespace UI_fily
                 if (optionwindow.RbtnSound == "2") { mediaplayer2.Position = TimeSpan.Zero; mediaplayer2.Play(); }
                 if (optionwindow.RbtnSound == "3") { mediaplayer1.Position = TimeSpan.Zero; mediaplayer1.Play(); }
                 sound = true;
+                soundstate.Content = "sound on";
+
             }
         }
     }
