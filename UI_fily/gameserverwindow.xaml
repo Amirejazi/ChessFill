@@ -214,6 +214,41 @@
             <Button x:Name="close" BorderThickness="0" Height="53" Width="54" Background="Transparent" Margin="1146,0,0,0" Click="closee" VerticalAlignment="Top">
                 <Image Source="sorce/close.png" Height="47" Width="45"></Image>
             </Button>
+            <Button x:Name="soundcheker" BorderThickness="0" Height="53" Width="54" Background="Transparent" Margin="1091,0,55,0" Click="closee" VerticalAlignment="Top">
+                <Image Source="sorce/sound.png" Height="47" Width="45"></Image>
+            </Button>
+            <Image x:Name="imgz_1"  Height="75" Width="75" Margin="905,495,220,0" VerticalAlignment="Top"/>
+            <Image x:Name="imgz_2"  Height="75" Width="75" Margin="930,495,195,0" VerticalAlignment="Top"/>
+            <Image x:Name="imgz_3"  Height="75" Width="75" Margin="956,495,169,0" VerticalAlignment="Top"/>
+            <Image x:Name="imgz_4"  Height="75" Width="75" Margin="983,495,142,0" VerticalAlignment="Top"/>
+            <Image x:Name="imgz_5"  Height="75" Width="75" Margin="1011,495,114,0" VerticalAlignment="Top"/>
+            <Image x:Name="imgz_6"  Height="74" Width="75" Margin="1039,496,86,0" VerticalAlignment="Top"/>
+            <Image x:Name="imgz_7"  Height="75" Width="75" Margin="1068,495,57,0" VerticalAlignment="Top"/>
+            <Image x:Name="imgz_8"  Height="75" Width="75" Margin="1098,495,27,0" VerticalAlignment="Top"/>
+            <Image x:Name="imgz_9"  Height="75" Width="75" Margin="877,400,248,0" VerticalAlignment="Top"/>
+            <Image x:Name="imgz_10"  Height="75" Width="75" Margin="920,400,205,0" VerticalAlignment="Top"/>
+            <Image x:Name="imgz_11"  Height="75" Width="75" Margin="957,400,168,0" VerticalAlignment="Top"/>
+            <Image x:Name="imgz_12"  Height="75" Width="75" Margin="990,400,135,0" VerticalAlignment="Top"/>
+            <Image x:Name="imgz_13"  Height="75" Width="75" Margin="1024,400,101,0" VerticalAlignment="Top"/>
+            <Image x:Name="imgz_14"  Height="74" Width="75" Margin="1060,401,65,0" VerticalAlignment="Top"/>
+            <Image x:Name="imgz_15" Height="75" Width="75" Margin="1099,400,26,0" VerticalAlignment="Top"/>
+            <Image x:Name="imgz_16" Height="75" Width="75" Margin="1139,402,-14,0" VerticalAlignment="Top"/>
+            <Image x:Name="imgzw_1" Height="75" Width="75" Margin="15,185,1110,0" VerticalAlignment="Top"/>
+            <Image x:Name="imgzw_2" Height="75" Width="75" Margin="40,185,1085,0" VerticalAlignment="Top"/>
+            <Image x:Name="imgzw_3" Height="75" Width="75" Margin="66,185,1059,0" VerticalAlignment="Top"/>
+            <Image x:Name="imgzw_4" Height="75" Width="75" Margin="93,185,1032,0" VerticalAlignment="Top"/>
+            <Image x:Name="imgzw_5" Height="75" Width="75" Margin="121,185,1004,0" VerticalAlignment="Top"/>
+            <Image x:Name="imgzw_6" Height="74" Width="75" Margin="149,185,976,0" VerticalAlignment="Top"/>
+            <Image x:Name="imgzw_7"  Height="75" Width="75" Margin="178,185,947,0" VerticalAlignment="Top"/>
+            <Image x:Name="imgzw_8" Height="75" Width="75" Margin="208,185,917,0" VerticalAlignment="Top"/>
+            <Image x:Name="imgzw_9" Height="75" Width="75" Margin="-19,95,1144,0" VerticalAlignment="Top"/>
+            <Image x:Name="imgzw_10" Height="75" Width="75" Margin="24,95,1101,0" VerticalAlignment="Top"/>
+            <Image x:Name="imgzw_11" Height="75" Width="75" Margin="60,95,1065,0" VerticalAlignment="Top"/>
+            <Image x:Name="imgzw_12" Height="75" Width="75" Margin="92,95,1033,0" VerticalAlignment="Top"/>
+            <Image x:Name="imgzw_13" Height="75" Width="75" Margin="125,95,1000,0" VerticalAlignment="Top"/>
+            <Image x:Name="imgzw_14"  Height="74" Width="75" Margin="160,95,965,0" VerticalAlignment="Top"/>
+            <Image x:Name="imgzw_15"  Height="75" Width="75" Margin="200,95,925,0" VerticalAlignment="Top"/>
+            <Image x:Name="imgzw_16" Height="75" Width="75" Margin="240,95,885,0" VerticalAlignment="Top"/>
         </Grid>
     </Border>
 </Window>

@@ -207,7 +207,7 @@ namespace UI_fily
 
         private void rbtntimerno_Checked(object sender, RoutedEventArgs e)
         {
-            //textboxgametime.IsEnabled = false;
+            textboxgametime.IsEnabled = false;
         }
 
         public static string rbtn1 { get; set; }

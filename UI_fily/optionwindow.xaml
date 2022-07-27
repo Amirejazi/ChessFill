@@ -183,7 +183,18 @@
                     </Border>
                     <Border x:Name="soundborder" Visibility="Collapsed">
                         <Grid>
-                            <Label Content="4" FontSize="60" ></Label>
+                            <Grid>
+                                <Label Content="Choose a sound :" FontSize="40" Height="62" VerticalAlignment="Top" Margin="6,0,430,0" ></Label>
+                                <Label Content="Upload a sound :" FontSize="40" Height="62" VerticalAlignment="Top" Margin="6,66,291,0" />
+                                <Grid Margin="0,0,0,358">
+                                    <RadioButton x:Name="rbtnsound1" IsChecked="True" Content="sound1" FontSize="30" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalAlignment="Top" VerticalContentAlignment="Center" Margin="652,17,0,0" Checked="rbtnwhitecolor_Checked"/>
+                                    <RadioButton x:Name="rbtnsound2" Content="sound2" FontSize="30" HorizontalAlignment="Left" HorizontalContentAlignment="Center" VerticalAlignment="Top" VerticalContentAlignment="Center" Margin="514,17,0,0" Checked="rbtnblackcolor_Checked"/>
+                                </Grid>
+
+                                <Grid/>
+                                <Button Content="Upload" x:Name="btnupload" FontSize="30"  HorizontalAlignment="Left" Margin="516,82,0,0" VerticalAlignment="Top" Height="46" Width="246"/>
+
+                            </Grid>
                         </Grid>
                     </Border>
                     <Border x:Name="settingborder" Visibility="Collapsed">
