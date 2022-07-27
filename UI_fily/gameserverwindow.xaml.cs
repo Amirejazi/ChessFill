@@ -247,6 +247,41 @@ namespace UI_fily
             images.Add(_62img);
             images.Add(_63img);
             images.Add(_64img);
+            System.Windows.Threading.DispatcherTimer timer = new System.Windows.Threading.DispatcherTimer();
+            timer.Tick += Timer_tick;
+            timer.Interval = new TimeSpan(0, 0, 1);
+            timer.Start();
+        }
+        string sanie = "";
+        int saniee = 0;
+        string daghighe = "";
+        int daghighee = 0;
+        private void Timer_tick(object sender, EventArgs e)
+        {
+            sanie = second.Content.ToString();
+            saniee = Convert.ToInt32(sanie) - 1;
+            sanie = saniee.ToString();
+            second.Content = sanie;
+            if(second.Content.ToString() == "0")
+            {
+                if (minute.Content.ToString() == "0")
+                {
+                    MessageBoxResult result;
+                    result = MessageBox.Show("the game is over", ":)", MessageBoxButton.OK);
+                    if (result == MessageBoxResult.OK)
+                    {
+                        this.Close();
+                    }
+                }
+                second.Content = "59";
+                daghighe = minute.Content.ToString();
+                daghighee = Convert.ToInt32(daghighe)-1;
+                daghighe = daghighee.ToString();
+                minute.Content = daghighe;
+                
+                    
+                
+            }
 
 
         }
