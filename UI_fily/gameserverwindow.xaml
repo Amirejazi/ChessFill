@@ -210,7 +210,7 @@
 
             <Label x:Name="servername" Content="server name" Foreground="White" FontSize="50" HorizontalAlignment="Left" Margin="919,574,0,0" VerticalAlignment="Top" Height="103" Width="341"/>
             <Label x:Name="clientname" Content="client name" Foreground="White" FontSize="50" HorizontalAlignment="Left" Margin="10,31,0,0" VerticalAlignment="Top" Height="90" Width="300"/>
-            <Label Content="00:00" Foreground="White" FontSize="50" HorizontalAlignment="Left" Margin="64,270,0,0" VerticalAlignment="Top" Height="90" Width="138"/>
+            <!--<Label Content="00:00" Foreground="White" FontSize="50" HorizontalAlignment="Left" Margin="64,270,0,0" VerticalAlignment="Top" Height="90" Width="138"/>-->
 
             
             <Label x:Name="minute" Content="05" Foreground="White" FontSize="50" HorizontalAlignment="Left" Margin="64,270,0,0" VerticalAlignment="Top" Height="90" Width="81"/>

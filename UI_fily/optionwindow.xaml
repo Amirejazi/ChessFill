@@ -159,7 +159,7 @@
 
                         </Grid>
                     </Border>
-                    <Border x:Name="timerborder" Visibility="Visible">
+                    <Border x:Name="timerborder" Visibility="Collapsed">
                         <Grid>
                             <Label Content="Playing with Time :" FontSize="40" Margin="0,0,414,349" ></Label>
                             <Label Content="Enter the game time (min) :" FontSize="40" Margin="0,57,256,292" />
