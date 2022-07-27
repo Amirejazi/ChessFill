@@ -29,14 +29,11 @@ namespace UI_fily
         public static string rbtncolor { get; set; }
         public static string servername { get; set; }
         public static string clientname { get; set; }
-        public static bool Rbtnsound1 { get; set; }
-        public static bool Rbtnsound2 { get; set; }
-        public static bool Rbtnsound3 { get; set; }
+        public static string RbtnSound { get; set; }
         public static Uri Rbtnsound { get; set; }
         public static string rbtnplaywithtime { get; set; }
         public static string rbtnshowtime { get; set; }
         public static string timer { get; set; }
-        public static string RbtnSound { get; set; }
         public static Uri Urisound { get; set; }
 
         public void bordercollaps()
