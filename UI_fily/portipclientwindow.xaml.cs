@@ -53,5 +53,12 @@ namespace UI_fily
         {
 
         }
+
+        private void back_Click(object sender, RoutedEventArgs e)
+        {
+            choose choose = new choose();
+            this.Close();
+            choose.ShowDialog();
+        }
     }
 }

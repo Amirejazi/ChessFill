@@ -88,6 +88,9 @@ namespace UI_fily
         }
         private void btnnext_Click(object sender, RoutedEventArgs e)
         {
+            gameserverwindow.soundimage1 = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\sound.png");
+            gameserverwindow.soundimage1 = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\sound2.png");
+
             if (rbtnnut == "1")
             {
                 gameserverwindow.rokh_w = Path.Combine(Directory.GetCurrentDirectory(), "..\\..\\sorce\\rokh_white_1.png");
@@ -280,7 +283,13 @@ namespace UI_fily
         {
             rbtnshowtime = "2";
         }
-        
+
+        private void back_Click(object sender, RoutedEventArgs e)
+        {
+            choose choose = new choose();
+            this.Close();
+            choose.ShowDialog();
+        }
     }
     
     

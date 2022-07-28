@@ -55,5 +55,12 @@ namespace UI_fily
             this.Close();
             gameclientwindow.ShowDialog();
         }
+
+        private void back_Click(object sender, RoutedEventArgs e)
+        {
+            optionwindow optionwindow  = new optionwindow();
+            this.Close();
+            optionwindow.ShowDialog();
+        }
     }
 }
