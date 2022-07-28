@@ -1648,11 +1648,11 @@ namespace UI_fily
                 loc = shah_b;
             indexg = index;
         }
-        public void Sarbaz_firstTime(int index)
+        void Sarbaz_firstTime(int index)
         {
             ResetBrush();
-            entkhabsound.Position = TimeSpan.Zero;
-            entkhabsound.Play();
+            entkhabsoundq.Position = TimeSpan.Zero;
+            entkhabsoundq.Play();
             int brush = index + 8;
             bool flagc = true;
             if (brush < 65)
@@ -1661,10 +1661,7 @@ namespace UI_fily
                     Brush(brush);
                 else
                 {
-                    if (ColorChecker(!flag, images[brush].Source.ToString()))
-                        Brushr(brush);
-                    else
-                        flagc = false;
+                    flagc = false;
                 }
             }
             brush = index + 16;
@@ -1672,11 +1669,18 @@ namespace UI_fily
             {
                 if (images[brush].Source == null)
                     Brush(brush);
-                else
-                {
-                    if (ColorChecker(!flag, images[brush].Source.ToString()))
-                        Brushr(brush);
-                }
+            }
+            brush = index + 9;
+            if (brush % 8 != 1 && brush < 65 && images[brush].Source != null)
+            {
+                if (ColorChecker(!flag, images[brush].Source.ToString()))
+                    Brushr(brush);
+            }
+            brush = index + 7;
+            if (brush % 8 != 0 && brush < 65 && images[brush].Source != null)
+            {
+                if (ColorChecker(!flag, images[brush].Source.ToString()))
+                    Brushr(brush);
             }
             if (flag)
                 loc = sarbaz_w;
@@ -1684,21 +1688,28 @@ namespace UI_fily
                 loc = sarbaz_b;
             indexg = index;
         }
-        public void Sarbaz(int index)
+        void Sarbaz(int index)
         {
             ResetBrush();
-            entkhabsound.Position = TimeSpan.Zero;
-            entkhabsound.Play();
+            entkhabsoundq.Position = TimeSpan.Zero;
+            entkhabsoundq.Play();
             int brush = index + 8;
             if (brush < 65)
             {
                 if (images[brush].Source == null)
                     Brush(brush);
-                else
-                {
-                    if (ColorChecker(!flag, images[brush].Source.ToString()))
-                        Brushr(brush);
-                }
+            }
+            brush = index + 9;
+            if (brush % 8 != 1 && brush < 65 && images[brush].Source != null)
+            {
+                if (ColorChecker(!flag, images[brush].Source.ToString()))
+                    Brushr(brush);
+            }
+            brush = index + 7;
+            if (brush % 8 != 0 && brush < 65 && images[brush].Source != null)
+            {
+                if (ColorChecker(!flag, images[brush].Source.ToString()))
+                    Brushr(brush);
             }
             if (flag)
                 loc = sarbaz_w;
@@ -2095,17 +2106,6 @@ namespace UI_fily
             EventOfButtons(64);
         }
 
-        //private void startclient(object sender, RoutedEventArgs e)
-        //{
-        //    if (Recieve == Pass.Text)
-        //    {
-        //        Send("connected");
-        //    }
-        //    else
-        //    {
-        //        MessageBox.Show("hammalak");
-        //    }
-        //}
 
         private async void startclient()
         {
