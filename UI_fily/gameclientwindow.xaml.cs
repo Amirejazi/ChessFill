@@ -620,9 +620,20 @@ namespace UI_fily
                 {
                     ZadanOtherimages[i].Source = new BitmapImage(new Uri(fil_w));
                 }
-                if (vazir_wCounter != 1)
+                if (vazir_wCounter == 0)
                 {
                     ZadanOtherimages[2 - rokh_wCounter + (2 - asb_wCounter) + (2 - fil_wCounter) + 1].Source = new BitmapImage(new Uri(vazir_w));
+                }
+                if (shah_wCounter == 0)
+                {
+                    MessageBoxResult res;
+                    res = MessageBox.Show("You Lose :((", ":(", MessageBoxButton.OK);
+                    if (res == MessageBoxResult.OK)
+                    {
+                        portipclientwindow portipclientwindow = new portipclientwindow();
+                        this.Close();
+                        portipclientwindow.ShowDialog();
+                    }
                 }
                 for (int i = 1; i <= (8 - sarbaz_bCounter); i++)
                 {
@@ -643,6 +654,17 @@ namespace UI_fily
                 if (vazir_bCounter == 0)
                 {
                     ZadanOtherenemy[2 - rokh_bCounter + (2 - asb_bCounter) + (2 - fil_bCounter) + 1].Source = new BitmapImage(new Uri(vazir_b));
+                }
+                if (shah_bCounter == 0)
+                {
+                    MessageBoxResult res;
+                    res = MessageBox.Show("You Win :))", ":)", MessageBoxButton.OK);
+                    if (res == MessageBoxResult.OK)
+                    {
+                        portipclientwindow portipclientwindow = new portipclientwindow();
+                        this.Close();
+                        portipclientwindow.ShowDialog();
+                    }
                 }
             }
             else
@@ -667,6 +689,17 @@ namespace UI_fily
                 {
                     ZadanOtherenemy[2 - rokh_wCounter + (2 - asb_wCounter) + (2 - fil_wCounter) + 1].Source = new BitmapImage(new Uri(vazir_w));
                 }
+                if (shah_wCounter == 0)
+                {
+                    MessageBoxResult res;
+                    res = MessageBox.Show("You Lose :((", ":(", MessageBoxButton.OK);
+                    if (res == MessageBoxResult.OK)
+                    {
+                        portipclientwindow portipclientwindow = new portipclientwindow();
+                        this.Close();
+                        portipclientwindow.ShowDialog();
+                    }
+                }
                 for (int i = 1; i <= (8 - sarbaz_bCounter); i++)
                 {
                     Zadansarbazimages[i].Source = new BitmapImage(new Uri(sarbaz_b));
@@ -687,6 +720,17 @@ namespace UI_fily
                 {
                     ZadanOtherimages[2 - rokh_bCounter + (2 - asb_bCounter) + (2 - fil_bCounter) + 1].Source = new BitmapImage(new Uri(vazir_b));
                 }
+                if (shah_bCounter == 0)
+                {
+                    MessageBoxResult res;
+                    res = MessageBox.Show("You Win :))", ":)", MessageBoxButton.OK);
+                    if (res == MessageBoxResult.OK)
+                    {
+                        portipclientwindow portipclientwindow = new portipclientwindow();
+                        this.Close();
+                        portipclientwindow.ShowDialog();
+                    }
+                }
             }
         }
         void finalsbz()
@@ -698,7 +742,7 @@ namespace UI_fily
                     if (SarbazChecker(flag, images[i].Source.ToString()))
                     {
                         MessageBoxResult res;
-                        res = MessageBox.Show("choose vazir or rokh !", "?!", MessageBoxButton.YesNo);
+                        res = MessageBox.Show("choose vazir or rokh or fil \n Vazir:Yes \n No:Rokh \n Cancel:fill !", "?!", MessageBoxButton.YesNoCancel);
                         if (res == MessageBoxResult.Yes)
                         {
                             if (flag)
@@ -714,7 +758,7 @@ namespace UI_fily
                                 Zadan();
                             }
                         }
-                        else
+                        else if(res == MessageBoxResult.No)
                         {
                             if (flag)
                             {
@@ -725,6 +769,21 @@ namespace UI_fily
                             else
                             {
                                 images[i].Source = new BitmapImage(new Uri(rokh_b));
+                                LocationSaver();
+                                Zadan();
+                            }
+                        }
+                        else
+                        {
+                            if (flag)
+                            {
+                                images[i].Source = new BitmapImage(new Uri(fil_w));
+                                LocationSaver();
+                                Zadan();
+                            }
+                            else
+                            {
+                                images[i].Source = new BitmapImage(new Uri(fil_b));
                                 LocationSaver();
                                 Zadan();
                             }
