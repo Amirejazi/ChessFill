@@ -685,7 +685,7 @@ namespace UI_fily
                 {
                     ZadanOtherenemy[i].Source = new BitmapImage(new Uri(fil_w));
                 }
-                if (vazir_wCounter != 1)
+                if (vazir_wCounter == 0)
                 {
                     ZadanOtherenemy[2 - rokh_wCounter + (2 - asb_wCounter) + (2 - fil_wCounter) + 1].Source = new BitmapImage(new Uri(vazir_w));
                 }
