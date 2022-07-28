@@ -1651,8 +1651,8 @@ namespace UI_fily
         void Sarbaz_firstTime(int index)
         {
             ResetBrush();
-            entkhabsoundq.Position = TimeSpan.Zero;
-            entkhabsoundq.Play();
+            entkhabsound.Position = TimeSpan.Zero;
+            entkhabsound.Play();
             int brush = index + 8;
             bool flagc = true;
             if (brush < 65)
@@ -1691,8 +1691,8 @@ namespace UI_fily
         void Sarbaz(int index)
         {
             ResetBrush();
-            entkhabsoundq.Position = TimeSpan.Zero;
-            entkhabsoundq.Play();
+            entkhabsound.Position = TimeSpan.Zero;
+            entkhabsound.Play();
             int brush = index + 8;
             if (brush < 65)
             {
