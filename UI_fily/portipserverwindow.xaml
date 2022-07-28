@@ -23,8 +23,8 @@
             <TextBox x:Name="Port" HorizontalAlignment="Left" FontSize="35" Margin="435,409,0,0" TextWrapping="Wrap" Text="8080" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="600" Height="45"/>
             <TextBox x:Name="Pass" HorizontalAlignment="Left" FontSize="35" Margin="435,481,0,0" TextWrapping="Wrap" Text="1234" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="600" Height="45"/>
             <Button Name="btnstart" Content="Start" FontSize="35" Height="50" Width="250" HorizontalAlignment="Center" Margin="0,579,0,0" VerticalAlignment="Top" Click="btnstart_Click"/>
-            <Button x:Name="btntest" Content="server" FontSize="35" Height="50" Width="250" HorizontalAlignment="Left" Margin="746,172,0,0" VerticalAlignment="Top" Click="btntest_Click" />
-            <Button x:Name="btntest2" Content="client" FontSize="35" Height="50" Width="250" HorizontalAlignment="Left" Margin="126,172,0,0" VerticalAlignment="Top" Click="btntest2_Click"  />
+            <!--<Button x:Name="btntest" Content="server" FontSize="35" Height="50" Width="250" HorizontalAlignment="Left" Margin="746,172,0,0" VerticalAlignment="Top" Click="btntest_Click" />-->
+            <!--<Button x:Name="btntest2" Content="client" FontSize="35" Height="50" Width="250" HorizontalAlignment="Left" Margin="126,172,0,0" VerticalAlignment="Top" Click="btntest2_Click"  />-->
             <Button x:Name="close" BorderThickness="0" Height="53" Width="54" Background="Transparent" Margin="1146,0,0,0" Click="closee" VerticalAlignment="Top">
                 <Image Source="sorce/close2.png" Height="47" Width="45"></Image>
             </Button>
