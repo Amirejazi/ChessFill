@@ -692,7 +692,7 @@ namespace UI_fily
                 if (shah_wCounter == 0)
                 {
                     MessageBoxResult res;
-                    res = MessageBox.Show("You Lose :((", ":(", MessageBoxButton.OK);
+                    res = MessageBox.Show("You Win :))", ":)", MessageBoxButton.OK);
                     if (res == MessageBoxResult.OK)
                     {
                         portipclientwindow portipclientwindow = new portipclientwindow();
@@ -723,7 +723,7 @@ namespace UI_fily
                 if (shah_bCounter == 0)
                 {
                     MessageBoxResult res;
-                    res = MessageBox.Show("You Win :))", ":)", MessageBoxButton.OK);
+                    res = MessageBox.Show("You Lose :((", ":(", MessageBoxButton.OK);
                     if (res == MessageBoxResult.OK)
                     {
                         portipclientwindow portipclientwindow = new portipclientwindow();
